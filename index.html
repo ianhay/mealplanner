@@ -448,7 +448,7 @@
 </div>
 
 <script>
-const APP_VERSION = "0.4.0";
+const APP_VERSION = "0.4.1";
 console.log("Meal Planner v" + APP_VERSION + " (schema 2, client-side selection)");
 
 /* ============================================================
@@ -1088,13 +1088,32 @@ function runDiagnostics(){
     push("OK", `cost/serve range: ${sorted[0]?.name} ($${sorted[0]?.cost_per_serve.toFixed(2)}) to ${sorted[sorted.length-1]?.name} ($${sorted[sorted.length-1]?.cost_per_serve.toFixed(2)})`);
   }
 
-  // 3. per-store coverage
-  let totalRows=0, withStore=0;
-  recs.forEach(r=>(r.priced_ingredients||[]).forEach(pi=>{ if(pi.ing){ totalRows++; if(pi.by_store) withStore++; } }));
+  // 3. per-store coverage — structural (has by_store) AND actual (live price
+  //    found per store, not just falling back to the same baseline number
+  //    at both — which would make c/w identical for a totally innocent reason)
+  let totalRows=0, withStore=0, liveC=0, liveW=0, uniqueIngRows=0;
+  const seenSlugs = new Set();
+  recs.forEach(r=>(r.priced_ingredients||[]).forEach(pi=>{
+    if(!pi.ing) return;
+    totalRows++;
+    if(pi.by_store) withStore++;
+    if(!seenSlugs.has(pi.ing)){
+      seenSlugs.add(pi.ing); uniqueIngRows++;
+      if(pi.by_store?.c?.flag==="live") liveC++;
+      if(pi.by_store?.w?.flag==="live") liveW++;
+    }
+  }));
   const pct = totalRows? (withStore/totalRows*100) : 0;
   if(totalRows===0) push("WARN", "no bank-ingredient rows to check store coverage");
   else if(pct<50) push("FAIL", `only ${withStore}/${totalRows} (${pct.toFixed(0)}%) ingredient rows carry by_store data — single-store totals are likely NOT real per-store prices. This usually means week-data.json is from an older generator run; re-run "Generate Weekly Prices".`);
-  else push(pct>95?"OK":"WARN", `${withStore}/${totalRows} (${pct.toFixed(0)}%) ingredient rows carry by_store data`);
+  else push(pct>95?"OK":"WARN", `${withStore}/${totalRows} (${pct.toFixed(0)}%) ingredient rows carry by_store data (structure present)`);
+  const livePctC = uniqueIngRows? liveC/uniqueIngRows*100 : 0;
+  const livePctW = uniqueIngRows? liveW/uniqueIngRows*100 : 0;
+  if(livePctC<10 && livePctW<10){
+    push("FAIL", `only ${liveC}/${uniqueIngRows} Coles and ${liveW}/${uniqueIngRows} Woolworths ingredients (of ${uniqueIngRows} unique ones used this week) have an actual LIVE price — nearly everything fell back to the bank baseline at BOTH stores, which is why Coles-only and Woolworths-only totals below look identical: they're both showing the same baseline number, not a real bug in the store split. Check the generator log for catalogue-fetch/search failures.`);
+  } else {
+    push("OK", `${liveC}/${uniqueIngRows} (${livePctC.toFixed(0)}%) unique ingredients have a live Coles price, ${liveW}/${uniqueIngRows} (${livePctW.toFixed(0)}%) have a live Woolworths price`);
+  }
 
   // 4. headline vs list reconciliation, across all three store modes, using
   //    the CURRENT plan and the app's real functions (temporarily switching

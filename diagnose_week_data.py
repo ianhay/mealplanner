@@ -130,6 +130,8 @@ def check_plausible_prices(week, results):
 def check_store_coverage(week, results):
     recs = week.get("recipes", [])
     total_rows, with_by_store = 0, 0
+    seen_slugs = set()
+    live_c = live_w = 0
     for r in recs:
         for pi in r.get("priced_ingredients", []):
             if not pi.get("ing"):
@@ -137,13 +139,33 @@ def check_store_coverage(week, results):
             total_rows += 1
             if pi.get("by_store"):
                 with_by_store += 1
+            slug = pi["ing"]
+            if slug not in seen_slugs:
+                seen_slugs.add(slug)
+                bs = pi.get("by_store") or {}
+                if bs.get("c", {}).get("flag") == "live":
+                    live_c += 1
+                if bs.get("w", {}).get("flag") == "live":
+                    live_w += 1
     if total_rows == 0:
         results.append((WARN, "no bank-ingredient rows found to check store coverage"))
         return
     pct = with_by_store / total_rows * 100
     level = OK if pct > 95 else (WARN if pct > 50 else FAIL)
     results.append((level, f"{with_by_store}/{total_rows} ({pct:.0f}%) priced_ingredient rows carry by_store data "
-                            f"(needed for single-store totals to be real, not relabelled)"))
+                            f"(structure present)"))
+
+    n = len(seen_slugs) or 1
+    live_pct_c, live_pct_w = live_c / n * 100, live_w / n * 100
+    if live_pct_c < 10 and live_pct_w < 10:
+        results.append((FAIL,
+            f"only {live_c}/{n} Coles and {live_w}/{n} Woolworths ingredients have an actual LIVE "
+            f"price — nearly everything fell back to the bank baseline at BOTH stores. This is why "
+            f"Coles-only/Woolworths-only totals will look identical below: same baseline number at "
+            f"both, not a bug in the store split. Check the generator log for catalogue-fetch/search failures."))
+    else:
+        results.append((OK, f"{live_c}/{n} ({live_pct_c:.0f}%) unique ingredients have a live Coles price, "
+                             f"{live_w}/{n} ({live_pct_w:.0f}%) have a live Woolworths price"))
 
 # ---- simulate the app's own selection + costing math -------------------
 
