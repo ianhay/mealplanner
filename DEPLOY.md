@@ -94,6 +94,7 @@ generate-thisweek.py       weekly pricing job (prices ingredients, costs every r
 ingredients.json           canonical ingredient catalogue (~96 items, baseline prices)
 recipes.json               48 recipes referencing ingredient slugs + quantities
 convert_bank.py            one-off migration script — reference only, no need to run again
+diagnose_week_data.py      sanity-checks a live week-data.json — run after any generator change
 manifest.json, sw.js       PWA manifest + service worker
 icon-*.png, apple-touch-icon.png
 set-catalogue-vars.sh      convenience script for step 4

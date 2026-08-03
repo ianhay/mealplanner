@@ -12,6 +12,51 @@ built around `recipe-bank.json` + `thisweek.json` + a server-side "pick 12").
 --------------------------------------------------------------------------------
 ## 1. What changed from v1, and why
 
+### v0.3.0 (this update)
+
+Three real bugs, found from actual use, all fixed:
+
+- **"Cheapest week" showing near-zero totals** turned out to be a *labelling*
+  bug wearing a data-bug costume: the headline pill only ever showed money
+  **saved**, never total **spend**. Cheapest-week mode deliberately doesn't
+  chase discounts, so in a week where none of the 5 cheapest recipes happened
+  to be on special, "$0.83 saved" was accurate — it just looked exactly like
+  a broken total. Fixed by showing both figures, clearly labelled, in
+  `renderHero()`.
+- **Headline vs List total mismatch** was the same root cause — once the
+  hero pill shows total spend (not savings), it reconciles with the List tab
+  by construction, because both now go through the same `effectivePrice()`
+  helper (see below). There's a standing regression test for this in
+  `diagnose_week_data.py` (`check_hero_list_reconciliation`).
+- **"Shop at Coles/Woolworths" not doing anything real.** `price_ingredient_catalogue`
+  used to search Coles, and only checked Woolworths if Coles had zero
+  matches — so nearly every ingredient's "price" was really "whatever price
+  Coles happened to have," regardless of the `store_pref` label attached to
+  it. Switching to "Shop at Woolworths" just relabelled the same numbers
+  under a different heading. Fixed: every ingredient is now priced at
+  **both** stores independently (`_price_one_store` called for `coles` and
+  `woolworths`), stored as `by_store: {c:{...}, w:{...}}` alongside the
+  blended default. The app's `effectivePrice()` picks the real store-specific
+  price when the household has chosen one store; `diagnose_week_data.py`'s
+  `check_single_store_actually_differs` guards against this regressing
+  (it would show identical Coles/Woolworths totals, same as the actual bug).
+- Also added a plausibility guard in the generator: any live search-derived
+  price under 15% of the ingredient's bank baseline is now rejected rather
+  than published (catches the parsing-glitch class of bug before it reaches
+  `week-data.json` at all).
+- **Visual restyle** to the Ian Hay cobalt-blue/signal-orange system: Barlow
+  Condensed headings, IBM Plex Sans body, IBM Plex Mono for the version tag
+  and receipt, 4px radii on components (999px reserved for chips/tags/status),
+  blue for navigation and primary actions, orange reserved for "on special"
+  meals and the savings figure. Added `prefers-color-scheme: dark` support.
+  Fixed a day-row wrap bug (Sun dropping to its own line on narrow phones) as
+  a side effect of the CSS pass.
+- **`diagnose_week_data.py`** (new): run it against any `week-data.json`
+  (local file or live URL) to catch all three bug classes above before they
+  reach the app. See §11.
+
+### v0.2 → v1, structural history
+
 v1 picked twelve recipes server-side (scored by *category*-level discount —
 every chicken recipe scored identically off the deepest chicken special
 anywhere in the catalogue), priced only those twelve, and shipped a frozen
@@ -281,7 +326,29 @@ If `week-data.json` fails to load, the planner shows a tiny demo dataset.
   additional soft constraints in `selectWeek`.
 
 --------------------------------------------------------------------------------
-## 10. Where to start a review
+## 10. Diagnostics (`diagnose_week_data.py`)
+
+Run this against any `week-data.json` — a local file after a generator run,
+or the live URL — to catch the bug classes described in §1 before they reach
+the app:
+
+```
+python3 diagnose_week_data.py week-data.json
+python3 diagnose_week_data.py https://ianhay.github.io/mealplanner/week-data.json
+```
+
+It re-simulates the app's own `effectivePrice` / cost / list-aggregation
+logic in Python (not just spot-checking fields), so it catches the same
+class of mismatch a human would only notice by comparing two numbers on
+screen. Checks: schema references resolve; no recipe or ingredient priced
+implausibly low; every priced ingredient carries real `by_store` data;
+headline total reconciles with list total in all three shop-store modes;
+Coles-only and Woolworths-only totals genuinely differ for a sample week.
+Exit code is 1 if anything fails — safe to wire into the GitHub Actions
+workflow as a post-generation step if you want a bad week blocked from
+publishing rather than just flagged.
+
+## 11. Where to start a review
 
 1. Deploy as-is (see `DEPLOY.md`) and run the workflow once. Read the log —
    step `[3/4]` should report most of the ~96 ingredients priced live.

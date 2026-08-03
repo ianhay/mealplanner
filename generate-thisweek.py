@@ -737,11 +737,54 @@ def _unit_probe_qty(unit: str) -> Dict:
         return {"grams": None, "count": 1, "ml": None}
     return {"grams": None, "count": None, "ml": None}   # "pack": shelf price as-is
 
+def _price_one_store(store: str, meta: Dict, qty: Dict, pool: List[Dict]) -> tuple:
+    """Returns (now, was, basis, flag, source) for a single store, or None."""
+    label = meta["label"]
+    for term in ([label] + meta.get("search_terms", []))[:4]:
+        cands = sf_search(store, term)
+        if not cands:
+            continue
+        cand = _best_search_candidate(label, cands)
+        if not cand:
+            continue
+        res = _price_from_search(qty, cand)
+        if not res or not res[0] or res[0] <= 0:
+            continue
+        now, was, basis = res
+        # Plausibility guard: a per-unit price under 15% of the bank baseline
+        # is far more likely a parsing glitch (e.g. a multi-pack unit price
+        # misread) than a genuine 85%+ discount — reject rather than publish
+        # a number that would make a whole week look implausibly cheap.
+        baseline = meta.get("baseline") or 0
+        if baseline > 0 and now < baseline * 0.15:
+            continue
+        return (now, was, basis, "live", "search")
+
+    rtok = _content_tokens(label)
+    need = 2 if len(rtok) >= 2 else 1
+    best, best_shared = None, 0
+    for sc in pool:
+        if sc["code"] != store[0]:   # 'c' or 'w' — svgData pool is store-tagged
+            continue
+        shared = len(rtok & sc["toks"])
+        if shared >= need and shared > best_shared:
+            best, best_shared = sc, shared
+    if best:
+        res = _price_from_svgdata(qty, best, meta["baseline"])
+        if res:
+            now, was, basis = res
+            baseline = meta.get("baseline") or 0
+            if not (baseline > 0 and now < baseline * 0.15):
+                return (now, was, basis, "live", "svgdata")
+    return None
+
 def price_ingredient_catalogue(ingredients: Dict, all_items: List[Dict]) -> Dict:
     """
-    Search-price every ingredient once (both stores where relevant), producing
-    a genuine PER-UNIT price ($/kg, $/L, $/ea or $/pack) rather than a price
-    scaled to any one recipe's portion. This is the step that used to happen
+    Search-price every ingredient at EACH store independently (not "stop at
+    the first match, usually Coles") so single-store mode has genuine
+    per-store prices rather than one blended price relabelled. Produces a
+    genuine PER-UNIT price ($/kg, $/L, $/ea or $/pack) rather than a price
+    scaled to any one recipe's portion — the step that used to happen
     per-selected-recipe; doing it once per ingredient is what lets the whole
     bank be costed for free.
     """
@@ -756,45 +799,35 @@ def price_ingredient_catalogue(ingredients: Dict, all_items: List[Dict]) -> Dict
 
     for slug, meta in ingredients.items():
         qty = _unit_probe_qty(meta["unit"])
-        label = meta["label"]
-        chosen = None
+        by_store = {}
+        any_live = False
+        for store, code in (("coles", "c"), ("woolworths", "w")):
+            got = _price_one_store(store, meta, qty, pool)
+            if got:
+                now, was, basis, flag, src = got
+                by_store[code] = {"now": now, "was": was, "basis": basis, "flag": flag}
+                any_live = True
+                stats["via_search" if src == "search" else "via_svgdata"] += 1
+            else:
+                by_store[code] = {"now": meta["baseline"], "was": None,
+                                   "basis": "bank baseline", "flag": "est"}
 
-        for st in ("coles", "woolworths"):
-            for term in ([label] + meta.get("search_terms", []))[:4]:
-                cands = sf_search(st, term)
-                if not cands:
-                    continue
-                cand = _best_search_candidate(label, cands)
-                if cand:
-                    res = _price_from_search(qty, cand)
-                    if res and res[0] and res[0] > 0:
-                        chosen = (res, "search")
-                        break
-            if chosen:
-                break
-
-        if not chosen:
-            rtok = _content_tokens(label)
-            need = 2 if len(rtok) >= 2 else 1
-            best, best_shared = None, 0
-            for sc in pool:
-                shared = len(rtok & sc["toks"])
-                if shared >= need and shared > best_shared:
-                    best, best_shared = sc, shared
-            if best:
-                res = _price_from_svgdata(qty, best, meta["baseline"])
-                if res:
-                    chosen = (res, "svgdata")
-
-        if chosen:
-            (now, was, basis), src = chosen
-            priced[slug] = {"now": now, "was": was, "basis": basis, "flag": "live"}
+        if any_live:
             stats["matched"] += 1
-            stats["via_search" if src == "search" else "via_svgdata"] += 1
         else:
-            priced[slug] = {"now": meta["baseline"], "was": None,
-                             "basis": "bank baseline", "flag": "est"}
             stats["via_baseline"] += 1
+
+        pref = meta.get("store_pref", "e")
+        default = by_store.get(pref) if pref in ("c", "w") else None
+        if not default or default["flag"] != "live":
+            # fall back to whichever store found a live price; else baseline
+            default = next((v for v in by_store.values() if v["flag"] == "live"), by_store["c"])
+
+        priced[slug] = {
+            "now": default["now"], "was": default["was"],
+            "basis": default["basis"], "flag": default["flag"],
+            "by_store": by_store,
+        }
 
     return priced, stats
 
@@ -813,6 +846,7 @@ def annotate_recipes(recipes: List[Dict], ingredients: Dict, priced: Dict) -> Li
             slug = ing["ing"]
             meta = ingredients.get(slug, {})
             p = priced.get(slug, {"now": 0, "was": None, "flag": "est"})
+
             unit = meta.get("unit", "pack")
             qty = ing.get("qty")
 
@@ -827,6 +861,12 @@ def annotate_recipes(recipes: List[Dict], ingredients: Dict, priced: Dict) -> Li
 
             now = round((p["now"] or 0) * factor, 2)
             item_was = round((p["was"] or 0) * factor, 2) if p.get("was") else None
+
+            by_store_scaled = {}
+            for code, sp in p.get("by_store", {}).items():
+                sc_now = round((sp["now"] or 0) * factor, 2)
+                sc_was = round((sp["was"] or 0) * factor, 2) if sp.get("was") else None
+                by_store_scaled[code] = {"now": sc_now, "was": sc_was, "flag": sp.get("flag", "est")}
 
             # pantry items are assumed already-owned by default in the app (the
             # planner lets a household mark them owned); still priced here so
@@ -843,6 +883,7 @@ def annotate_recipes(recipes: List[Dict], ingredients: Dict, priced: Dict) -> Li
                 "unit": unit, "role": ing.get("role", "scales"),
                 "note": ing.get("note"),
                 "now": now, "was": item_was, "flag": p.get("flag", "est"),
+                "by_store": by_store_scaled,
             })
 
         saving = round(was_cost - cost, 2) if any_was else 0.0
