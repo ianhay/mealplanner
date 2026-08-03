@@ -1,4 +1,4 @@
-# The Docket — Handoff & Orientation (v2)
+# Meal Planner — Handoff & Orientation (v2)
 
 A FODMAP-safe **weekly dinner planner** that builds a savings-weighted menu and
 shopping list from this week's **Perth (WA) supermarket specials** (Coles +
@@ -12,7 +12,38 @@ built around `recipe-bank.json` + `thisweek.json` + a server-side "pick 12").
 --------------------------------------------------------------------------------
 ## 1. What changed from v1, and why
 
-### v0.3.0 (this update)
+### v0.4.0 (this update)
+
+- **Renamed "The Docket" → "Meal Planner"** everywhere user-facing (title,
+  heading, PWA name, console log, share-sheet text). Internal-only names
+  (localStorage key prefixes, the commit-bot's git identity) were left
+  alone deliberately — renaming a localStorage key prefix would silently
+  wipe anyone's saved plan/settings on upgrade.
+- **Store totals weren't actually different** — traced to the same root
+  cause as the v0.3.0 store-pricing fix not yet having taken effect: it's a
+  *generator*-side fix, so it only applies once `generate-thisweek.py` runs
+  again and republishes `week-data.json`. If you're still seeing identical
+  Coles/Woolworths totals after this update, re-run the "Generate Weekly
+  Prices" workflow — the in-app diagnostics (below) will tell you plainly if
+  that's what's going on ("0% of ingredient rows carry by_store data").
+- **A recipe showing $86.80 for 2 people** ("Easy night: oven-bake fish &
+  steam-fresh veg") was a real gap: the plausibility guard added in v0.3.0
+  only checked the *floor* (reject prices implausibly below baseline) and
+  never checked the *ceiling* — so a wrong-product search match or a
+  $/100g-read-as-$/kg mixup on the high side sailed straight through. Fixed:
+  `_price_one_store` now rejects any live price outside baseline × 0.15–4.0,
+  both directions. `diagnose_week_data.py` and the in-app diagnostics were
+  updated to check both directions too — they'd have caught this on the
+  published data even before the generator-side fix landed.
+- **In-app diagnostics** (new): Setup tab → Diagnostics → "Run diagnostics".
+  Runs the same checks as `diagnose_week_data.py`, but against the app's own
+  live `weekTotals()`/`listItems()`/`effectivePrice()` — so it's checking
+  exactly what's on screen, not a re-implementation that could itself drift
+  out of sync. Produces a plain-text report with a "Copy result" button.
+  This is the fastest path to reporting a pricing/total bug: run it, copy,
+  paste.
+
+### v0.3.0
 
 Three real bugs, found from actual use, all fixed:
 
@@ -326,15 +357,19 @@ If `week-data.json` fails to load, the planner shows a tiny demo dataset.
   additional soft constraints in `selectWeek`.
 
 --------------------------------------------------------------------------------
-## 10. Diagnostics (`diagnose_week_data.py`)
+## 10. Diagnostics (`diagnose_week_data.py` + in-app)
 
-Run this against any `week-data.json` — a local file after a generator run,
-or the live URL — to catch the bug classes described in §1 before they reach
-the app:
+Two ways to run the same checks:
+
+- **In-app** (fastest): Setup tab → Diagnostics → **Run diagnostics** →
+  **Copy result**. Runs against the app's own live functions and the
+  currently-loaded week + plan, so it's checking exactly what's on screen.
+- **Standalone script**, against a local file or the live URL:
 
 ```
 python3 diagnose_week_data.py week-data.json
 python3 diagnose_week_data.py https://ianhay.github.io/mealplanner/week-data.json
+
 ```
 
 It re-simulates the app's own `effectivePrice` / cost / list-aggregation

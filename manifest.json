@@ -1,6 +1,6 @@
 {
-  "name": "The Docket — Weekly Meal Planner",
-  "short_name": "The Docket",
+  "name": "Meal Planner",
+  "short_name": "Meal Planner",
   "description": "FODMAP-safe weekly meal plan built from this week's WA supermarket specials.",
   "start_url": "index.html",
   "scope": "./",

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-The Docket — Weekly Meal Plan Generator
+Meal Planner — Weekly Price Generator
 Runs Tuesday night: fetches Coles + Woolies catalogues, matches recipes, 
 generates thisweek.json, pushes to GitHub.
 
@@ -751,12 +751,16 @@ def _price_one_store(store: str, meta: Dict, qty: Dict, pool: List[Dict]) -> tup
         if not res or not res[0] or res[0] <= 0:
             continue
         now, was, basis = res
-        # Plausibility guard: a per-unit price under 15% of the bank baseline
-        # is far more likely a parsing glitch (e.g. a multi-pack unit price
-        # misread) than a genuine 85%+ discount — reject rather than publish
-        # a number that would make a whole week look implausibly cheap.
+        # Plausibility guard, both directions. A per-unit price under 15% of
+        # the bank baseline is far more likely a parsing glitch (e.g. a
+        # multi-pack unit price misread) than a genuine 85%+ discount. A
+        # price over 4x baseline is far more likely a wrong-product match or
+        # a per-100g/per-kg mixup (e.g. matching "oven bake fish" to an
+        # unrelated premium item, or reading a $/100g figure as $/kg) than a
+        # genuine price — reject either rather than publish a number that
+        # makes one recipe look absurdly cheap or absurdly expensive.
         baseline = meta.get("baseline") or 0
-        if baseline > 0 and now < baseline * 0.15:
+        if baseline > 0 and not (baseline * 0.15 <= now <= baseline * 4.0):
             continue
         return (now, was, basis, "live", "search")
 
@@ -774,7 +778,7 @@ def _price_one_store(store: str, meta: Dict, qty: Dict, pool: List[Dict]) -> tup
         if res:
             now, was, basis = res
             baseline = meta.get("baseline") or 0
-            if not (baseline > 0 and now < baseline * 0.15):
+            if baseline <= 0 or (baseline * 0.15 <= now <= baseline * 4.0):
                 return (now, was, basis, "live", "svgdata")
     return None
 
@@ -969,7 +973,7 @@ def push_to_github(week_data: Dict, github_token: str, github_repo: str, github_
             json.dump(week_data, f, indent=2)
 
         subprocess.run(["git", "config", "user.email", github_email], check=True)
-        subprocess.run(["git", "config", "user.name", "Docket Bot"], check=True)
+        subprocess.run(["git", "config", "user.name", "Meal Planner Bot"], check=True)
         subprocess.run(["git", "add", "week-data.json"], check=True)
         subprocess.run(["git", "commit", "-m",
                          f"Weekly price update: {week_data['metadata']['week_start']} – "
@@ -987,7 +991,7 @@ def push_to_github(week_data: Dict, github_token: str, github_repo: str, github_
 # ============ MAIN ============
 def main():
     print("=" * 60)
-    print("The Docket — Weekly Price Generator (pricing-first, v2)")
+    print("Meal Planner — Weekly Price Generator (pricing-first, v2)")
     print("=" * 60)
 
     if len(sys.argv) > 1:

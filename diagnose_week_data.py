@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-The Docket — week-data.json diagnostics.
+Meal Planner — week-data.json diagnostics.
 
 Run this against a live week-data.json (either a local file or a URL) to
 catch the kinds of bugs that are invisible from a quick look at the app:
@@ -85,34 +85,47 @@ def check_plausible_prices(week, results):
     recs = week.get("recipes", [])
     # A recipe costing less than $0.50/serve is almost certainly a pricing
     # bug, not a genuinely cheap meal — even lentils-and-rice costs more than
-    # that per person in real life.
+    # that per person in real life. A recipe over $30/serve for an everyday
+    # dinner is the same bug class the other direction (wrong-product match,
+    # or a $/100g figure misread as $/kg).
     FLOOR_PER_SERVE = 0.50
-    suspects = [r for r in recs if r.get("cost_per_serve", 999) < FLOOR_PER_SERVE]
-    if suspects:
+    CEIL_PER_SERVE = 30.00
+    too_cheap = [r for r in recs if r.get("cost_per_serve", 999) < FLOOR_PER_SERVE]
+    too_expensive = [r for r in recs if r.get("cost_per_serve", 0) > CEIL_PER_SERVE]
+    if too_cheap:
         results.append((FAIL,
-            f"{len(suspects)} recipe(s) priced under ${FLOOR_PER_SERVE:.2f}/serve — "
+            f"{len(too_cheap)} recipe(s) priced under ${FLOOR_PER_SERVE:.2f}/serve — "
             f"almost certainly a pricing bug: " +
-            ", ".join(f"{r['name']} (${r['cost_per_serve']:.2f})" for r in suspects[:5])))
-    else:
+            ", ".join(f"{r['name']} (${r['cost_per_serve']:.2f})" for r in too_cheap[:5])))
+    if too_expensive:
+        results.append((FAIL,
+            f"{len(too_expensive)} recipe(s) priced over ${CEIL_PER_SERVE:.2f}/serve — "
+            f"almost certainly a wrong-product match or unit mixup: " +
+            ", ".join(f"{r['name']} (${r['cost_per_serve']:.2f})" for r in too_expensive[:5])))
+    if not too_cheap and not too_expensive:
         cheapest = min(recs, key=lambda r: r.get("cost_per_serve", 999))
-        results.append((OK, f"cheapest recipe this week: {cheapest['name']} at "
-                             f"${cheapest['cost_per_serve']:.2f}/serve (floor is ${FLOOR_PER_SERVE:.2f})"))
+        priciest = max(recs, key=lambda r: r.get("cost_per_serve", 0))
+        results.append((OK, f"cost/serve range this week: {cheapest['name']} at "
+                             f"${cheapest['cost_per_serve']:.2f} to {priciest['name']} at "
+                             f"${priciest['cost_per_serve']:.2f} (bounds ${FLOOR_PER_SERVE:.2f}-${CEIL_PER_SERVE:.2f})"))
 
-    # Per-ingredient: a live 'now' price under 15% of baseline is the same
-    # class of bug (should already be rejected server-side — this re-checks
-    # the published data in case an older generator run produced it).
+    # Per-ingredient: a live 'now' price under 15% or over 4x baseline is the
+    # same class of bug (should already be rejected server-side — this
+    # re-checks the published data in case an older generator run produced it
+    # before the guard existed, or the guard has a gap).
     bad_ing = []
     for slug, meta in ings.items():
         baseline = meta.get("baseline") or 0
         if baseline <= 0:
             continue
         for code, sp in (meta.get("by_store") or {}).items():
-            if sp.get("flag") == "live" and sp.get("now", 0) < baseline * 0.15:
-                bad_ing.append(f"{slug}/{code}: ${sp['now']:.2f} vs baseline ${baseline:.2f}")
+            now = sp.get("now", 0)
+            if sp.get("flag") == "live" and not (baseline * 0.15 <= now <= baseline * 4.0):
+                bad_ing.append(f"{slug}/{code}: ${now:.2f} vs baseline ${baseline:.2f}")
     if bad_ing:
-        results.append((FAIL, f"{len(bad_ing)} ingredient price(s) implausibly below baseline: {bad_ing[:5]}"))
+        results.append((FAIL, f"{len(bad_ing)} ingredient price(s) implausible vs baseline: {bad_ing[:5]}"))
     else:
-        results.append((OK, "no implausible per-ingredient prices found"))
+        results.append((OK, "no implausible per-ingredient prices found (checked both floor and ceiling)"))
 
 def check_store_coverage(week, results):
     recs = week.get("recipes", [])

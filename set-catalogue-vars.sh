@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# Sets The Docket's SaleFinder IDs as GitHub Actions *repository Variables*,
+# Sets Meal Planner's SaleFinder IDs as GitHub Actions *repository Variables*,
 # so you don't have to click through Settings -> Secrets and variables -> Actions.
 #
 # One-time setup:

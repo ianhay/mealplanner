@@ -1,4 +1,4 @@
-# The Docket — deploy guide (fresh repo: `mealplanner`)
+# Meal Planner — deploy guide (fresh repo: `mealplanner`)
 
 This is a from-scratch setup for a brand new repo. Everything in this folder
 is the whole app — copy the contents into the repo root and commit.

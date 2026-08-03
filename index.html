@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>The Docket — Weekly Meal Planner</title>
+<title>Meal Planner</title>
 <!-- PWA: installable app -->
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#24529A">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
-<meta name="apple-mobile-web-app-title" content="The Docket">
+<meta name="apple-mobile-web-app-title" content="Meal Planner">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -252,7 +252,7 @@
 
 <header>
   <div class="eyebrow"><span>Powered by GitHub + Automation</span><span class="ver" id="verTag"></span></div>
-  <h1>The Docket <span class="tear">— plan, then shop</span></h1>
+  <h1>Meal Planner</h1>
   <div class="weekline" id="weekline">
     <span class="loading">loading week…</span>
   </div>
@@ -348,6 +348,14 @@
 
   <h2 style="margin-top:20px">About this week</h2>
   <div id="metadata-display" style="font-size:.8rem;color:var(--ink-soft);line-height:1.6"></div>
+
+  <h2 style="margin-top:20px">Diagnostics</h2>
+  <p class="hint" style="margin-top:0">If a price or total looks wrong, run this — it re-checks pricing, per-store data, and whether the headline total actually matches the shopping list, using this week's real data. Copy the result and paste it back to get it fixed.</p>
+  <div class="actions" style="margin-top:10px">
+    <button class="alt" onclick="runDiagnostics()">Run diagnostics</button>
+    <button class="alt" id="diagCopyBtn" onclick="copyDiagnostics()" style="display:none">Copy result</button>
+  </div>
+  <pre id="diagOutput" class="mono" style="display:none;white-space:pre-wrap;background:var(--ih-surface);border:1px solid var(--ih-border);border-radius:4px;padding:11px 12px;margin-top:10px;max-height:340px;overflow:auto"></pre>
 </section>
 
 <div class="toast" id="toast">Copied</div>
@@ -440,8 +448,8 @@
 </div>
 
 <script>
-const APP_VERSION = "0.3.0";
-console.log("The Docket planner v" + APP_VERSION + " (schema 2, client-side selection)");
+const APP_VERSION = "0.4.0";
+console.log("Meal Planner v" + APP_VERSION + " (schema 2, client-side selection)");
 
 /* ============================================================
    DATA: week-data.json (schema 2) — the FULL priced bank.
@@ -1005,7 +1013,7 @@ function sharePlan(){
   try{ b64 = btoa(unescape(encodeURIComponent(JSON.stringify(payload)))); }
   catch(e){ showToast("Couldn't build link"); return; }
   const url = location.origin + location.pathname + "#plan=" + b64;
-  if(navigator.share){ navigator.share({title:"The Docket — this week's plan", url}).catch(()=>{}); return; }
+  if(navigator.share){ navigator.share({title:"Meal Planner — this week's plan", url}).catch(()=>{}); return; }
   navigator.clipboard.writeText(url).then(()=>showToast("Plan link copied")).catch(()=>{ try{ prompt("Copy this link:", url); }catch(_){}});
 }
 function readSharedPlan(){
@@ -1043,6 +1051,97 @@ function applySharedPlan(o){
 }
 function renderAllSetupRows(){
   renderModeRow(); renderShopDayRow(); renderStoreRow(); renderDietRow(); renderDislikeRow(); renderPantryList();
+}
+
+/* ============================================================
+   DIAGNOSTICS — mirrors diagnose_week_data.py, but runs against this
+   app's own live functions (weekTotals/listItems/effectivePrice) rather
+   than a re-implementation, so it catches exactly what's on screen.
+   ============================================================ */
+function runDiagnostics(){
+  const lines = [];
+  const push = (level, msg) => lines.push(`[${level}] ${msg}`);
+  const ings = WEEK.ingredients||{}, recs = WEEK.recipes||[];
+  const now = new Date().toLocaleString();
+  lines.push(`Meal Planner diagnostics — ${now}`);
+  lines.push(`App version ${APP_VERSION} · ${recs.length} recipes · ${Object.keys(ings).length} ingredients loaded`);
+  lines.push(`Settings: mode=${settings.mode} days=${settings.days} people=${settings.defaultPpl} shopStore=${settings.shopStore} dislikes=[${settings.dislikes.join(",")}]`);
+  lines.push("");
+
+  // 1. schema
+  let badHero=0, badIng=0;
+  recs.forEach(r=>{
+    if(r.hero && !ings[r.hero]) badHero++;
+    (r.priced_ingredients||[]).forEach(pi=>{ if(pi.ing && !ings[pi.ing]) badIng++; });
+  });
+  if(badHero||badIng) push("FAIL", `${badHero} recipe(s) with an unresolved hero, ${badIng} ingredient row(s) with an unresolved slug`);
+  else push("OK", "schema check: all hero/ingredient references resolve");
+
+  // 2. plausibility (recipe-level, using the data as loaded — not re-simulated)
+  const FLOOR=0.5, CEIL=30;
+  const tooCheap = recs.filter(r=>(r.cost_per_serve??999) < FLOOR);
+  const tooExp = recs.filter(r=>(r.cost_per_serve??0) > CEIL);
+  if(tooCheap.length) push("FAIL", `${tooCheap.length} recipe(s) under $${FLOOR.toFixed(2)}/serve: ` + tooCheap.slice(0,5).map(r=>`${r.name} ($${r.cost_per_serve.toFixed(2)})`).join(", "));
+  if(tooExp.length) push("FAIL", `${tooExp.length} recipe(s) over $${CEIL.toFixed(2)}/serve: ` + tooExp.slice(0,5).map(r=>`${r.name} ($${r.cost_per_serve.toFixed(2)})`).join(", "));
+  if(!tooCheap.length && !tooExp.length){
+    const sorted = recs.slice().sort((a,b)=>a.cost_per_serve-b.cost_per_serve);
+    push("OK", `cost/serve range: ${sorted[0]?.name} ($${sorted[0]?.cost_per_serve.toFixed(2)}) to ${sorted[sorted.length-1]?.name} ($${sorted[sorted.length-1]?.cost_per_serve.toFixed(2)})`);
+  }
+
+  // 3. per-store coverage
+  let totalRows=0, withStore=0;
+  recs.forEach(r=>(r.priced_ingredients||[]).forEach(pi=>{ if(pi.ing){ totalRows++; if(pi.by_store) withStore++; } }));
+  const pct = totalRows? (withStore/totalRows*100) : 0;
+  if(totalRows===0) push("WARN", "no bank-ingredient rows to check store coverage");
+  else if(pct<50) push("FAIL", `only ${withStore}/${totalRows} (${pct.toFixed(0)}%) ingredient rows carry by_store data — single-store totals are likely NOT real per-store prices. This usually means week-data.json is from an older generator run; re-run "Generate Weekly Prices".`);
+  else push(pct>95?"OK":"WARN", `${withStore}/${totalRows} (${pct.toFixed(0)}%) ingredient rows carry by_store data`);
+
+  // 4. headline vs list reconciliation, across all three store modes, using
+  //    the CURRENT plan and the app's real functions (temporarily switching
+  //    shopStore, then restoring it — no visible flicker since nothing
+  //    re-renders until this function returns).
+  const savedStore = settings.shopStore;
+  const storeTotals = {};
+  try{
+    ["both","c","w"].forEach(mode=>{
+      settings.shopStore = mode;
+      const t = weekTotals();
+      const {items} = listItems();
+      const listTotal = items.filter(i=>!i.owned).reduce((s,i)=>s+i.p,0);
+      storeTotals[mode] = t.cost;
+      if(Math.abs(t.cost-listTotal) > 0.01){
+        push("FAIL", `shopStore=${mode}: headline $${t.cost.toFixed(2)} != list $${listTotal.toFixed(2)} (diff $${Math.abs(t.cost-listTotal).toFixed(2)})`);
+      } else {
+        push("OK", `shopStore=${mode}: headline ($${t.cost.toFixed(2)}) matches list ($${listTotal.toFixed(2)})`);
+      }
+    });
+  } finally {
+    settings.shopStore = savedStore;
+  }
+
+  // 5. Coles-only vs Woolworths-only should genuinely differ
+  if(storeTotals.c===storeTotals.w){
+    push("WARN", `Coles-only and Woolworths-only totals are identical ($${storeTotals.c.toFixed(2)}) for this week's plan — check by_store isn't duplicating one store's price. If §3 above also failed, re-run the generator first.`);
+  } else {
+    push("OK", `Coles-only ($${storeTotals.c.toFixed(2)}) and Woolworths-only ($${storeTotals.w.toFixed(2)}) totals genuinely differ`);
+  }
+
+  const anyFail = lines.some(l=>l.startsWith("[FAIL]"));
+  lines.push("");
+  lines.push(anyFail ? "Overall: FAIL — copy this and send it back" : "Overall: OK");
+
+  const out = lines.join("\n");
+  const box = document.getElementById("diagOutput");
+  box.textContent = out;
+  box.style.display = "block";
+  document.getElementById("diagCopyBtn").style.display = "inline-block";
+  window._lastDiagnostics = out;
+}
+function copyDiagnostics(){
+  if(!window._lastDiagnostics) return;
+  navigator.clipboard.writeText(window._lastDiagnostics).then(()=>showToast("Diagnostics copied")).catch(()=>{
+    try{ prompt("Copy this:", window._lastDiagnostics); }catch(_){}
+  });
 }
 
 /* ============================================================

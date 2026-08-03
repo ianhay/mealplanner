@@ -1,8 +1,8 @@
-/* The Docket — service worker.
+/* Meal Planner — service worker.
    Strategy: NETWORK-FIRST for the page and the weekly data, so an update is
    always shown when online (this app changes every Wednesday). The cache is
    only a fallback so it still opens offline. Bump CACHE to force a refresh. */
-const CACHE = 'mealplanner-v2';
+const CACHE = 'mealplanner-v3';
 const SHELL = [
   'index.html',
   'manifest.json',
