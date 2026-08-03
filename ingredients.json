@@ -1,0 +1,1291 @@
+{
+ "version": 1,
+ "ingredients": {
+  "whole_chicken": {
+   "label": "Whole chicken",
+   "category": "chicken",
+   "unit": "ea",
+   "baseline": 6.8,
+   "pantry": false,
+   "store_pref": "w",
+   "search_terms": [
+    "chicken",
+    "whole"
+   ],
+   "occurrences": 1
+  },
+  "wa_white_potatoes": {
+   "label": "Wa white potatoes",
+   "category": "produce",
+   "unit": "kg",
+   "baseline": 3.0,
+   "pantry": false,
+   "store_pref": "e",
+   "search_terms": [
+    "potatoes",
+    "white"
+   ],
+   "occurrences": 1
+  },
+  "carrots": {
+   "label": "Carrots",
+   "category": "produce",
+   "unit": "ea",
+   "baseline": 0.4,
+   "pantry": false,
+   "store_pref": "e",
+   "search_terms": [
+    "carrots"
+   ],
+   "occurrences": 1
+  },
+  "thyme_fresh": {
+   "label": "Thyme, fresh",
+   "category": "pantry",
+   "unit": "pack",
+   "baseline": 3.0,
+   "pantry": true,
+   "store_pref": "e",
+   "search_terms": [
+    "fresh",
+    "thyme"
+   ],
+   "occurrences": 3
+  },
+  "lamb_forequarter_chops": {
+   "label": "Lamb forequarter chops",
+   "category": "lamb",
+   "unit": "kg",
+   "baseline": 18.0,
+   "pantry": false,
+   "store_pref": "c",
+   "search_terms": [
+    "chops",
+    "forequarter",
+    "lamb"
+   ],
+   "occurrences": 1
+  },
+  "cherry_tomatoes": {
+   "label": "Cherry tomatoes",
+   "category": "produce",
+   "unit": "kg",
+   "baseline": 10.0,
+   "pantry": false,
+   "store_pref": "c",
+   "search_terms": [
+    "cherry",
+    "tomatoes"
+   ],
+   "occurrences": 3
+  },
+  "qukes_baby_cucumbers": {
+   "label": "Qukes baby cucumbers",
+   "category": "produce",
+   "unit": "kg",
+   "baseline": 12.0,
+   "pantry": false,
+   "store_pref": "w",
+   "search_terms": [
+    "baby",
+    "cucumbers",
+    "qukes"
+   ],
+   "occurrences": 1
+  },
+  "salmon_skin_on": {
+   "label": "Salmon skin-on",
+   "category": "seafood",
+   "unit": "kg",
+   "baseline": 34.0,
+   "pantry": false,
+   "store_pref": "c",
+   "search_terms": [
+    "salmon",
+    "skin"
+   ],
+   "occurrences": 1
+  },
+  "broccolini": {
+   "label": "Broccolini",
+   "category": "produce",
+   "unit": "ea",
+   "baseline": 2.3,
+   "pantry": false,
+   "store_pref": "w",
+   "search_terms": [
+    "broccolini"
+   ],
+   "occurrences": 1
+  },
+  "raw_banana_prawns": {
+   "label": "Raw banana prawns",
+   "category": "seafood",
+   "unit": "kg",
+   "baseline": 19.0,
+   "pantry": false,
+   "store_pref": "w",
+   "search_terms": [
+    "banana",
+    "prawns",
+    "raw"
+   ],
+   "occurrences": 4
+  },
+  "coles_light_soy": {
+   "label": "Coles light soy",
+   "category": "pantry",
+   "unit": "L",
+   "baseline": 6.0,
+   "pantry": true,
+   "store_pref": "c",
+   "search_terms": [
+    "coles",
+    "light",
+    "soy"
+   ],
+   "occurrences": 1
+  },
+  "ginger_knob": {
+   "label": "Ginger knob",
+   "category": "produce",
+   "unit": "pack",
+   "baseline": 1.2,
+   "pantry": false,
+   "store_pref": "e",
+   "search_terms": [
+    "ginger",
+    "knob"
+   ],
+   "occurrences": 8
+  },
+  "beef_oyster_blade": {
+   "label": "Beef oyster blade",
+   "category": "beef",
+   "unit": "kg",
+   "baseline": 24.0,
+   "pantry": false,
+   "store_pref": "c",
+   "search_terms": [
+    "beef",
+    "blade",
+    "oyster"
+   ],
+   "occurrences": 1
+  },
+  "woolworths_diced_tomatoes": {
+   "label": "Woolworths diced tomatoes",
+   "category": "produce",
+   "unit": "kg",
+   "baseline": 5.5,
+   "pantry": false,
+   "store_pref": "w",
+   "search_terms": [
+    "diced",
+    "tomatoes",
+    "woolworths"
+   ],
+   "occurrences": 1
+  },
+  "rosemary_fresh": {
+   "label": "Rosemary, fresh",
+   "category": "produce",
+   "unit": "pack",
+   "baseline": 3.0,
+   "pantry": false,
+   "store_pref": "e",
+   "search_terms": [
+    "fresh",
+    "rosemary"
+   ],
+   "occurrences": 1
+  },
+  "pork_sirloin_steak": {
+   "label": "Pork sirloin steak",
+   "category": "beef",
+   "unit": "kg",
+   "baseline": 20.0,
+   "pantry": false,
+   "store_pref": "c",
+   "search_terms": [
+    "pork",
+    "sirloin",
+    "steak"
+   ],
+   "occurrences": 1
+  },
+  "mccain_airfryer_chips": {
+   "label": "Mccain airfryer chips",
+   "category": "produce",
+   "unit": "kg",
+   "baseline": 3.67,
+   "pantry": false,
+   "store_pref": "c",
+   "search_terms": [
+    "airfryer",
+    "chips",
+    "mccain"
+   ],
+   "occurrences": 1
+  },
+  "rocket": {
+   "label": "Rocket",
+   "category": "produce",
+   "unit": "kg",
+   "baseline": 25.0,
+   "pantry": false,
+   "store_pref": "e",
+   "search_terms": [
+    "rocket"
+   ],
+   "occurrences": 1
+  },
+  "thai_red_curry_paste_jar": {
+   "label": "Thai red curry paste jar",
+   "category": "pantry",
+   "unit": "pack",
+   "baseline": 4.5,
+   "pantry": true,
+   "store_pref": "e",
+   "search_terms": [
+    "curry",
+    "jar",
+    "paste",
+    "red",
+    "thai"
+   ],
+   "occurrences": 1
+  },
+  "coconut_milk": {
+   "label": "Coconut milk",
+   "category": "produce",
+   "unit": "L",
+   "baseline": 5.5,
+   "pantry": false,
+   "store_pref": "e",
+   "search_terms": [
+    "coconut",
+    "milk"
+   ],
+   "occurrences": 9
+  },
+  "bok_choy": {
+   "label": "Bok choy",
+   "category": "produce",
+   "unit": "ea",
+   "baseline": 1.5,
+   "pantry": false,
+   "store_pref": "e",
+   "search_terms": [
+    "bok",
+    "choy"
+   ],
+   "occurrences": 11
+  },
+  "lime": {
+   "label": "Lime",
+   "category": "produce",
+   "unit": "ea",
+   "baseline": 0.8,
+   "pantry": false,
+   "store_pref": "e",
+   "search_terms": [
+    "lime"
+   ],
+   "occurrences": 8
+  },
+  "laksa_paste_jar": {
+   "label": "Laksa paste jar",
+   "category": "pantry",
+   "unit": "pack",
+   "baseline": 5.5,
+   "pantry": true,
+   "store_pref": "e",
+   "search_terms": [
+    "jar",
+    "laksa",
+    "paste"
+   ],
+   "occurrences": 1
+  },
+  "rice_noodles": {
+   "label": "Rice noodles",
+   "category": "produce",
+   "unit": "kg",
+   "baseline": 11.2,
+   "pantry": false,
+   "store_pref": "e",
+   "search_terms": [
+    "noodles",
+    "rice"
+   ],
+   "occurrences": 4
+  },
+  "free_range_eggs": {
+   "label": "Free-range eggs",
+   "category": "egg",
+   "unit": "ea",
+   "baseline": 0.7,
+   "pantry": false,
+   "store_pref": "e",
+   "search_terms": [
+    "eggs",
+    "free",
+    "range"
+   ],
+   "occurrences": 6
+  },
+  "chicken_mince": {
+   "label": "Chicken mince",
+   "category": "chicken",
+   "unit": "kg",
+   "baseline": 8.0,
+   "pantry": false,
+   "store_pref": "c",
+   "search_terms": [
+    "chicken",
+    "mince"
+   ],
+   "occurrences": 1
+  },
+  "thai_basil_bunch": {
+   "label": "Thai basil bunch",
+   "category": "produce",
+   "unit": "pack",
+   "baseline": 3.5,
+   "pantry": false,
+   "store_pref": "e",
+   "search_terms": [
+    "basil",
+    "bunch",
+    "thai"
+   ],
+   "occurrences": 2
+  },
+  "chicken_breast": {
+   "label": "Chicken breast",
+   "category": "chicken",
+   "unit": "kg",
+   "baseline": 16.0,
+   "pantry": false,
+   "store_pref": "c",
+   "search_terms": [
+    "breast",
+    "chicken"
+   ],
+   "occurrences": 8
+  },
+  "orange": {
+   "label": "Orange",
+   "category": "produce",
+   "unit": "pack",
+   "baseline": 0.88,
+   "pantry": false,
+   "store_pref": "e",
+   "search_terms": [
+    "orange"
+   ],
+   "occurrences": 1
+  },
+  "chicken_thigh_fillets": {
+   "label": "Chicken thigh fillets",
+   "category": "chicken",
+   "unit": "kg",
+   "baseline": 18.67,
+   "pantry": false,
+   "store_pref": "c",
+   "search_terms": [
+    "chicken",
+    "fillets",
+    "thigh"
+   ],
+   "occurrences": 1
+  },
+  "peanut_butter": {
+   "label": "Peanut butter",
+   "category": "produce",
+   "unit": "pack",
+   "baseline": 0,
+   "pantry": false,
+   "store_pref": "e",
+   "search_terms": [
+    "butter",
+    "peanut"
+   ],
+   "occurrences": 3
+  },
+  "salmon_portions": {
+   "label": "Salmon portions",
+   "category": "seafood",
+   "unit": "kg",
+   "baseline": 36.0,
+   "pantry": false,
+   "store_pref": "w",
+   "search_terms": [
+    "portions",
+    "salmon"
+   ],
+   "occurrences": 2
+  },
+  "white_miso_paste_jar": {
+   "label": "White miso paste jar",
+   "category": "pantry",
+   "unit": "pack",
+   "baseline": 6.0,
+   "pantry": true,
+   "store_pref": "e",
+   "search_terms": [
+    "jar",
+    "miso",
+    "paste",
+    "white"
+   ],
+   "occurrences": 1
+  },
+  "tom_yum_paste_jar": {
+   "label": "Tom yum paste jar",
+   "category": "pantry",
+   "unit": "pack",
+   "baseline": 4.5,
+   "pantry": true,
+   "store_pref": "e",
+   "search_terms": [
+    "jar",
+    "paste",
+    "tom",
+    "yum"
+   ],
+   "occurrences": 1
+  },
+  "tandoori_paste_jar": {
+   "label": "Tandoori paste jar",
+   "category": "pantry",
+   "unit": "pack",
+   "baseline": 5.0,
+   "pantry": true,
+   "store_pref": "e",
+   "search_terms": [
+    "jar",
+    "paste",
+    "tandoori"
+   ],
+   "occurrences": 1
+  },
+  "lactose_free_yoghurt": {
+   "label": "Lactose-free yoghurt",
+   "category": "produce",
+   "unit": "kg",
+   "baseline": 9.0,
+   "pantry": false,
+   "store_pref": "e",
+   "search_terms": [
+    "free",
+    "lactose",
+    "yoghurt"
+   ],
+   "occurrences": 1
+  },
+  "cucumber": {
+   "label": "Cucumber",
+   "category": "produce",
+   "unit": "ea",
+   "baseline": 1.5,
+   "pantry": false,
+   "store_pref": "e",
+   "search_terms": [
+    "cucumber"
+   ],
+   "occurrences": 3
+  },
+  "beef_stew_meat": {
+   "label": "Beef stew meat",
+   "category": "beef",
+   "unit": "kg",
+   "baseline": 18.0,
+   "pantry": false,
+   "store_pref": "c",
+   "search_terms": [
+    "beef",
+    "meat",
+    "stew"
+   ],
+   "occurrences": 1
+  },
+  "massaman_paste_jar": {
+   "label": "Massaman paste jar",
+   "category": "pantry",
+   "unit": "pack",
+   "baseline": 5.5,
+   "pantry": true,
+   "store_pref": "e",
+   "search_terms": [
+    "jar",
+    "massaman",
+    "paste"
+   ],
+   "occurrences": 1
+  },
+  "tamarind_paste": {
+   "label": "Tamarind paste",
+   "category": "pantry",
+   "unit": "pack",
+   "baseline": 3.5,
+   "pantry": true,
+   "store_pref": "e",
+   "search_terms": [
+    "paste",
+    "tamarind"
+   ],
+   "occurrences": 1
+  },
+  "luv_a_duck_peking_duck_legs": {
+   "label": "Luv-a-duck peking duck legs",
+   "category": "duck",
+   "unit": "kg",
+   "baseline": 15.38,
+   "pantry": false,
+   "store_pref": "w",
+   "search_terms": [
+    "duck",
+    "legs",
+    "luv",
+    "peking"
+   ],
+   "occurrences": 1
+  },
+  "wa_navel_oranges": {
+   "label": "Wa navel oranges",
+   "category": "produce",
+   "unit": "ea",
+   "baseline": 0.88,
+   "pantry": false,
+   "store_pref": "e",
+   "search_terms": [
+    "navel",
+    "oranges"
+   ],
+   "occurrences": 1
+  },
+  "potatoes": {
+   "label": "Potatoes",
+   "category": "produce",
+   "unit": "pack",
+   "baseline": 0,
+   "pantry": false,
+   "store_pref": "e",
+   "search_terms": [
+    "potatoes"
+   ],
+   "occurrences": 3
+  },
+  "kb_s_salt_pepper_squid": {
+   "label": "Kb's salt & pepper squid",
+   "category": "seafood",
+   "unit": "kg",
+   "baseline": 16.67,
+   "pantry": false,
+   "store_pref": "c",
+   "search_terms": [
+    "pepper",
+    "salt",
+    "squid"
+   ],
+   "occurrences": 1
+  },
+  "sirena_tuna_in_oil": {
+   "label": "Sirena tuna in oil",
+   "category": "seafood",
+   "unit": "kg",
+   "baseline": 20.0,
+   "pantry": false,
+   "store_pref": "c",
+   "search_terms": [
+    "oil",
+    "sirena",
+    "tuna"
+   ],
+   "occurrences": 1
+  },
+  "pasta": {
+   "label": "Pasta",
+   "category": "produce",
+   "unit": "kg",
+   "baseline": 2.0,
+   "pantry": false,
+   "store_pref": "w",
+   "search_terms": [
+    "pasta"
+   ],
+   "occurrences": 1
+  },
+  "kalamata_olives": {
+   "label": "Kalamata olives",
+   "category": "produce",
+   "unit": "kg",
+   "baseline": 17.5,
+   "pantry": false,
+   "store_pref": "e",
+   "search_terms": [
+    "kalamata",
+    "olives"
+   ],
+   "occurrences": 2
+  },
+  "d_orsogna_shortcut_bacon": {
+   "label": "D'orsogna shortcut bacon",
+   "category": "pork",
+   "unit": "kg",
+   "baseline": 13.0,
+   "pantry": false,
+   "store_pref": "w",
+   "search_terms": [
+    "bacon",
+    "orsogna",
+    "shortcut"
+   ],
+   "occurrences": 1
+  },
+  "chicken_drumsticks": {
+   "label": "Chicken drumsticks",
+   "category": "chicken",
+   "unit": "kg",
+   "baseline": 3.5,
+   "pantry": false,
+   "store_pref": "c",
+   "search_terms": [
+    "chicken",
+    "drumsticks"
+   ],
+   "occurrences": 1
+  },
+  "wa_sweet_corn": {
+   "label": "Wa sweet corn",
+   "category": "produce",
+   "unit": "ea",
+   "baseline": 1.0,
+   "pantry": false,
+   "store_pref": "c",
+   "search_terms": [
+    "corn",
+    "sweet"
+   ],
+   "occurrences": 1
+  },
+  "birds_eye_oven_bake_fish": {
+   "label": "Birds eye oven bake fish",
+   "category": "seafood",
+   "unit": "kg",
+   "baseline": 14.12,
+   "pantry": false,
+   "store_pref": "w",
+   "search_terms": [
+    "bake",
+    "birds",
+    "eye",
+    "fish",
+    "oven"
+   ],
+   "occurrences": 1
+  },
+  "birds_eye_steam_fresh_veg": {
+   "label": "Birds eye steam fresh veg",
+   "category": "produce",
+   "unit": "kg",
+   "baseline": 8.0,
+   "pantry": false,
+   "store_pref": "w",
+   "search_terms": [
+    "birds",
+    "eye",
+    "fresh",
+    "steam",
+    "veg"
+   ],
+   "occurrences": 1
+  },
+  "gold_kiwifruit": {
+   "label": "Gold kiwifruit",
+   "category": "produce",
+   "unit": "ea",
+   "baseline": 1.62,
+   "pantry": false,
+   "store_pref": "c",
+   "search_terms": [
+    "gold",
+    "kiwifruit"
+   ],
+   "occurrences": 1
+  },
+  "beef_strips": {
+   "label": "Beef strips",
+   "category": "beef",
+   "unit": "kg",
+   "baseline": 24.0,
+   "pantry": false,
+   "store_pref": "c",
+   "search_terms": [
+    "beef",
+    "strips"
+   ],
+   "occurrences": 1
+  },
+  "red_capsicum": {
+   "label": "Red capsicum",
+   "category": "produce",
+   "unit": "ea",
+   "baseline": 0.9,
+   "pantry": false,
+   "store_pref": "e",
+   "search_terms": [
+    "capsicum",
+    "red"
+   ],
+   "occurrences": 1
+  },
+  "pork_shoulder": {
+   "label": "Pork shoulder",
+   "category": "pork",
+   "unit": "kg",
+   "baseline": 18.0,
+   "pantry": false,
+   "store_pref": "w",
+   "search_terms": [
+    "pork",
+    "shoulder"
+   ],
+   "occurrences": 1
+  },
+  "granny_smith_apples": {
+   "label": "Granny smith apples",
+   "category": "produce",
+   "unit": "ea",
+   "baseline": 0.5,
+   "pantry": false,
+   "store_pref": "e",
+   "search_terms": [
+    "apples",
+    "granny",
+    "smith"
+   ],
+   "occurrences": 2
+  },
+  "firm_tofu": {
+   "label": "Firm tofu",
+   "category": "legume",
+   "unit": "kg",
+   "baseline": 8.75,
+   "pantry": false,
+   "store_pref": "w",
+   "search_terms": [
+    "firm",
+    "tofu"
+   ],
+   "occurrences": 1
+  },
+  "lemongrass_paste_jar": {
+   "label": "Lemongrass paste jar",
+   "category": "pantry",
+   "unit": "pack",
+   "baseline": 4.0,
+   "pantry": true,
+   "store_pref": "e",
+   "search_terms": [
+    "jar",
+    "lemongrass",
+    "paste"
+   ],
+   "occurrences": 1
+  },
+  "beef_stir_fry_strips": {
+   "label": "Beef stir-fry strips",
+   "category": "beef",
+   "unit": "kg",
+   "baseline": 24.0,
+   "pantry": false,
+   "store_pref": "c",
+   "search_terms": [
+    "beef",
+    "fry",
+    "stir",
+    "strips"
+   ],
+   "occurrences": 2
+  },
+  "sesame_oil": {
+   "label": "Sesame oil",
+   "category": "pantry",
+   "unit": "pack",
+   "baseline": 0.0,
+   "pantry": true,
+   "store_pref": "e",
+   "search_terms": [
+    "oil",
+    "sesame"
+   ],
+   "occurrences": 2
+  },
+  "chicken_thigh_chunks": {
+   "label": "Chicken thigh chunks",
+   "category": "chicken",
+   "unit": "kg",
+   "baseline": 18.67,
+   "pantry": false,
+   "store_pref": "c",
+   "search_terms": [
+    "chicken",
+    "chunks",
+    "thigh"
+   ],
+   "occurrences": 1
+  },
+  "squid_tubes": {
+   "label": "Squid tubes",
+   "category": "seafood",
+   "unit": "kg",
+   "baseline": 20.0,
+   "pantry": false,
+   "store_pref": "w",
+   "search_terms": [
+    "squid",
+    "tubes"
+   ],
+   "occurrences": 1
+  },
+  "green_curry_paste_jar": {
+   "label": "Green curry paste jar",
+   "category": "pantry",
+   "unit": "pack",
+   "baseline": 5.5,
+   "pantry": true,
+   "store_pref": "e",
+   "search_terms": [
+    "curry",
+    "green",
+    "jar",
+    "paste"
+   ],
+   "occurrences": 1
+  },
+  "beef_chuck": {
+   "label": "Beef chuck",
+   "category": "beef",
+   "unit": "kg",
+   "baseline": 18.0,
+   "pantry": false,
+   "store_pref": "c",
+   "search_terms": [
+    "beef",
+    "chuck"
+   ],
+   "occurrences": 1
+  },
+  "red_wine": {
+   "label": "Red wine",
+   "category": "produce",
+   "unit": "L",
+   "baseline": 13.33,
+   "pantry": false,
+   "store_pref": "e",
+   "search_terms": [
+    "red",
+    "wine"
+   ],
+   "occurrences": 1
+  },
+  "beef_stock": {
+   "label": "Beef stock",
+   "category": "beef",
+   "unit": "L",
+   "baseline": 7.5,
+   "pantry": true,
+   "store_pref": "e",
+   "search_terms": [
+    "beef",
+    "stock"
+   ],
+   "occurrences": 2
+  },
+  "fish_fillets": {
+   "label": "Fish fillets",
+   "category": "seafood",
+   "unit": "kg",
+   "baseline": 24.0,
+   "pantry": false,
+   "store_pref": "c",
+   "search_terms": [
+    "fillets",
+    "fish"
+   ],
+   "occurrences": 1
+  },
+  "butter_lettuce_head": {
+   "label": "Butter lettuce head",
+   "category": "produce",
+   "unit": "pack",
+   "baseline": 3.5,
+   "pantry": false,
+   "store_pref": "e",
+   "search_terms": [
+    "butter",
+    "head",
+    "lettuce"
+   ],
+   "occurrences": 2
+  },
+  "lf_mayo": {
+   "label": "Lf mayo",
+   "category": "produce",
+   "unit": "pack",
+   "baseline": 0,
+   "pantry": false,
+   "store_pref": "e",
+   "search_terms": [
+    "mayo"
+   ],
+   "occurrences": 1
+  },
+  "rotisserie_chicken_whole": {
+   "label": "Rotisserie chicken whole",
+   "category": "chicken",
+   "unit": "pack",
+   "baseline": 8.0,
+   "pantry": false,
+   "store_pref": "w",
+   "search_terms": [
+    "chicken",
+    "rotisserie",
+    "whole"
+   ],
+   "occurrences": 1
+  },
+  "pork_belly": {
+   "label": "Pork belly",
+   "category": "pork",
+   "unit": "kg",
+   "baseline": 23.0,
+   "pantry": false,
+   "store_pref": "w",
+   "search_terms": [
+    "belly",
+    "pork"
+   ],
+   "occurrences": 1
+  },
+  "rice_ramen_noodles": {
+   "label": "Rice ramen noodles",
+   "category": "produce",
+   "unit": "kg",
+   "baseline": 11.2,
+   "pantry": false,
+   "store_pref": "e",
+   "search_terms": [
+    "noodles",
+    "ramen",
+    "rice"
+   ],
+   "occurrences": 1
+  },
+  "white_miso_paste": {
+   "label": "White miso paste",
+   "category": "pantry",
+   "unit": "pack",
+   "baseline": 0,
+   "pantry": true,
+   "store_pref": "e",
+   "search_terms": [
+    "miso",
+    "paste",
+    "white"
+   ],
+   "occurrences": 1
+  },
+  "garam_masala": {
+   "label": "Garam masala",
+   "category": "produce",
+   "unit": "pack",
+   "baseline": 0,
+   "pantry": false,
+   "store_pref": "e",
+   "search_terms": [
+    "garam",
+    "masala"
+   ],
+   "occurrences": 1
+  },
+  "tomato_paste": {
+   "label": "Tomato paste",
+   "category": "pantry",
+   "unit": "pack",
+   "baseline": 3.5,
+   "pantry": true,
+   "store_pref": "e",
+   "search_terms": [
+    "paste",
+    "tomato"
+   ],
+   "occurrences": 1
+  },
+  "lactose_free_cream": {
+   "label": "Lactose-free cream",
+   "category": "produce",
+   "unit": "L",
+   "baseline": 16.0,
+   "pantry": false,
+   "store_pref": "e",
+   "search_terms": [
+    "cream",
+    "free",
+    "lactose"
+   ],
+   "occurrences": 1
+  },
+  "broccoli": {
+   "label": "Broccoli",
+   "category": "produce",
+   "unit": "ea",
+   "baseline": 3.5,
+   "pantry": false,
+   "store_pref": "e",
+   "search_terms": [
+    "broccoli"
+   ],
+   "occurrences": 1
+  },
+  "red_lentils": {
+   "label": "Red lentils",
+   "category": "legume",
+   "unit": "kg",
+   "baseline": 0.0,
+   "pantry": false,
+   "store_pref": "e",
+   "search_terms": [
+    "lentils",
+    "red"
+   ],
+   "occurrences": 1
+  },
+  "turmeric": {
+   "label": "Turmeric",
+   "category": "produce",
+   "unit": "pack",
+   "baseline": 0,
+   "pantry": false,
+   "store_pref": "e",
+   "search_terms": [
+    "turmeric"
+   ],
+   "occurrences": 1
+  },
+  "chicken_thighs": {
+   "label": "Chicken thighs",
+   "category": "chicken",
+   "unit": "kg",
+   "baseline": 18.67,
+   "pantry": false,
+   "store_pref": "c",
+   "search_terms": [
+    "chicken",
+    "thighs"
+   ],
+   "occurrences": 1
+  },
+  "frozen_peas": {
+   "label": "Frozen peas",
+   "category": "produce",
+   "unit": "kg",
+   "baseline": 13.33,
+   "pantry": false,
+   "store_pref": "e",
+   "search_terms": [
+    "frozen",
+    "peas"
+   ],
+   "occurrences": 1
+  },
+  "flathead_or_bream_fillets": {
+   "label": "Flathead or bream fillets",
+   "category": "seafood",
+   "unit": "kg",
+   "baseline": 24.0,
+   "pantry": false,
+   "store_pref": "c",
+   "search_terms": [
+    "bream",
+    "fillets",
+    "flathead"
+   ],
+   "occurrences": 1
+  },
+  "dill_or_thyme_fresh": {
+   "label": "Dill or thyme, fresh",
+   "category": "pantry",
+   "unit": "pack",
+   "baseline": 3.0,
+   "pantry": true,
+   "store_pref": "e",
+   "search_terms": [
+    "dill",
+    "fresh",
+    "thyme"
+   ],
+   "occurrences": 1
+  },
+  "lemon": {
+   "label": "Lemon",
+   "category": "produce",
+   "unit": "ea",
+   "baseline": 0.7,
+   "pantry": false,
+   "store_pref": "e",
+   "search_terms": [
+    "lemon"
+   ],
+   "occurrences": 1
+  },
+  "canned_chickpeas": {
+   "label": "Canned chickpeas",
+   "category": "legume",
+   "unit": "kg",
+   "baseline": 4.5,
+   "pantry": false,
+   "store_pref": "e",
+   "search_terms": [
+    "canned",
+    "chickpeas"
+   ],
+   "occurrences": 1
+  },
+  "curry_paste_jar": {
+   "label": "Curry paste jar",
+   "category": "pantry",
+   "unit": "pack",
+   "baseline": 5.0,
+   "pantry": true,
+   "store_pref": "e",
+   "search_terms": [
+    "curry",
+    "jar",
+    "paste"
+   ],
+   "occurrences": 1
+  },
+  "fresh_spinach": {
+   "label": "Fresh spinach",
+   "category": "produce",
+   "unit": "kg",
+   "baseline": 20.0,
+   "pantry": false,
+   "store_pref": "e",
+   "search_terms": [
+    "fresh",
+    "spinach"
+   ],
+   "occurrences": 1
+  },
+  "pork_chops": {
+   "label": "Pork chops",
+   "category": "pork",
+   "unit": "kg",
+   "baseline": 19.0,
+   "pantry": false,
+   "store_pref": "w",
+   "search_terms": [
+    "chops",
+    "pork"
+   ],
+   "occurrences": 1
+  },
+  "apple_cider": {
+   "label": "Apple cider",
+   "category": "produce",
+   "unit": "L",
+   "baseline": 17.5,
+   "pantry": false,
+   "store_pref": "e",
+   "search_terms": [
+    "apple",
+    "cider"
+   ],
+   "occurrences": 1
+  },
+  "fresh_mussels": {
+   "label": "Fresh mussels",
+   "category": "seafood",
+   "unit": "kg",
+   "baseline": 20.0,
+   "pantry": false,
+   "store_pref": "w",
+   "search_terms": [
+    "fresh",
+    "mussels"
+   ],
+   "occurrences": 1
+  },
+  "white_wine": {
+   "label": "White wine",
+   "category": "produce",
+   "unit": "L",
+   "baseline": 16.0,
+   "pantry": false,
+   "store_pref": "e",
+   "search_terms": [
+    "white",
+    "wine"
+   ],
+   "occurrences": 1
+  },
+  "parsley_thyme_fresh": {
+   "label": "Parsley & thyme fresh",
+   "category": "pantry",
+   "unit": "pack",
+   "baseline": 6.0,
+   "pantry": true,
+   "store_pref": "e",
+   "search_terms": [
+    "fresh",
+    "parsley",
+    "thyme"
+   ],
+   "occurrences": 1
+  },
+  "ground_beef": {
+   "label": "Ground beef",
+   "category": "beef",
+   "unit": "kg",
+   "baseline": 18.0,
+   "pantry": false,
+   "store_pref": "c",
+   "search_terms": [
+    "beef",
+    "ground"
+   ],
+   "occurrences": 1
+  },
+  "water_chestnuts": {
+   "label": "Water chestnuts",
+   "category": "produce",
+   "unit": "kg",
+   "baseline": 11.0,
+   "pantry": false,
+   "store_pref": "e",
+   "search_terms": [
+    "chestnuts",
+    "water"
+   ],
+   "occurrences": 1
+  },
+  "cod_fillets": {
+   "label": "Cod fillets",
+   "category": "seafood",
+   "unit": "kg",
+   "baseline": 24.0,
+   "pantry": false,
+   "store_pref": "w",
+   "search_terms": [
+    "cod",
+    "fillets"
+   ],
+   "occurrences": 1
+  }
+ }
+}

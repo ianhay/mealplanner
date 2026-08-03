@@ -1,0 +1,2451 @@
+{
+ "version": 1,
+ "recipes": [
+  {
+   "id": "roast-chicken-root-veg",
+   "name": "roast chicken & root veg",
+   "desc": "Steggles whole bird on special. Lemon & thyme in the cavity, no allium stuffing.",
+   "serves": 2,
+   "diet": {
+    "low_fodmap": true,
+    "gluten_free": true,
+    "lactose_free": true
+   },
+   "diet_raw": "Low FODMAP \u00b7 LF \u00b7 GF",
+   "hero": "whole_chicken",
+   "nut": {
+    "kj": 2700,
+    "prot": 48,
+    "fib": 7,
+    "carb": 35
+   },
+   "waste": "Carcass \u2192 onion-free stock; leftover meat \u2192 lunches; potato bag shared 3 meals",
+   "steps": [
+    "Oven 190\u00b0C. Lemon + thyme in the cavity, oil + salt the skin.",
+    "Roast ~1.7kg bird 75\u201380 min over potatoes + carrots, baste twice.",
+    "Rest 15 min under foil. Pan juices + cornflour = GF gravy."
+   ],
+   "ingredients": [
+    {
+     "ing": "whole_chicken",
+     "qty": 1,
+     "unit": "ea",
+     "role": "hero",
+     "note": "carcass \u2192 stock"
+    },
+    {
+     "ing": "wa_white_potatoes",
+     "qty": 2000.0,
+     "unit": "g",
+     "role": "shared",
+     "note": "shared 3 meals"
+    },
+    {
+     "ing": "carrots",
+     "qty": 4.0,
+     "unit": "ea",
+     "role": "shared",
+     "note": "half now, half for braise"
+    },
+    {
+     "ing": "thyme_fresh",
+     "qty": null,
+     "unit": "pack",
+     "role": "pantry",
+     "note": "dries well"
+    }
+   ]
+  },
+  {
+   "id": "lamb-chops-salad",
+   "name": "Lamb forequarter chops, warm potato & cherry tom salad",
+   "desc": "Coles forequarter chops $6/kg off. Lemon, dried oregano, garlic-infused oil \u2014 Greek without the alliums.",
+   "serves": 2,
+   "diet": {
+    "low_fodmap": true,
+    "gluten_free": true,
+    "lactose_free": true
+   },
+   "diet_raw": "Low FODMAP \u00b7 LF \u00b7 GF",
+   "hero": "lamb_forequarter_chops",
+   "nut": {
+    "kj": 2620,
+    "prot": 39,
+    "fib": 5,
+    "carb": 24
+   },
+   "waste": "Potatoes from shared bag; oregano is dry pantry spice",
+   "steps": [
+    "Marinate ~700g chops: lemon juice, dried oregano, garlic-infused oil, 20 min.",
+    "Grill or hot pan ~4 min a side (forequarter likes medium); rest 5.",
+    "Boil potatoes, halve warm, toss with oil, lemon, cherry toms + qukes."
+   ],
+   "ingredients": [
+    {
+     "ing": "lamb_forequarter_chops",
+     "qty": 700.0,
+     "unit": "g",
+     "role": "hero",
+     "note": null
+    },
+    {
+     "ing": "cherry_tomatoes",
+     "qty": 250.0,
+     "unit": "g",
+     "role": "scales",
+     "note": null
+    },
+    {
+     "ing": "qukes_baby_cucumbers",
+     "qty": 250.0,
+     "unit": "g",
+     "role": "shared",
+     "note": "half here, half squid night"
+    }
+   ]
+  },
+  {
+   "id": "salmon-broccolini-mash",
+   "name": "Salmon, broccolini & smashed potatoes",
+   "desc": "Tassie salmon skin-on $4/kg off at Coles. Broccolini $2.30 a bunch.",
+   "serves": 2,
+   "diet": {
+    "low_fodmap": true,
+    "gluten_free": true,
+    "lactose_free": true
+   },
+   "diet_raw": "Low FODMAP \u00b7 LF \u00b7 GF",
+   "hero": "salmon_skin_on",
+   "nut": {
+    "kj": 2420,
+    "prot": 38,
+    "fib": 6,
+    "carb": 26
+   },
+   "waste": "Potatoes from shared bag; broccolini stems \u2192 stir-fry",
+   "steps": [
+    "Boil potatoes 12 min, smash, crisp in olive oil.",
+    "Pan-sear 2 salmon portions (~400g) skin-down 4 min, flip 2 min.",
+    "Char broccolini in same pan, splash soy + lemon."
+   ],
+   "ingredients": [
+    {
+     "ing": "salmon_skin_on",
+     "qty": 400.0,
+     "unit": "g",
+     "role": "hero",
+     "note": null
+    },
+    {
+     "ing": "broccolini",
+     "qty": 2.0,
+     "unit": "ea",
+     "role": "scales",
+     "note": "stems \u2192 stir-fry"
+    }
+   ]
+  },
+  {
+   "id": "prawn-ginger-stir-fry",
+   "name": "Prawn & ginger stir-fry on rice",
+   "desc": "Karumba raw banana prawns Down Down $19/kg. Ginger, broccolini stems, FODMAP-safe soy.",
+   "serves": 2,
+   "diet": {
+    "low_fodmap": true,
+    "gluten_free": true,
+    "lactose_free": true
+   },
+   "diet_raw": "Low FODMAP \u00b7 LF \u00b7 GF option",
+   "hero": "raw_banana_prawns",
+   "nut": {
+    "kj": 2080,
+    "prot": 34,
+    "fib": 4,
+    "carb": 52
+   },
+   "waste": "Uses broccolini stems + spring-onion greens from other meals",
+   "steps": [
+    "Peel 400g prawns; pat dry. Rice on.",
+    "Wok on high: ginger + broccolini stems 1 min in garlic-infused oil.",
+    "Prawns 90 sec, soy + rice vinegar + white pepper, spring-onion greens off heat."
+   ],
+   "ingredients": [
+    {
+     "ing": "raw_banana_prawns",
+     "qty": 400.0,
+     "unit": "g",
+     "role": "hero",
+     "note": null
+    },
+    {
+     "ing": "coles_light_soy",
+     "qty": 500.0,
+     "unit": "ml",
+     "role": "pantry",
+     "note": "pantry \u2014 lasts months"
+    },
+    {
+     "ing": "ginger_knob",
+     "qty": null,
+     "unit": "pack",
+     "role": "scales",
+     "note": "keeps weeks"
+    }
+   ]
+  },
+  {
+   "id": "beef-braise-mash",
+   "name": "Slow-braised oyster blade & mash",
+   "desc": "Coles oyster blade $3 off \u2014 the right cut for a winter braise. Woolies diced tomatoes $1.10/can.",
+   "serves": 2,
+   "diet": {
+    "low_fodmap": true,
+    "gluten_free": true,
+    "lactose_free": true
+   },
+   "diet_raw": "Low FODMAP \u00b7 LF \u00b7 GF",
+   "hero": "beef_oyster_blade",
+   "nut": {
+    "kj": 2540,
+    "prot": 44,
+    "fib": 6,
+    "carb": 30
+   },
+   "waste": "Uses carrot-bag remainder; both tomato cans fully used; freezes well",
+   "steps": [
+    "Brown 500g oyster blade chunks hard in batches; set aside.",
+    "Carrots + 2 cans diced tomatoes + 1 cup water + rosemary + balsamic; beef back in.",
+    "Lid on, 160\u00b0C oven 2.5 hrs. Mash potatoes with olive oil."
+   ],
+   "ingredients": [
+    {
+     "ing": "beef_oyster_blade",
+     "qty": 500.0,
+     "unit": "g",
+     "role": "hero",
+     "note": null
+    },
+    {
+     "ing": "woolworths_diced_tomatoes",
+     "qty": 400.0,
+     "unit": "g",
+     "role": "scales",
+     "note": "both cans used"
+    },
+    {
+     "ing": "rosemary_fresh",
+     "qty": null,
+     "unit": "pack",
+     "role": "scales",
+     "note": "dries well"
+    }
+   ]
+  },
+  {
+   "id": "pork-chips-rocket",
+   "name": "Pork sirloin, air-fryer chips & rocket",
+   "desc": "Coles pork sirloin $2.50 off and McCain air-fryer chips half price \u2014 pub dinner at home.",
+   "serves": 2,
+   "diet": {
+    "low_fodmap": true,
+    "gluten_free": true,
+    "lactose_free": true
+   },
+   "diet_raw": "Low FODMAP \u00b7 LF \u00b7 GF",
+   "hero": "pork_sirloin_steak",
+   "nut": {
+    "kj": 2760,
+    "prot": 42,
+    "fib": 4,
+    "carb": 40
+   },
+   "waste": "Chips live in freezer; rocket remainder \u2192 lunches",
+   "steps": [
+    "Chips into air fryer per pack (~18 min).",
+    "Pork steaks: salt, hot pan 3\u20134 min a side, rest 5 under foil.",
+    "Rocket + lemon + olive oil + parmesan if you have it."
+   ],
+   "ingredients": [
+    {
+     "ing": "pork_sirloin_steak",
+     "qty": 500.0,
+     "unit": "g",
+     "role": "hero",
+     "note": null
+    },
+    {
+     "ing": "mccain_airfryer_chips",
+     "qty": 750.0,
+     "unit": "g",
+     "role": "scales",
+     "note": "freezer \u2014 keeps"
+    },
+    {
+     "ing": "rocket",
+     "qty": 120.0,
+     "unit": "g",
+     "role": "scales",
+     "note": "rest \u2192 lunches"
+    }
+   ]
+  },
+  {
+   "id": "thai-red-curry-prawns",
+   "name": "Thai red curry prawns & jasmine rice",
+   "desc": "Prawns on special. Thai curry paste (no garlic/onion added), coconut milk, bok choy \u2014 20 min.",
+   "serves": 2,
+   "diet": {
+    "low_fodmap": true,
+    "gluten_free": true,
+    "lactose_free": true
+   },
+   "diet_raw": "Low FODMAP \u00b7 LF \u00b7 GF",
+   "hero": "raw_banana_prawns",
+   "nut": {
+    "kj": 2340,
+    "prot": 35,
+    "fib": 5,
+    "carb": 48
+   },
+   "waste": "Curry paste jar lasts weeks; coconut milk fully used; bok choy shared with stir-fries",
+   "steps": [
+    "Heat 2 tbsp curry paste in wok with garlic-infused oil 1 min.",
+    "400mL coconut milk + 300g prawns + bok choy, simmer 8 min.",
+    "Lime juice, white pepper, Thai basil if available. Rice on the side."
+   ],
+   "ingredients": [
+    {
+     "ing": "raw_banana_prawns",
+     "qty": 400.0,
+     "unit": "g",
+     "role": "hero",
+     "note": null
+    },
+    {
+     "ing": "thai_red_curry_paste_jar",
+     "qty": null,
+     "unit": "pack",
+     "role": "pantry",
+     "note": "lasts weeks"
+    },
+    {
+     "ing": "coconut_milk",
+     "qty": 400.0,
+     "unit": "ml",
+     "role": "scales",
+     "note": "whole can used"
+    },
+    {
+     "ing": "bok_choy",
+     "qty": 2.0,
+     "unit": "ea",
+     "role": "shared",
+     "note": "shared with stir-fries"
+    },
+    {
+     "ing": "lime",
+     "qty": 2.0,
+     "unit": "ea",
+     "role": "scales",
+     "note": null
+    }
+   ]
+  },
+  {
+   "id": "laksa-rice-noodles",
+   "name": "Laksa with rice noodles & poached eggs",
+   "desc": "Laksa paste + coconut milk broth, prawns or chicken, rice noodles. Adapted for low FODMAP (no shallots).",
+   "serves": 2,
+   "diet": {
+    "low_fodmap": true,
+    "gluten_free": true,
+    "lactose_free": true
+   },
+   "diet_raw": "Low FODMAP \u00b7 LF \u00b7 GF noodles",
+   "hero": "raw_banana_prawns",
+   "nut": {
+    "kj": 2520,
+    "prot": 32,
+    "fib": 6,
+    "carb": 62
+   },
+   "waste": "Paste jar lasts; coconut milk fully used; eggs double as breakfasts",
+   "steps": [
+    "Boil rice noodles per pack; drain.",
+    "Heat 3 tbsp laksa paste in garlic-infused oil 1 min, add 400mL coconut milk + 300mL stock.",
+    "Simmer 8 min with 300g prawns + bok choy; poach 2 eggs in the broth; garnish with coriander."
+   ],
+   "ingredients": [
+    {
+     "ing": "laksa_paste_jar",
+     "qty": null,
+     "unit": "pack",
+     "role": "pantry",
+     "note": "lasts weeks"
+    },
+    {
+     "ing": "coconut_milk",
+     "qty": 400.0,
+     "unit": "ml",
+     "role": "scales",
+     "note": "whole can"
+    },
+    {
+     "ing": "rice_noodles",
+     "qty": 250.0,
+     "unit": "g",
+     "role": "shared",
+     "note": "half pack"
+    },
+    {
+     "ing": "raw_banana_prawns",
+     "qty": 300.0,
+     "unit": "g",
+     "role": "hero",
+     "note": null
+    },
+    {
+     "ing": "free_range_eggs",
+     "qty": 2.0,
+     "unit": "ea",
+     "role": "scales",
+     "note": "rest \u2192 breakfasts"
+    }
+   ]
+  },
+  {
+   "id": "chicken-basil-noodles",
+   "name": "Chicken & basil stir-fry noodles",
+   "desc": "Thai-style basil chicken mince, fresh Thai basil, rice noodles, bok choy. Spring-onion greens only.",
+   "serves": 2,
+   "diet": {
+    "low_fodmap": true,
+    "gluten_free": true,
+    "lactose_free": true
+   },
+   "diet_raw": "Low FODMAP \u00b7 LF \u00b7 GF noodles",
+   "hero": "chicken_mince",
+   "nut": {
+    "kj": 2380,
+    "prot": 41,
+    "fib": 4,
+    "carb": 62
+   },
+   "waste": "Whole basil bunch used; spring-onion greens from earlier meals",
+   "steps": [
+    "Boil rice noodles per pack.",
+    "Brown 400g chicken mince hard in garlic-infused oil; add soy, white pepper, 1 tsp maple.",
+    "Toss noodles + bok choy; big handful Thai basil off heat, spring-onion greens over."
+   ],
+   "ingredients": [
+    {
+     "ing": "chicken_mince",
+     "qty": 400.0,
+     "unit": "g",
+     "role": "hero",
+     "note": null
+    },
+    {
+     "ing": "thai_basil_bunch",
+     "qty": null,
+     "unit": "pack",
+     "role": "scales",
+     "note": "whole bunch used"
+    },
+    {
+     "ing": "rice_noodles",
+     "qty": 250.0,
+     "unit": "g",
+     "role": "shared",
+     "note": "half pack"
+    },
+    {
+     "ing": "bok_choy",
+     "qty": 2.0,
+     "unit": "ea",
+     "role": "scales",
+     "note": null
+    }
+   ]
+  },
+  {
+   "id": "orange-chicken-stir-fry",
+   "name": "Orange & chilli chicken stir-fry with rice",
+   "desc": "Chicken on special. Orange zest & juice (actual citrus, not bottled \u2014 low FODMAP). Bok choy, ginger.",
+   "serves": 2,
+   "diet": {
+    "low_fodmap": true,
+    "gluten_free": true,
+    "lactose_free": true
+   },
+   "diet_raw": "Low FODMAP \u00b7 LF \u00b7 GF",
+   "hero": "chicken_breast",
+   "nut": {
+    "kj": 2420,
+    "prot": 44,
+    "fib": 5,
+    "carb": 44
+   },
+   "waste": "Orange shared with duck night; ginger keeps weeks",
+   "steps": [
+    "Slice 450g chicken breast thin; toss with 1 tsp cornflour.",
+    "Wok on high: sear chicken in batches, set aside; ginger + bok choy 1 min.",
+    "Orange juice + zest + soy + 1 tsp maple; chicken back in, whole chilli pepper if you like."
+   ],
+   "ingredients": [
+    {
+     "ing": "chicken_breast",
+     "qty": 450.0,
+     "unit": "g",
+     "role": "hero",
+     "note": null
+    },
+    {
+     "ing": "bok_choy",
+     "qty": 2.0,
+     "unit": "ea",
+     "role": "scales",
+     "note": null
+    },
+    {
+     "ing": "orange",
+     "qty": null,
+     "unit": "pack",
+     "role": "shared",
+     "note": "shared with other meals"
+    },
+    {
+     "ing": "ginger_knob",
+     "qty": null,
+     "unit": "pack",
+     "role": "scales",
+     "note": "keeps weeks"
+    }
+   ]
+  },
+  {
+   "id": "satay-chicken-rice",
+   "name": "Peanut satay chicken & rice (FODMAP-safe)",
+   "desc": "Chicken thighs on special. Peanut butter sauce with garlic-infused oil, lemongrass (optional), rice.",
+   "serves": 2,
+   "diet": {
+    "low_fodmap": true,
+    "gluten_free": true,
+    "lactose_free": true
+   },
+   "diet_raw": "Low FODMAP \u00b7 LF \u00b7 GF",
+   "hero": "chicken_thigh_fillets",
+   "nut": {
+    "kj": 2650,
+    "prot": 40,
+    "fib": 5,
+    "carb": 54
+   },
+   "waste": "Peanut butter is pantry; lemongrass keeps weeks dried",
+   "steps": [
+    "Marinate 450g thigh fillets: soy + garlic-infused oil + 1 tsp maple, 15 min.",
+    "Pan-fry 5 min a side; set aside.",
+    "Sauce: peanut butter + coconut milk + lime + soy, thin with water; simmer thighs in it, 5 min."
+   ],
+   "ingredients": [
+    {
+     "ing": "chicken_thigh_fillets",
+     "qty": 450.0,
+     "unit": "g",
+     "role": "hero",
+     "note": null
+    },
+    {
+     "ing": "peanut_butter",
+     "qty": null,
+     "unit": "pack",
+     "role": "scales",
+     "note": null
+    },
+    {
+     "ing": "coconut_milk",
+     "qty": 200.0,
+     "unit": "ml",
+     "role": "shared",
+     "note": "use the other half elsewhere"
+    },
+    {
+     "ing": "lime",
+     "qty": 1.0,
+     "unit": "ea",
+     "role": "scales",
+     "note": null
+    }
+   ]
+  },
+  {
+   "id": "miso-salmon-bok-choy",
+   "name": "Miso-glazed salmon & bok choy",
+   "desc": "Salmon on special. White miso glaze (low sodium, no added garlic), sesame oil, lime.",
+   "serves": 2,
+   "diet": {
+    "low_fodmap": true,
+    "gluten_free": true,
+    "lactose_free": true
+   },
+   "diet_raw": "Low FODMAP \u00b7 LF \u00b7 GF",
+   "hero": "salmon_portions",
+   "nut": {
+    "kj": 2480,
+    "prot": 39,
+    "fib": 5,
+    "carb": 24
+   },
+   "waste": "Miso paste jar lasts months; sesame oil lasts months",
+   "steps": [
+    "Glaze: 2 tbsp white miso + 1 tbsp maple + lime juice + 1 tsp sesame oil.",
+    "Brush over 2 salmon portions (~400g); bake 200\u00b0C 12\u201314 min.",
+    "Bok choy steamed alongside, drizzle sesame oil + soy."
+   ],
+   "ingredients": [
+    {
+     "ing": "salmon_portions",
+     "qty": 400.0,
+     "unit": "g",
+     "role": "hero",
+     "note": null
+    },
+    {
+     "ing": "white_miso_paste_jar",
+     "qty": null,
+     "unit": "pack",
+     "role": "pantry",
+     "note": "lasts months"
+    },
+    {
+     "ing": "bok_choy",
+     "qty": 2.0,
+     "unit": "ea",
+     "role": "scales",
+     "note": null
+    }
+   ]
+  },
+  {
+   "id": "tom-yum-chicken-rice",
+   "name": "Tom yum chicken soup & jasmine rice",
+   "desc": "Tom yum paste, chicken, prawns optional, ginger, lime, bok choy. Adapted: no onion/garlic added.",
+   "serves": 2,
+   "diet": {
+    "low_fodmap": true,
+    "gluten_free": true,
+    "lactose_free": true
+   },
+   "diet_raw": "Low FODMAP \u00b7 LF \u00b7 GF",
+   "hero": "chicken_breast",
+   "nut": {
+    "kj": 1950,
+    "prot": 31,
+    "fib": 4,
+    "carb": 48
+   },
+   "waste": "Paste jar lasts; ginger shared with stir-fries",
+   "steps": [
+    "Heat 2 tbsp tom yum paste in garlic-infused oil 1 min; add 600mL stock + 200mL coconut milk.",
+    "Simmer with 300g chicken cubes + bok choy 12 min; add lime juice, white pepper.",
+    "Jasmine rice on the side; coriander if you have it."
+   ],
+   "ingredients": [
+    {
+     "ing": "tom_yum_paste_jar",
+     "qty": null,
+     "unit": "pack",
+     "role": "pantry",
+     "note": "lasts weeks"
+    },
+    {
+     "ing": "chicken_breast",
+     "qty": 300.0,
+     "unit": "g",
+     "role": "hero",
+     "note": null
+    },
+    {
+     "ing": "coconut_milk",
+     "qty": 200.0,
+     "unit": "ml",
+     "role": "scales",
+     "note": "halve a can"
+    },
+    {
+     "ing": "bok_choy",
+     "qty": 1.0,
+     "unit": "ea",
+     "role": "scales",
+     "note": null
+    },
+    {
+     "ing": "lime",
+     "qty": 1.0,
+     "unit": "ea",
+     "role": "scales",
+     "note": null
+    }
+   ]
+  },
+  {
+   "id": "tandoori-chicken-rice",
+   "name": "Tandoori chicken, cucumber yoghurt & rice",
+   "desc": "Chicken on special. Tandoori paste (check label for garlic \u2014 many are garlic-free), LF yoghurt, cucumber.",
+   "serves": 2,
+   "diet": {
+    "low_fodmap": true,
+    "gluten_free": false,
+    "lactose_free": true
+   },
+   "diet_raw": "Low FODMAP \u00b7 low lactose",
+   "hero": "chicken_breast",
+   "nut": {
+    "kj": 2420,
+    "prot": 41,
+    "fib": 4,
+    "carb": 46
+   },
+   "waste": "Tandoori paste jar lasts; yoghurt shared with breakfasts",
+   "steps": [
+    "Marinate 450g chicken breast: 3 tbsp tandoori paste + 2 tbsp LF yoghurt, 20 min.",
+    "Bake 200\u00b0C 16 min, turning once; rest 5.",
+    "Cucumber salad: smashed, salt 10 min, dress with LF yoghurt + lime."
+   ],
+   "ingredients": [
+    {
+     "ing": "chicken_breast",
+     "qty": 450.0,
+     "unit": "g",
+     "role": "hero",
+     "note": null
+    },
+    {
+     "ing": "tandoori_paste_jar",
+     "qty": null,
+     "unit": "pack",
+     "role": "pantry",
+     "note": "lasts weeks"
+    },
+    {
+     "ing": "lactose_free_yoghurt",
+     "qty": 500.0,
+     "unit": "g",
+     "role": "scales",
+     "note": "rest \u2192 breakfasts"
+    },
+    {
+     "ing": "cucumber",
+     "qty": 1.0,
+     "unit": "ea",
+     "role": "scales",
+     "note": null
+    }
+   ]
+  },
+  {
+   "id": "massaman-beef-rice",
+   "name": "Massaman beef curry & jasmine rice",
+   "desc": "Beef on special (rump or chuck). Massaman paste, potato, carrot, tamarind, peanut butter.",
+   "serves": 2,
+   "diet": {
+    "low_fodmap": true,
+    "gluten_free": true,
+    "lactose_free": true
+   },
+   "diet_raw": "Low FODMAP \u00b7 LF \u00b7 GF",
+   "hero": "beef_stew_meat",
+   "nut": {
+    "kj": 2580,
+    "prot": 38,
+    "fib": 6,
+    "carb": 52
+   },
+   "waste": "Paste lasts; potatoes from shared bag; peanut butter is pantry",
+   "steps": [
+    "Brown 400g beef cubes; set aside.",
+    "Fry 3 tbsp massaman paste in garlic-infused oil 2 min; add 400mL coconut milk + 300mL stock.",
+    "Beef + potatoes + carrot (shared bag), simmer 45 min; finish with peanut butter + tamarind + lime."
+   ],
+   "ingredients": [
+    {
+     "ing": "beef_stew_meat",
+     "qty": 400.0,
+     "unit": "g",
+     "role": "hero",
+     "note": null
+    },
+    {
+     "ing": "massaman_paste_jar",
+     "qty": null,
+     "unit": "pack",
+     "role": "pantry",
+     "note": "lasts weeks"
+    },
+    {
+     "ing": "tamarind_paste",
+     "qty": null,
+     "unit": "pack",
+     "role": "pantry",
+     "note": "tamarind lasts months"
+    },
+    {
+     "ing": "peanut_butter",
+     "qty": null,
+     "unit": "pack",
+     "role": "scales",
+     "note": "pantry check"
+    }
+   ]
+  },
+  {
+   "id": "coconut-chicken-curry",
+   "name": "Coconut chicken curry with bok choy",
+   "desc": "Chicken on special. Light curry (turmeric, coriander, cumin), coconut milk, ginger, lime.",
+   "serves": 2,
+   "diet": {
+    "low_fodmap": true,
+    "gluten_free": true,
+    "lactose_free": true
+   },
+   "diet_raw": "Low FODMAP \u00b7 LF \u00b7 GF",
+   "hero": "chicken_breast",
+   "nut": {
+    "kj": 2340,
+    "prot": 39,
+    "fib": 4,
+    "carb": 36
+   },
+   "waste": "Spices are pantry; coconut milk fully used; bok choy shared",
+   "steps": [
+    "Heat garlic-infused oil + 1 tsp turmeric + 1 tsp coriander + 1 tsp cumin + ginger, 1 min.",
+    "Add 400mL coconut milk + 300g chicken cubes, simmer 15 min.",
+    "Bok choy in for last 5 min; finish with lime juice, white pepper."
+   ],
+   "ingredients": [
+    {
+     "ing": "chicken_breast",
+     "qty": 300.0,
+     "unit": "g",
+     "role": "hero",
+     "note": null
+    },
+    {
+     "ing": "bok_choy",
+     "qty": 2.0,
+     "unit": "ea",
+     "role": "scales",
+     "note": null
+    },
+    {
+     "ing": "ginger_knob",
+     "qty": null,
+     "unit": "pack",
+     "role": "scales",
+     "note": "keeps weeks"
+    }
+   ]
+  },
+  {
+   "id": "peking-duck-orange",
+   "name": "Peking duck legs with orange & potatoes",
+   "desc": "Luv-a-Duck Peking legs on special \u2014 pre-cooked. WA navel oranges $3.50/kg.",
+   "serves": 2,
+   "diet": {
+    "low_fodmap": true,
+    "gluten_free": true,
+    "lactose_free": true
+   },
+   "diet_raw": "Low FODMAP \u00b7 LF \u00b7 GF",
+   "hero": "luv_a_duck_peking_duck_legs",
+   "nut": {
+    "kj": 2820,
+    "prot": 36,
+    "fib": 4,
+    "carb": 32
+   },
+   "waste": "Legs are a sealed two-serve pack; orange zest + juice both used",
+   "steps": [
+    "Duck legs per pack, 200\u00b0C ~25 min until skin crisps.",
+    "Pan sauce: juice + zest of 1 orange, splash soy, 1 tsp maple, reduce.",
+    "Roast potatoes from shared bag alongside; orange segments in a leafy salad."
+   ],
+   "ingredients": [
+    {
+     "ing": "luv_a_duck_peking_duck_legs",
+     "qty": 650.0,
+     "unit": "g",
+     "role": "hero",
+     "note": null
+    },
+    {
+     "ing": "wa_navel_oranges",
+     "qty": 2.0,
+     "unit": "ea",
+     "role": "scales",
+     "note": "$3.50/kg both stores"
+    },
+    {
+     "ing": "potatoes",
+     "qty": null,
+     "unit": "pack",
+     "role": "scales",
+     "note": "allocate 200g"
+    }
+   ]
+  },
+  {
+   "id": "squid-chips-qukes",
+   "name": "Salt & pepper squid, chips & qukes",
+   "desc": "KB's S&P squid half price. Air-fryer chips + smashed cucumber = casual Friday fakeaway.",
+   "serves": 2,
+   "diet": {
+    "low_fodmap": false,
+    "gluten_free": false,
+    "lactose_free": true
+   },
+   "diet_raw": "LF \u00b7 check crumb for FODMAP",
+   "hero": "kb_s_salt_pepper_squid",
+   "nut": {
+    "kj": 2280,
+    "prot": 26,
+    "fib": 3,
+    "carb": 46
+   },
+   "waste": "Uses qukes pack half + open chips bag from pork night",
+   "steps": [
+    "Squid + chips per pack timing (air fryer ~15 min).",
+    "Qukes: smash, salt 10 min, rice vinegar + sesame oil.",
+    "Lemon over everything. Check crumb ingredients if strict FODMAP this week."
+   ],
+   "ingredients": [
+    {
+     "ing": "kb_s_salt_pepper_squid",
+     "qty": 360.0,
+     "unit": "g",
+     "role": "hero",
+     "note": null
+    }
+   ]
+  },
+  {
+   "id": "tuna-cherry-tom-pasta",
+   "name": "Tuna, cherry tomato & olive pasta (GF option)",
+   "desc": "Sirena on special. Woolies home-brand pasta $1, cherry toms. GF pasta keeps it low FODMAP.",
+   "serves": 2,
+   "diet": {
+    "low_fodmap": true,
+    "gluten_free": true,
+    "lactose_free": true
+   },
+   "diet_raw": "Low FODMAP w/ GF pasta \u00b7 LF",
+   "hero": "sirena_tuna_in_oil",
+   "nut": {
+    "kj": 2350,
+    "prot": 28,
+    "fib": 5,
+    "carb": 56
+   },
+   "waste": "Olives finish in lunches; tuna oil becomes sauce base",
+   "steps": [
+    "Pasta on (GF if keeping strict).",
+    "Cherry toms blistered in tuna's olive oil + garlic-infused oil + whole chilli if you like.",
+    "Tuna + olives + pasta water to emulsify; lemon zest over."
+   ],
+   "ingredients": [
+    {
+     "ing": "sirena_tuna_in_oil",
+     "qty": 185.0,
+     "unit": "g",
+     "role": "hero",
+     "note": null
+    },
+    {
+     "ing": "pasta",
+     "qty": 500.0,
+     "unit": "g",
+     "role": "shared",
+     "note": "half bag"
+    },
+    {
+     "ing": "cherry_tomatoes",
+     "qty": 250.0,
+     "unit": "g",
+     "role": "scales",
+     "note": null
+    },
+    {
+     "ing": "kalamata_olives",
+     "qty": null,
+     "unit": "kg",
+     "role": "scales",
+     "note": "rest \u2192 lunches"
+    }
+   ]
+  },
+  {
+   "id": "fried-rice-bacon-egg",
+   "name": "Bacon & egg fried rice",
+   "desc": "D'Orsogna shortcut bacon 40% off. Use 250g here, rest to breakfasts/freezer. Day-old rice fries best.",
+   "serves": 2,
+   "diet": {
+    "low_fodmap": true,
+    "gluten_free": true,
+    "lactose_free": true
+   },
+   "diet_raw": "Low FODMAP \u00b7 LF \u00b7 GF",
+   "hero": "d_orsogna_shortcut_bacon",
+   "nut": {
+    "kj": 2580,
+    "prot": 30,
+    "fib": 4,
+    "carb": 58
+   },
+   "waste": "Bacon keeps 3+ weeks sealed (or freeze portions); uses spring-onion greens already bought",
+   "steps": [
+    "Cook rice ahead (or use stir-fry night's extra), spread to dry.",
+    "Crisp 250g diced bacon; push aside, scramble 4 eggs in the fat.",
+    "Rice on high heat, soy + white pepper, spring-onion greens off heat."
+   ],
+   "ingredients": [
+    {
+     "ing": "d_orsogna_shortcut_bacon",
+     "qty": 1000.0,
+     "unit": "g",
+     "role": "hero",
+     "note": "250g tonight \u2014 rest breakfasts/freezer"
+    },
+    {
+     "ing": "free_range_eggs",
+     "qty": 6.0,
+     "unit": "ea",
+     "role": "scales",
+     "note": "rest \u2192 breakfasts"
+    }
+   ]
+  },
+  {
+   "id": "drumstick-traybake",
+   "name": "Drumstick traybake (cook half, freeze half)",
+   "desc": "Coles 2kg drumstick pack $7 \u2014 $3.50/kg. Roast 1kg with WA sweet corn; freeze the rest.",
+   "serves": 2,
+   "diet": {
+    "low_fodmap": true,
+    "gluten_free": true,
+    "lactose_free": true
+   },
+   "diet_raw": "Low FODMAP (\u00bd cob) \u00b7 LF \u00b7 GF",
+   "hero": "chicken_drumsticks",
+   "nut": {
+    "kj": 2460,
+    "prot": 40,
+    "fib": 5,
+    "carb": 33
+   },
+   "waste": "Half pack straight to freezer \u2014 labelled and dated",
+   "steps": [
+    "Oven 210\u00b0C. 1kg drumsticks: oil, smoked paprika, salt; 40 min, turning once.",
+    "Corn cobs in foil alongside, 25 min (keep to \u00bd cob each for FODMAP).",
+    "Freeze other 1kg drumsticks raw. Leafy salad on side."
+   ],
+   "ingredients": [
+    {
+     "ing": "chicken_drumsticks",
+     "qty": 2000.0,
+     "unit": "g",
+     "role": "hero",
+     "note": "freeze half"
+    },
+    {
+     "ing": "wa_sweet_corn",
+     "qty": 2.0,
+     "unit": "ea",
+     "role": "scales",
+     "note": "\u00bd cob per serve"
+    }
+   ]
+  },
+  {
+   "id": "fish-steam-fresh-kiwi",
+   "name": "Easy night: oven-bake fish & steam-fresh veg",
+   "desc": "Both half-price-ish at Woolies. Fish $6 (half price), veg $3.60. Gold kiwis for dessert. Zero effort.",
+   "serves": 2,
+   "diet": {
+    "low_fodmap": true,
+    "gluten_free": false,
+    "lactose_free": true
+   },
+   "diet_raw": "Low FODMAP \u00b7 LF",
+   "hero": "birds_eye_oven_bake_fish",
+   "nut": {
+    "kj": 1920,
+    "prot": 28,
+    "fib": 6,
+    "carb": 38
+   },
+   "waste": "Everything portioned \u2014 nothing left over",
+   "steps": [
+    "Fish fillets per pack, 200\u00b0C ~25 min.",
+    "Steam-fresh veg in microwave, olive oil + lemon.",
+    "Gold kiwis after \u2014 low FODMAP, unlike most fruit on special this week."
+   ],
+   "ingredients": [
+    {
+     "ing": "birds_eye_oven_bake_fish",
+     "qty": 425.0,
+     "unit": "g",
+     "role": "hero",
+     "note": null
+    },
+    {
+     "ing": "birds_eye_steam_fresh_veg",
+     "qty": 450.0,
+     "unit": "g",
+     "role": "scales",
+     "note": null
+    },
+    {
+     "ing": "gold_kiwifruit",
+     "qty": 4.0,
+     "unit": "ea",
+     "role": "scales",
+     "note": null
+    }
+   ]
+  },
+  {
+   "id": "beef-fajita-strips",
+   "name": "Beef fajita strips with bok choy & rice",
+   "desc": "Beef strips on special. Capsicum, garlic-infused oil, lime, cumin \u2014 no traditional onion.",
+   "serves": 2,
+   "diet": {
+    "low_fodmap": true,
+    "gluten_free": true,
+    "lactose_free": true
+   },
+   "diet_raw": "Low FODMAP \u00b7 LF \u00b7 GF",
+   "hero": "beef_strips",
+   "nut": {
+    "kj": 2580,
+    "prot": 42,
+    "fib": 5,
+    "carb": 46
+   },
+   "waste": "Spices are pantry; bok choy shared with stir-fries",
+   "steps": [
+    "Slice 400g beef thin; toss with cumin + lime juice + 1 tbsp garlic-infused oil, 10 min.",
+    "High heat wok: beef 90 sec, remove; capsicum + bok choy 2 min.",
+    "Beef back in, soy + white pepper; lime over. Rice on the side."
+   ],
+   "ingredients": [
+    {
+     "ing": "beef_strips",
+     "qty": 400.0,
+     "unit": "g",
+     "role": "hero",
+     "note": null
+    },
+    {
+     "ing": "red_capsicum",
+     "qty": 1.0,
+     "unit": "ea",
+     "role": "scales",
+     "note": null
+    },
+    {
+     "ing": "bok_choy",
+     "qty": 2.0,
+     "unit": "ea",
+     "role": "scales",
+     "note": null
+    }
+   ]
+  },
+  {
+   "id": "pork-apple-ginger",
+   "name": "Pork & apple ginger braise (apple OK low FODMAP)",
+   "desc": "Pork on special. Granny Smith apples low FODMAP, ginger, apple cider vinegar \u2014 gentle braise.",
+   "serves": 2,
+   "diet": {
+    "low_fodmap": true,
+    "gluten_free": true,
+    "lactose_free": true
+   },
+   "diet_raw": "Low FODMAP \u00b7 LF \u00b7 GF",
+   "hero": "pork_shoulder",
+   "nut": {
+    "kj": 2420,
+    "prot": 38,
+    "fib": 5,
+    "carb": 42
+   },
+   "waste": "Apples fully used; ginger keeps weeks",
+   "steps": [
+    "Brown 450g pork shoulder chunks; set aside.",
+    "Apples (peeled, cored) + ginger slices + 1 cup stock + 2 tbsp cider vinegar; pork back in.",
+    "Lid on, 160\u00b0C oven 1.5 hrs. Mash potatoes on the side."
+   ],
+   "ingredients": [
+    {
+     "ing": "pork_shoulder",
+     "qty": 450.0,
+     "unit": "g",
+     "role": "hero",
+     "note": null
+    },
+    {
+     "ing": "granny_smith_apples",
+     "qty": 3.0,
+     "unit": "ea",
+     "role": "scales",
+     "note": "low FODMAP"
+    },
+    {
+     "ing": "ginger_knob",
+     "qty": null,
+     "unit": "pack",
+     "role": "scales",
+     "note": "keeps weeks"
+    },
+    {
+     "ing": "potatoes",
+     "qty": null,
+     "unit": "pack",
+     "role": "scales",
+     "note": "allocate 250g"
+    }
+   ]
+  },
+  {
+   "id": "tofu-peanut-noodles",
+   "name": "Tofu & peanut noodle bowls",
+   "desc": "Firm tofu, rice noodles, FODMAP-safe peanut-lime sauce, cucumber & carrot.",
+   "serves": 2,
+   "diet": {
+    "low_fodmap": true,
+    "gluten_free": false,
+    "lactose_free": true
+   },
+   "diet_raw": "Low FODMAP \u00b7 LF \u00b7 Veg",
+   "hero": "firm_tofu",
+   "nut": {
+    "kj": 2240,
+    "prot": 26,
+    "fib": 8,
+    "carb": 55
+   },
+   "waste": "Peanut butter & soy pantry; whole tofu block used",
+   "steps": [
+    "Press + cube 400g tofu; crisp in hot oil, splash soy.",
+    "Sauce: peanut butter + lime + soy + maple + ginger, thin with water.",
+    "Soak rice noodles; toss everything, cucumber + carrot ribbons over."
+   ],
+   "ingredients": [
+    {
+     "ing": "firm_tofu",
+     "qty": 400.0,
+     "unit": "g",
+     "role": "hero",
+     "note": "whole block used"
+    },
+    {
+     "ing": "rice_noodles",
+     "qty": 250.0,
+     "unit": "g",
+     "role": "shared",
+     "note": "half pack"
+    },
+    {
+     "ing": "cucumber",
+     "qty": 1.0,
+     "unit": "ea",
+     "role": "scales",
+     "note": null
+    },
+    {
+     "ing": "lime",
+     "qty": 2.0,
+     "unit": "ea",
+     "role": "scales",
+     "note": null
+    }
+   ]
+  },
+  {
+   "id": "lemongrass-chicken-rice",
+   "name": "Lemongrass chicken soup & jasmine rice",
+   "desc": "Chicken on special. Lemongrass (dried is fine), ginger, lime, coconut milk \u2014 fragrant and low FODMAP.",
+   "serves": 2,
+   "diet": {
+    "low_fodmap": true,
+    "gluten_free": true,
+    "lactose_free": true
+   },
+   "diet_raw": "Low FODMAP \u00b7 LF \u00b7 GF",
+   "hero": "chicken_breast",
+   "nut": {
+    "kj": 2140,
+    "prot": 35,
+    "fib": 3,
+    "carb": 46
+   },
+   "waste": "Lemongrass dried keeps months; ginger shared",
+   "steps": [
+    "Heat garlic-infused oil + 1 tbsp lemongrass paste (or dried) + ginger, 1 min.",
+    "Add 600mL stock + 200mL coconut milk, simmer 8 min with 300g chicken cubes.",
+    "Lime juice; coriander if available. Jasmine rice on side."
+   ],
+   "ingredients": [
+    {
+     "ing": "chicken_breast",
+     "qty": 300.0,
+     "unit": "g",
+     "role": "hero",
+     "note": null
+    },
+    {
+     "ing": "lemongrass_paste_jar",
+     "qty": null,
+     "unit": "pack",
+     "role": "pantry",
+     "note": "lasts months"
+    },
+    {
+     "ing": "coconut_milk",
+     "qty": 200.0,
+     "unit": "ml",
+     "role": "shared",
+     "note": "half can"
+    },
+    {
+     "ing": "lime",
+     "qty": 1.0,
+     "unit": "ea",
+     "role": "scales",
+     "note": null
+    }
+   ]
+  },
+  {
+   "id": "korean-beef-bibimbap",
+   "name": "Korean beef bibimbap with rice",
+   "desc": "Beef on special. Marinated in soy + sesame, served over rice with carrots, bok choy, egg \u2014 no traditional garlic/onion.",
+   "serves": 2,
+   "diet": {
+    "low_fodmap": true,
+    "gluten_free": true,
+    "lactose_free": true
+   },
+   "diet_raw": "Low FODMAP \u00b7 LF \u00b7 GF",
+   "hero": "beef_stir_fry_strips",
+   "nut": {
+    "kj": 2680,
+    "prot": 44,
+    "fib": 5,
+    "carb": 54
+   },
+   "waste": "Sesame oil lasts months; bok choy shared",
+   "steps": [
+    "Slice 400g beef thin; marinate: soy + 1 tsp sesame oil + 1 tsp maple + ginger, 20 min.",
+    "Rice on. Sear beef hard in a wok, 90 sec; set aside.",
+    "Stir-fry carrots + bok choy 2 min in garlic-infused oil; top rice. Beef on top, fried egg.",
+    "Drizzle with remaining marinade + sesame oil."
+   ],
+   "ingredients": [
+    {
+     "ing": "beef_stir_fry_strips",
+     "qty": 400.0,
+     "unit": "g",
+     "role": "hero",
+     "note": null
+    },
+    {
+     "ing": "bok_choy",
+     "qty": 2.0,
+     "unit": "ea",
+     "role": "scales",
+     "note": null
+    },
+    {
+     "ing": "sesame_oil",
+     "qty": null,
+     "unit": "pack",
+     "role": "pantry",
+     "note": null
+    },
+    {
+     "ing": "free_range_eggs",
+     "qty": 1.0,
+     "unit": "ea",
+     "role": "scales",
+     "note": null
+    }
+   ]
+  },
+  {
+   "id": "vietnamese-caramel-chicken",
+   "name": "Vietnamese caramel chicken & rice",
+   "desc": "Chicken thighs on special. Caramel sauce (sugar + soy + ginger) \u2014 no traditional aromatics, low FODMAP.",
+   "serves": 2,
+   "diet": {
+    "low_fodmap": true,
+    "gluten_free": true,
+    "lactose_free": true
+   },
+   "diet_raw": "Low FODMAP \u00b7 LF \u00b7 GF",
+   "hero": "chicken_thigh_chunks",
+   "nut": {
+    "kj": 2520,
+    "prot": 40,
+    "fib": 3,
+    "carb": 48
+   },
+   "waste": "Sugar & soy are pantry; ginger shared",
+   "steps": [
+    "Caramel: melt 2 tbsp sugar in a pan, add 3 tbsp soy + 1 tbsp garlic-infused oil + ginger.",
+    "Brown 450g chicken thigh chunks, pour caramel over, simmer 15 min, covered.",
+    "Finish with lime juice. Jasmine rice + steamed bok choy on side."
+   ],
+   "ingredients": [
+    {
+     "ing": "chicken_thigh_chunks",
+     "qty": 450.0,
+     "unit": "g",
+     "role": "hero",
+     "note": null
+    },
+    {
+     "ing": "ginger_knob",
+     "qty": null,
+     "unit": "pack",
+     "role": "scales",
+     "note": "keeps weeks"
+    },
+    {
+     "ing": "lime",
+     "qty": 1.0,
+     "unit": "ea",
+     "role": "scales",
+     "note": null
+    }
+   ]
+  },
+  {
+   "id": "japanese-teriyaki-salmon",
+   "name": "Japanese teriyaki salmon & steamed rice",
+   "desc": "Salmon on special. Teriyaki glaze (soy + maple + ginger), served with steamed bok choy.",
+   "serves": 2,
+   "diet": {
+    "low_fodmap": true,
+    "gluten_free": true,
+    "lactose_free": true
+   },
+   "diet_raw": "Low FODMAP \u00b7 LF \u00b7 GF",
+   "hero": "salmon_portions",
+   "nut": {
+    "kj": 2580,
+    "prot": 40,
+    "fib": 4,
+    "carb": 44
+   },
+   "waste": "Glaze ingredients all pantry staples",
+   "steps": [
+    "Glaze: 3 tbsp soy + 2 tbsp maple + 1 tsp ginger paste + 1 tsp garlic-infused oil.",
+    "Brush over 2 salmon portions (~400g); bake 200\u00b0C 12 min.",
+    "Steam bok choy alongside; drizzle extra glaze over rice."
+   ],
+   "ingredients": [
+    {
+     "ing": "salmon_portions",
+     "qty": 400.0,
+     "unit": "g",
+     "role": "hero",
+     "note": null
+    },
+    {
+     "ing": "bok_choy",
+     "qty": 2.0,
+     "unit": "ea",
+     "role": "scales",
+     "note": null
+    }
+   ]
+  },
+  {
+   "id": "thai-basil-squid",
+   "name": "Thai basil squid with jasmine rice",
+   "desc": "Squid on special. Thai basil, ginger, lime \u2014 quick stir-fry.",
+   "serves": 2,
+   "diet": {
+    "low_fodmap": true,
+    "gluten_free": true,
+    "lactose_free": true
+   },
+   "diet_raw": "Low FODMAP \u00b7 LF \u00b7 GF",
+   "hero": "squid_tubes",
+   "nut": {
+    "kj": 2180,
+    "prot": 30,
+    "fib": 3,
+    "carb": 46
+   },
+   "waste": "Whole basil bunch used; pantry soy",
+   "steps": [
+    "Slice 400g squid tubes into rings; pat dry.",
+    "High heat wok: garlic-infused oil + ginger 30 sec, squid 1.5 min (don't overcook).",
+    "Soy + lime juice + whole handful Thai basil off heat. Rice on side."
+   ],
+   "ingredients": [
+    {
+     "ing": "squid_tubes",
+     "qty": 400.0,
+     "unit": "g",
+     "role": "hero",
+     "note": null
+    },
+    {
+     "ing": "thai_basil_bunch",
+     "qty": null,
+     "unit": "pack",
+     "role": "scales",
+     "note": "whole bunch"
+    },
+    {
+     "ing": "ginger_knob",
+     "qty": null,
+     "unit": "pack",
+     "role": "scales",
+     "note": null
+    }
+   ]
+  },
+  {
+   "id": "green-curry-chicken",
+   "name": "Green curry chicken & bok choy",
+   "desc": "Chicken on special. Green curry paste (check label: many are garlic-free), coconut milk, bok choy.",
+   "serves": 2,
+   "diet": {
+    "low_fodmap": true,
+    "gluten_free": true,
+    "lactose_free": true
+   },
+   "diet_raw": "Low FODMAP \u00b7 LF \u00b7 GF",
+   "hero": "chicken_breast",
+   "nut": {
+    "kj": 2460,
+    "prot": 41,
+    "fib": 4,
+    "carb": 32
+   },
+   "waste": "Paste jar lasts weeks; coconut milk fully used",
+   "steps": [
+    "Heat 3 tbsp green curry paste in garlic-infused oil 1 min.",
+    "Add 400mL coconut milk + 300g chicken cubes, simmer 12 min.",
+    "Bok choy in for last 3 min; finish with lime, white pepper."
+   ],
+   "ingredients": [
+    {
+     "ing": "chicken_breast",
+     "qty": 300.0,
+     "unit": "g",
+     "role": "hero",
+     "note": null
+    },
+    {
+     "ing": "green_curry_paste_jar",
+     "qty": null,
+     "unit": "pack",
+     "role": "pantry",
+     "note": "lasts weeks"
+    },
+    {
+     "ing": "coconut_milk",
+     "qty": 400.0,
+     "unit": "ml",
+     "role": "scales",
+     "note": "whole can"
+    },
+    {
+     "ing": "bok_choy",
+     "qty": 3.0,
+     "unit": "ea",
+     "role": "scales",
+     "note": null
+    }
+   ]
+  },
+  {
+   "id": "slow-cooker-beef-stew",
+   "name": "Slow-cooker beef & root veg stew",
+   "desc": "Beef on special. Set in morning, ready for dinner \u2014 carrots, potatoes, herbs, wine.",
+   "serves": 2,
+   "diet": {
+    "low_fodmap": true,
+    "gluten_free": true,
+    "lactose_free": true
+   },
+   "diet_raw": "Low FODMAP \u00b7 LF \u00b7 GF",
+   "hero": "beef_chuck",
+   "nut": {
+    "kj": 2420,
+    "prot": 38,
+    "fib": 7,
+    "carb": 36
+   },
+   "waste": "Uses carrot & potato bag remainder; freezes well",
+   "steps": [
+    "Brown 600g beef cubes in batches; place in slow cooker.",
+    "Add carrots + potatoes (from shared bag) + 300mL red wine + 200mL stock + thyme.",
+    "Cook on low 6\u20138 hrs. Freeze any extra."
+   ],
+   "ingredients": [
+    {
+     "ing": "beef_chuck",
+     "qty": 600.0,
+     "unit": "g",
+     "role": "hero",
+     "note": null
+    },
+    {
+     "ing": "red_wine",
+     "qty": 300.0,
+     "unit": "ml",
+     "role": "scales",
+     "note": null
+    },
+    {
+     "ing": "beef_stock",
+     "qty": 200.0,
+     "unit": "ml",
+     "role": "pantry",
+     "note": null
+    },
+    {
+     "ing": "thyme_fresh",
+     "qty": null,
+     "unit": "pack",
+     "role": "pantry",
+     "note": "dries well"
+    }
+   ]
+  },
+  {
+   "id": "fish-tacos-lettuce-wraps",
+   "name": "Fish tacos (lettuce wraps) with lime crema",
+   "desc": "Fish on special. Crunchy lettuce wraps instead of tortillas \u2014 low carb, low FODMAP.",
+   "serves": 2,
+   "diet": {
+    "low_fodmap": true,
+    "gluten_free": true,
+    "lactose_free": true
+   },
+   "diet_raw": "Low FODMAP \u00b7 LF \u00b7 GF",
+   "hero": "fish_fillets",
+   "nut": {
+    "kj": 2040,
+    "prot": 35,
+    "fib": 5,
+    "carb": 24
+   },
+   "waste": "LF mayo is fridge staple; lettuce fully used",
+   "steps": [
+    "Pan-fry 400g fish fillets (skin-on if available) 3 min a side; flake.",
+    "Crema: LF mayo + lime juice + white pepper.",
+    "Butter lettuce leaves as wraps; fill with fish, crema, shredded carrot, coriander."
+   ],
+   "ingredients": [
+    {
+     "ing": "fish_fillets",
+     "qty": 400.0,
+     "unit": "g",
+     "role": "hero",
+     "note": null
+    },
+    {
+     "ing": "butter_lettuce_head",
+     "qty": null,
+     "unit": "pack",
+     "role": "scales",
+     "note": "whole used"
+    },
+    {
+     "ing": "lf_mayo",
+     "qty": null,
+     "unit": "pack",
+     "role": "scales",
+     "note": null
+    },
+    {
+     "ing": "lime",
+     "qty": 1.0,
+     "unit": "ea",
+     "role": "scales",
+     "note": null
+    }
+   ]
+  },
+  {
+   "id": "chicken-rice-bowl-fried-egg",
+   "name": "Chicken & rice bowl with fried egg",
+   "desc": "Rotisserie chicken (buy ready-made on special). Shred, serve over rice, top with fried egg + carrots.",
+   "serves": 2,
+   "diet": {
+    "low_fodmap": true,
+    "gluten_free": true,
+    "lactose_free": true
+   },
+   "diet_raw": "Low FODMAP \u00b7 LF \u00b7 GF",
+   "hero": "rotisserie_chicken_whole",
+   "nut": {
+    "kj": 2340,
+    "prot": 36,
+    "fib": 4,
+    "carb": 52
+   },
+   "waste": "Uses bought roast chicken (minimal prep); carcass keeps for stock",
+   "steps": [
+    "Rice on. Shred 1 rotisserie chicken (from special) into warm rice.",
+    "Fry 2 eggs; top rice, season with soy + white pepper.",
+    "Steamed carrots on the side."
+   ],
+   "ingredients": [
+    {
+     "ing": "rotisserie_chicken_whole",
+     "qty": null,
+     "unit": "pack",
+     "role": "hero",
+     "note": "carcass \u2192 next week stock"
+    },
+    {
+     "ing": "free_range_eggs",
+     "qty": 2.0,
+     "unit": "ea",
+     "role": "scales",
+     "note": null
+    }
+   ]
+  },
+  {
+   "id": "pork-belly-bok-choy",
+   "name": "Braised pork belly with bok choy",
+   "desc": "Pork belly on special. Ginger, soy, maple \u2014 low FODMAP Chinese-style braise.",
+   "serves": 2,
+   "diet": {
+    "low_fodmap": true,
+    "gluten_free": true,
+    "lactose_free": true
+   },
+   "diet_raw": "Low FODMAP \u00b7 LF \u00b7 GF",
+   "hero": "pork_belly",
+   "nut": {
+    "kj": 2820,
+    "prot": 32,
+    "fib": 4,
+    "carb": 24
+   },
+   "waste": "Soy & ginger are shared; bok choy from stir-fry supply",
+   "steps": [
+    "Brown 500g pork belly chunks; place in pot.",
+    "Add 400mL stock + 4 tbsp soy + 2 tbsp maple + ginger slices.",
+    "Simmer 45 min, covered. Bok choy in for last 5 min."
+   ],
+   "ingredients": [
+    {
+     "ing": "pork_belly",
+     "qty": 500.0,
+     "unit": "g",
+     "role": "hero",
+     "note": null
+    },
+    {
+     "ing": "beef_stock",
+     "qty": 400.0,
+     "unit": "ml",
+     "role": "pantry",
+     "note": null
+    },
+    {
+     "ing": "ginger_knob",
+     "qty": null,
+     "unit": "pack",
+     "role": "scales",
+     "note": "keeps weeks"
+    }
+   ]
+  },
+  {
+   "id": "ramen-bowl-poached-eggs",
+   "name": "Quick ramen bowls with poached eggs",
+   "desc": "Rice ramen noodles, simple miso broth, poached eggs, bok choy. 15 min.",
+   "serves": 2,
+   "diet": {
+    "low_fodmap": true,
+    "gluten_free": true,
+    "lactose_free": true
+   },
+   "diet_raw": "Low FODMAP \u00b7 LF \u00b7 GF noodles",
+   "hero": "free_range_eggs",
+   "nut": {
+    "kj": 2180,
+    "prot": 28,
+    "fib": 5,
+    "carb": 64
+   },
+   "waste": "Miso paste lasts months; noodles are pantry",
+   "steps": [
+    "Boil 500mL stock + 2 tbsp white miso (whisked smooth); simmer 2 min.",
+    "Cook rice ramen per pack; divide into bowls.",
+    "Poach 2 eggs gently in broth; pour broth over noodles.",
+    "Steamed bok choy + sesame oil + spring-onion greens."
+   ],
+   "ingredients": [
+    {
+     "ing": "rice_ramen_noodles",
+     "qty": 250.0,
+     "unit": "g",
+     "role": "shared",
+     "note": "half pack"
+    },
+    {
+     "ing": "white_miso_paste",
+     "qty": null,
+     "unit": "pack",
+     "role": "pantry",
+     "note": null
+    },
+    {
+     "ing": "free_range_eggs",
+     "qty": 2.0,
+     "unit": "ea",
+     "role": "hero",
+     "note": null
+    },
+    {
+     "ing": "bok_choy",
+     "qty": 2.0,
+     "unit": "ea",
+     "role": "scales",
+     "note": null
+    }
+   ]
+  },
+  {
+   "id": "butter-chicken-rice",
+   "name": "Butter chicken with rice (LF coconut cream)",
+   "desc": "Chicken on special. Butter chicken adapted for low FODMAP (no traditional onion/garlic).",
+   "serves": 2,
+   "diet": {
+    "low_fodmap": true,
+    "gluten_free": true,
+    "lactose_free": true
+   },
+   "diet_raw": "Low FODMAP \u00b7 low lactose \u00b7 GF",
+   "hero": "chicken_breast",
+   "nut": {
+    "kj": 2640,
+    "prot": 39,
+    "fib": 3,
+    "carb": 48
+   },
+   "waste": "Tomato paste tube shared; cream lasts",
+   "steps": [
+    "Brown 450g chicken cubes; set aside.",
+    "Heat garlic-infused oil + 2 tsp garam masala + 2 tbsp tomato paste, 1 min.",
+    "Add 200mL stock + 100mL LF cream + chicken, simmer 12 min.",
+    "Finish with lime juice, coriander. Rice on side."
+   ],
+   "ingredients": [
+    {
+     "ing": "chicken_breast",
+     "qty": 450.0,
+     "unit": "g",
+     "role": "hero",
+     "note": null
+    },
+    {
+     "ing": "garam_masala",
+     "qty": null,
+     "unit": "pack",
+     "role": "scales",
+     "note": null
+    },
+    {
+     "ing": "tomato_paste",
+     "qty": null,
+     "unit": "pack",
+     "role": "pantry",
+     "note": "lasts weeks"
+    },
+    {
+     "ing": "lactose_free_cream",
+     "qty": 200.0,
+     "unit": "ml",
+     "role": "scales",
+     "note": "rest \u2192 breakfasts"
+    }
+   ]
+  },
+  {
+   "id": "charred-broccoli-beef",
+   "name": "Charred broccoli & beef with soy",
+   "desc": "Beef strips on special. High-heat charred broccoli, simple soy glaze \u2014 12 min.",
+   "serves": 2,
+   "diet": {
+    "low_fodmap": true,
+    "gluten_free": true,
+    "lactose_free": true
+   },
+   "diet_raw": "Low FODMAP \u00b7 LF \u00b7 GF",
+   "hero": "beef_stir_fry_strips",
+   "nut": {
+    "kj": 2340,
+    "prot": 42,
+    "fib": 6,
+    "carb": 32
+   },
+   "waste": "Soy & sesame oil pantry; broccoli fully used",
+   "steps": [
+    "Slice 400g beef thin; toss with 1 tbsp soy + 1 tsp sesame oil.",
+    "High heat wok: char beef 60 sec, remove; char broccoli 2 min.",
+    "Beef back in, 2 tbsp soy + 1 tsp sesame oil + white pepper; toss. Rice on side."
+   ],
+   "ingredients": [
+    {
+     "ing": "beef_stir_fry_strips",
+     "qty": 400.0,
+     "unit": "g",
+     "role": "hero",
+     "note": null
+    },
+    {
+     "ing": "broccoli",
+     "qty": 1.0,
+     "unit": "ea",
+     "role": "scales",
+     "note": "whole head used"
+    },
+    {
+     "ing": "sesame_oil",
+     "qty": null,
+     "unit": "pack",
+     "role": "pantry",
+     "note": null
+    }
+   ]
+  },
+  {
+   "id": "coconut-dhal-rice",
+   "name": "Red lentil dhal with coconut & rice",
+   "desc": "Lentils are cheap + on pantry shelf. Coconut milk, ginger, turmeric \u2014 vegetarian, protein-rich.",
+   "serves": 2,
+   "diet": {
+    "low_fodmap": true,
+    "gluten_free": false,
+    "lactose_free": true
+   },
+   "diet_raw": "Low FODMAP \u00b7 LF \u00b7 Veg",
+   "hero": "red_lentils",
+   "nut": {
+    "kj": 2180,
+    "prot": 18,
+    "fib": 10,
+    "carb": 68
+   },
+   "waste": "Lentils & spices are pantry staples",
+   "steps": [
+    "Saut\u00e9 1 tsp turmeric + 1 tsp cumin + ginger in garlic-infused oil, 1 min.",
+    "Add 150g red lentils + 400mL coconut milk + 300mL stock, simmer 18 min.",
+    "Finish with lime juice, coriander. Jasmine rice on side."
+   ],
+   "ingredients": [
+    {
+     "ing": "red_lentils",
+     "qty": 150.0,
+     "unit": "g",
+     "role": "hero",
+     "note": null
+    },
+    {
+     "ing": "coconut_milk",
+     "qty": 400.0,
+     "unit": "ml",
+     "role": "scales",
+     "note": "whole can"
+    },
+    {
+     "ing": "turmeric",
+     "qty": null,
+     "unit": "pack",
+     "role": "scales",
+     "note": null
+    },
+    {
+     "ing": "lime",
+     "qty": 1.0,
+     "unit": "ea",
+     "role": "scales",
+     "note": null
+    }
+   ]
+  },
+  {
+   "id": "honey-soy-chicken-potatoes",
+   "name": "Honey soy chicken & crispy potatoes",
+   "desc": "Chicken thighs on special. Honey soy glaze, roast with baby potatoes from the shared bag.",
+   "serves": 2,
+   "diet": {
+    "low_fodmap": true,
+    "gluten_free": true,
+    "lactose_free": true
+   },
+   "diet_raw": "Low FODMAP \u00b7 LF \u00b7 GF",
+   "hero": "chicken_thighs",
+   "nut": {
+    "kj": 2580,
+    "prot": 40,
+    "fib": 5,
+    "carb": 42
+   },
+   "waste": "Glaze pantry; potatoes from shared bag",
+   "steps": [
+    "Glaze: 3 tbsp soy + 2 tbsp honey + 1 tbsp garlic-infused oil + 1 tsp ginger.",
+    "Toss 450g chicken thighs + baby potatoes (from shared bag); roast 200\u00b0C 25 min.",
+    "Drizzle with glaze halfway through. Steam bok choy on side."
+   ],
+   "ingredients": [
+    {
+     "ing": "chicken_thighs",
+     "qty": 450.0,
+     "unit": "g",
+     "role": "hero",
+     "note": null
+    },
+    {
+     "ing": "potatoes",
+     "qty": null,
+     "unit": "pack",
+     "role": "scales",
+     "note": "allocate 250g"
+    }
+   ]
+  },
+  {
+   "id": "prawn-egg-fried-rice",
+   "name": "Prawn & egg fried rice with peas",
+   "desc": "Prawns on special. Frozen peas are FODMAP-safe. Day-old rice is best.",
+   "serves": 2,
+   "diet": {
+    "low_fodmap": true,
+    "gluten_free": true,
+    "lactose_free": true
+   },
+   "diet_raw": "Low FODMAP \u00b7 LF \u00b7 GF",
+   "hero": "raw_banana_prawns",
+   "nut": {
+    "kj": 2420,
+    "prot": 32,
+    "fib": 4,
+    "carb": 62
+   },
+   "waste": "Peas are frozen (no waste); pantry soy",
+   "steps": [
+    "Cook rice ahead or use stir-fry night's leftover.",
+    "Scramble 2 eggs in garlic-infused oil; remove.",
+    "Stir-fry 300g prawns 90 sec; rice on high heat, soy + white pepper + frozen peas + eggs."
+   ],
+   "ingredients": [
+    {
+     "ing": "raw_banana_prawns",
+     "qty": 300.0,
+     "unit": "g",
+     "role": "hero",
+     "note": null
+    },
+    {
+     "ing": "free_range_eggs",
+     "qty": 2.0,
+     "unit": "ea",
+     "role": "scales",
+     "note": null
+    },
+    {
+     "ing": "frozen_peas",
+     "qty": 150.0,
+     "unit": "g",
+     "role": "scales",
+     "note": "FODMAP-safe"
+    }
+   ]
+  },
+  {
+   "id": "baked-white-fish-herbs",
+   "name": "Baked white fish with herb butter & lemon",
+   "desc": "Fish on special. Whole baked with fresh herbs, lemon, olive oil \u2014 minimal effort.",
+   "serves": 2,
+   "diet": {
+    "low_fodmap": true,
+    "gluten_free": true,
+    "lactose_free": true
+   },
+   "diet_raw": "Low FODMAP \u00b7 LF \u00b7 GF",
+   "hero": "flathead_or_bream_fillets",
+   "nut": {
+    "kj": 1980,
+    "prot": 37,
+    "fib": 3,
+    "carb": 12
+   },
+   "waste": "Herbs dry well; fish simple + fast",
+   "steps": [
+    "Place 2 fish fillets on foil; top with lemon slices, fresh herbs (dill/thyme), olive oil, salt.",
+    "Bake 200\u00b0C 14 min. Steamed potatoes + leafy salad on side."
+   ],
+   "ingredients": [
+    {
+     "ing": "flathead_or_bream_fillets",
+     "qty": 400.0,
+     "unit": "g",
+     "role": "hero",
+     "note": null
+    },
+    {
+     "ing": "dill_or_thyme_fresh",
+     "qty": null,
+     "unit": "pack",
+     "role": "pantry",
+     "note": "dries well"
+    },
+    {
+     "ing": "lemon",
+     "qty": 1.0,
+     "unit": "ea",
+     "role": "scales",
+     "note": null
+    }
+   ]
+  },
+  {
+   "id": "chickpea-curry-quick",
+   "name": "Quick chickpea curry with spinach",
+   "desc": "Canned chickpeas + curry paste. Spinach, coconut milk \u2014 vegetarian, budget.",
+   "serves": 2,
+   "diet": {
+    "low_fodmap": true,
+    "gluten_free": false,
+    "lactose_free": true
+   },
+   "diet_raw": "Low FODMAP \u00b7 LF \u00b7 Veg",
+   "hero": "canned_chickpeas",
+   "nut": {
+    "kj": 2240,
+    "prot": 16,
+    "fib": 9,
+    "carb": 58
+   },
+   "waste": "Chickpeas canned (shelf); curry paste lasts",
+   "steps": [
+    "Heat 2 tbsp curry paste in garlic-infused oil 1 min.",
+    "Add 1 can chickpeas (drained) + 200mL coconut milk + 200mL stock, simmer 8 min.",
+    "Stir in 150g fresh spinach off heat; lime, coriander. Rice on side."
+   ],
+   "ingredients": [
+    {
+     "ing": "canned_chickpeas",
+     "qty": 400.0,
+     "unit": "g",
+     "role": "hero",
+     "note": null
+    },
+    {
+     "ing": "curry_paste_jar",
+     "qty": null,
+     "unit": "pack",
+     "role": "pantry",
+     "note": "lasts weeks"
+    },
+    {
+     "ing": "coconut_milk",
+     "qty": 200.0,
+     "unit": "ml",
+     "role": "scales",
+     "note": null
+    },
+    {
+     "ing": "fresh_spinach",
+     "qty": 150.0,
+     "unit": "g",
+     "role": "scales",
+     "note": "fully used"
+    }
+   ]
+  },
+  {
+   "id": "pork-apple-cider-braise",
+   "name": "Pork chops in apple cider braise",
+   "desc": "Pork chops on special. Granny Smith apples (low FODMAP), cider, thyme.",
+   "serves": 2,
+   "diet": {
+    "low_fodmap": true,
+    "gluten_free": true,
+    "lactose_free": true
+   },
+   "diet_raw": "Low FODMAP \u00b7 LF \u00b7 GF",
+   "hero": "pork_chops",
+   "nut": {
+    "kj": 2360,
+    "prot": 38,
+    "fib": 4,
+    "carb": 36
+   },
+   "waste": "Apples fully used; thyme dries",
+   "steps": [
+    "Brown 2 pork chops; set aside.",
+    "Deglaze with 200mL cider + 200mL stock; return chops.",
+    "Add apple chunks (peeled, cored) + thyme; braise 15 min. Mash potatoes on side."
+   ],
+   "ingredients": [
+    {
+     "ing": "pork_chops",
+     "qty": 500.0,
+     "unit": "g",
+     "role": "hero",
+     "note": null
+    },
+    {
+     "ing": "apple_cider",
+     "qty": 200.0,
+     "unit": "ml",
+     "role": "scales",
+     "note": null
+    },
+    {
+     "ing": "granny_smith_apples",
+     "qty": 2.0,
+     "unit": "ea",
+     "role": "scales",
+     "note": "low FODMAP"
+    },
+    {
+     "ing": "thyme_fresh",
+     "qty": null,
+     "unit": "pack",
+     "role": "pantry",
+     "note": "dries well"
+    }
+   ]
+  },
+  {
+   "id": "mussels-white-wine-rice",
+   "name": "Mussels in white wine & herbs (if on special)",
+   "desc": "Mussels on special \u2014 expensive usually, but dramatic when discounted. Wine, lemon, fresh parsley.",
+   "serves": 2,
+   "diet": {
+    "low_fodmap": true,
+    "gluten_free": true,
+    "lactose_free": true
+   },
+   "diet_raw": "Low FODMAP \u00b7 LF \u00b7 GF",
+   "hero": "fresh_mussels",
+   "nut": {
+    "kj": 1640,
+    "prot": 28,
+    "fib": 2,
+    "carb": 24
+   },
+   "waste": "Wine shared; shells = natural disposal",
+   "steps": [
+    "Heat garlic-infused oil + fresh herbs (parsley, thyme); add 600g mussels.",
+    "Pour 250mL white wine + 100mL stock over; steam covered 5 min until open.",
+    "Discard any closed. Serve with crusty bread + rice."
+   ],
+   "ingredients": [
+    {
+     "ing": "fresh_mussels",
+     "qty": 600.0,
+     "unit": "g",
+     "role": "hero",
+     "note": null
+    },
+    {
+     "ing": "white_wine",
+     "qty": 250.0,
+     "unit": "ml",
+     "role": "scales",
+     "note": null
+    },
+    {
+     "ing": "parsley_thyme_fresh",
+     "qty": null,
+     "unit": "pack",
+     "role": "pantry",
+     "note": "whole bunches used"
+    }
+   ]
+  },
+  {
+   "id": "beef-mince-lettuce-cups",
+   "name": "Beef mince lettuce cups (Asian-style)",
+   "desc": "Ground beef on special. Soy-ginger filling in butter lettuce leaves \u2014 no carbs, fun format.",
+   "serves": 2,
+   "diet": {
+    "low_fodmap": true,
+    "gluten_free": true,
+    "lactose_free": true
+   },
+   "diet_raw": "Low FODMAP \u00b7 LF \u00b7 GF",
+   "hero": "ground_beef",
+   "nut": {
+    "kj": 2080,
+    "prot": 36,
+    "fib": 4,
+    "carb": 16
+   },
+   "waste": "Lettuce fully used; all sauces pantry",
+   "steps": [
+    "Brown 400g ground beef; add ginger + soy + 1 tsp sesame oil.",
+    "Stir in finely diced water chestnuts (canned, drained) + spring-onion greens.",
+    "Serve in butter lettuce leaves; drizzle with sesame oil + soy."
+   ],
+   "ingredients": [
+    {
+     "ing": "ground_beef",
+     "qty": 400.0,
+     "unit": "g",
+     "role": "hero",
+     "note": null
+    },
+    {
+     "ing": "butter_lettuce_head",
+     "qty": null,
+     "unit": "pack",
+     "role": "scales",
+     "note": "whole used"
+    },
+    {
+     "ing": "water_chestnuts",
+     "qty": 200.0,
+     "unit": "g",
+     "role": "scales",
+     "note": "whole can used"
+    },
+    {
+     "ing": "ginger_knob",
+     "qty": null,
+     "unit": "pack",
+     "role": "scales",
+     "note": "keeps weeks"
+    }
+   ]
+  },
+  {
+   "id": "baked-cod-tomato-olive",
+   "name": "Baked cod with cherry tomatoes & olives",
+   "desc": "Cod on special. Mediterranean-ish (no traditional aromatics), simple 20-min bake.",
+   "serves": 2,
+   "diet": {
+    "low_fodmap": true,
+    "gluten_free": true,
+    "lactose_free": true
+   },
+   "diet_raw": "Low FODMAP \u00b7 LF \u00b7 GF",
+   "hero": "cod_fillets",
+   "nut": {
+    "kj": 1920,
+    "prot": 36,
+    "fib": 4,
+    "carb": 18
+   },
+   "waste": "Cherry toms & olives shared with other nights",
+   "steps": [
+    "Place 2 cod fillets (~400g) on foil or parchment.",
+    "Top with cherry tomatoes + kalamata olives + capers + lemon slices + olive oil.",
+    "Bake 200\u00b0C 16 min. Steamed potatoes on side."
+   ],
+   "ingredients": [
+    {
+     "ing": "cod_fillets",
+     "qty": 400.0,
+     "unit": "g",
+     "role": "hero",
+     "note": null
+    },
+    {
+     "ing": "cherry_tomatoes",
+     "qty": 150.0,
+     "unit": "g",
+     "role": "shared",
+     "note": "shared"
+    },
+    {
+     "ing": "kalamata_olives",
+     "qty": 100.0,
+     "unit": "g",
+     "role": "shared",
+     "note": "shared"
+    }
+   ]
+  },
+  {
+   "id": "chicken-satay-peanut-noodles",
+   "name": "Chicken satay noodles (FODMAP-safe peanut)",
+   "desc": "Chicken on special. Grilled skewers with peanut dipping sauce, rice noodles.",
+   "serves": 2,
+   "diet": {
+    "low_fodmap": true,
+    "gluten_free": true,
+    "lactose_free": true
+   },
+   "diet_raw": "Low FODMAP \u00b7 LF \u00b7 GF noodles",
+   "hero": "chicken_breast",
+   "nut": {
+    "kj": 2520,
+    "prot": 38,
+    "fib": 5,
+    "carb": 54
+   },
+   "waste": "Peanut butter pantry; noodles half-pack",
+   "steps": [
+    "Cube 400g chicken breast; thread onto skewers. Grill or pan 8 min, turning.",
+    "Sauce: peanut butter + coconut milk + lime + soy + ginger.",
+    "Rice noodles per pack; serve with sauce for dipping + cucumber salad."
+   ],
+   "ingredients": [
+    {
+     "ing": "chicken_breast",
+     "qty": 400.0,
+     "unit": "g",
+     "role": "hero",
+     "note": null
+    },
+    {
+     "ing": "peanut_butter",
+     "qty": null,
+     "unit": "pack",
+     "role": "scales",
+     "note": null
+    },
+    {
+     "ing": "coconut_milk",
+     "qty": 200.0,
+     "unit": "ml",
+     "role": "scales",
+     "note": null
+    },
+    {
+     "ing": "rice_noodles",
+     "qty": 250.0,
+     "unit": "g",
+     "role": "shared",
+     "note": "half pack"
+    },
+    {
+     "ing": "cucumber",
+     "qty": 1.0,
+     "unit": "ea",
+     "role": "scales",
+     "note": null
+    }
+   ]
+  }
+ ]
+}

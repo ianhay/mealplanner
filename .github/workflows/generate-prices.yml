@@ -1,0 +1,80 @@
+name: Generate Weekly Prices
+
+on:
+  # Catalogues run Wed–Tue, so refresh Wednesday morning Perth time (Tue 22:00
+  # UTC = Wed 06:00 AWST, no DST in WA) to pick up the *new* week's flyer.
+  schedule:
+    - cron: '0 22 * * 2'
+
+  # Allow manual trigger
+  workflow_dispatch:
+    inputs:
+      coles_saleid:
+        description: 'Coles WA Metro saleId'
+        required: false
+        default: '66019'
+      woolies_saleid:
+        description: 'Woolworths WA saleId'
+        required: false
+        default: '66046'
+
+jobs:
+  generate-prices:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+    - name: Checkout repo
+      uses: actions/checkout@v5
+
+    - name: Set up Python
+      uses: actions/setup-python@v6
+      with:
+        python-version: '3.11'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install requests
+
+    - name: Run price generator
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_REPO: ${{ github.repository }}
+        GITHUB_EMAIL: ${{ secrets.COMMIT_EMAIL || 'docket-bot@example.com' }}
+        COLES_SALEID: ${{ inputs.coles_saleid || '66019' }}
+        WOOLIES_SALEID: ${{ inputs.woolies_saleid || '66046' }}
+        # --- SaleFinder API IDs (Settings -> Secrets and variables -> Actions -> Variables) ---
+        # catalogue id changes WEEKLY; retailer/location are fixed per store+region.
+        COLES_CATALOGUE_ID: ${{ vars.COLES_CATALOGUE_ID || '66233' }}
+        COLES_RETAILER_ID: ${{ vars.COLES_RETAILER_ID || '148' }}
+        COLES_LOCATION_ID: ${{ vars.COLES_LOCATION_ID || '9045' }}
+        COLES_TOKEN: ${{ secrets.COLES_TOKEN }}
+        WOOLIES_CATALOGUE_ID: ${{ vars.WOOLIES_CATALOGUE_ID || '66367' }}
+        WOOLIES_RETAILER_ID: ${{ vars.WOOLIES_RETAILER_ID || '126' }}
+        WOOLIES_LOCATION_ID: ${{ vars.WOOLIES_LOCATION_ID || '22287' }}
+        WOOLIES_TOKEN: ${{ secrets.WOOLIES_TOKEN }}
+        # SF_AUTO_RESOLVE=1 looks up the current catalogueId automatically instead
+        # of relying on the *_CATALOGUE_ID Variables above (verify once before relying on it).
+        SF_AUTO_RESOLVE: ${{ vars.SF_AUTO_RESOLVE || '0' }}
+        REPO_PATH: ${{ github.workspace }}
+      run: python3 generate-thisweek.py
+
+    - name: Commit and push
+      if: success()
+      run: |
+        git config user.name "Docket Bot"
+        git config user.email "docket-bot@example.com"
+        git add week-data.json
+        git commit -m "Weekly price update: $(date -d 'next wednesday' +'%a %d %b')" || { echo "No changes to commit"; exit 0; }
+        # Push. If the branch moved on (e.g. re-running an older run), rebase our
+        # freshly generated file onto the latest main and push again. '-X theirs'
+        # keeps OUR new week-data.json if it conflicts with origin's older one.
+        git push || {
+          echo "Push rejected — rebasing onto latest main and retrying..."
+          git fetch origin main
+          git rebase -X theirs origin/main
+          git push
+        }

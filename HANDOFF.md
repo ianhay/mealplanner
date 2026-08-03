@@ -1,0 +1,297 @@
+# The Docket — Handoff & Orientation (v2)
+
+A FODMAP-safe **weekly dinner planner** that builds a savings-weighted menu and
+shopping list from this week's **Perth (WA) supermarket specials** (Coles +
+Woolworths), then lets a household review, adjust, cost, and share it. Static
+front-end + a weekly Python pricing job. No server, no accounts, no database.
+
+This document is the single source of truth for how it works today. Read it
+top to bottom before changing anything. It supersedes the v1 HANDOFF (the one
+built around `recipe-bank.json` + `thisweek.json` + a server-side "pick 12").
+
+--------------------------------------------------------------------------------
+## 1. What changed from v1, and why
+
+v1 picked twelve recipes server-side (scored by *category*-level discount —
+every chicken recipe scored identically off the deepest chicken special
+anywhere in the catalogue), priced only those twelve, and shipped a frozen
+week. Two structural problems fell out of that:
+
+- **Selection ran before pricing existed**, so it could only ever be as
+  accurate as a category-level guess — never the recipe's own ingredients.
+- **The no-repeat window ate the bank.** 48 recipes ÷ 12/week, held back 28
+  days → by week four there were exactly 12 candidates for 12 slots. The
+  "savings vs cheapness" dial had nothing left to choose between.
+
+v2 inverts the order: **price the ~100-ingredient catalogue once, cost the
+whole recipe bank for free, and let the app select.** Concretely:
+
+- `recipe-bank.json` (prices baked into each recipe) → **`ingredients.json`**
+  (canonical, priced) + **`recipes.json`** (recipes reference ingredient slugs
+  + real quantities, no prices).
+- `generate-thisweek.py` no longer picks a week. It prices every ingredient
+  once (same request budget as before — a few dozen searches — because it now
+  scales with the *ingredient* count, not the *selected-recipe* count) and
+  publishes **`week-data.json`**: the full bank, every recipe costed and
+  savings-annotated.
+- `index.html` picks the week **client-side**, live, with four savings
+  modes, a proper Swap sheet (ranked alternatives, not blind cycling), a
+  savings hero banner, a dislikes list, and a pantry-owned checklist.
+- `history.json` / server-side no-repeat is gone. The week itself already
+  lives in the browser (localStorage) or a share-link; a second recency
+  ledger was a moving part without a capability behind it.
+
+Data flow:
+```
+catalogues (SaleFinder) ──┐
+                          ├─► price every ingredient ─► cost every recipe ─► week-data.json ─► index.html
+ingredients.json,          │                                                                    (picks the week,
+recipes.json ──────────────┘                                                                     live, in-browser)
+```
+
+--------------------------------------------------------------------------------
+## 2. Repo layout
+
+Root (served by GitHub Pages):
+- `index.html`            the entire app (UI + selection engine + PWA), single file
+- `generate-thisweek.py`    the weekly pricing job (no longer a selector)
+- `ingredients.json`        ~96 canonical ingredients: label, category, unit, baseline $, pantry flag, store preference, search terms
+- `recipes.json`            48 recipes referencing ingredient slugs + quantities (no prices)
+- `convert_bank.py`         one-off migration script (v1 `recipe-bank.json` → `ingredients.json` + `recipes.json`) — reference only, already run
+- `week-data.json`          GENERATED weekly — the full priced bank
+- `manifest.json`, `sw.js`  PWA manifest + service worker (cache bumped to v2)
+- icons
+- `set-catalogue-vars.sh`   convenience script (sets Actions Variables via gh CLI)
+- `DEPLOY.md`                concise deploy map + Variable list
+- `HANDOFF.md`               this file
+
+Hidden:
+- `.github/workflows/generate-prices.yml`   the scheduled + manual workflow
+
+Retired (no longer produced or read): `recipe-bank.json`, `thisweek.json`, `history.json`.
+
+Never hand-edit `week-data.json`; the job owns it.
+
+--------------------------------------------------------------------------------
+## 3. The ingredient catalogue (`ingredients.json`)
+
+```
+{
+  "version": 1,
+  "ingredients": {
+    "chicken_breast": {
+      "label": "Chicken breast", "category": "chicken", "unit": "kg",
+      "baseline": 16.0,          // used until a live price is found; then overwritten each run
+      "pantry": false,           // pantry items are excluded from hero candidacy and can be
+                                  // marked "owned" in the app to drop out of the shopping total
+      "store_pref": "c",         // which store's list this lands under in "Shop at Both" mode
+      "search_terms": ["breast", "chicken"],
+      "occurrences": 8           // how many v1 recipes used it (provenance only, not read by code)
+    }, ...
+  }
+}
+```
+
+`unit` is one of `kg` / `L` / `ea` / `pack`. `kg`/`L` ingredients get priced
+per-kilogram/per-litre and scaled by the recipe's quantity; `ea` ingredients
+(eggs, limes, bok choy) are priced per-item; `pack` is a flat shelf price used
+as-is (jars, bottles, whole items sold each rather than by weight).
+
+**Known limitation:** a handful of ingredients that are recorded with a
+weight in the source recipe but are actually sold "each" on special (whole
+chicken, whole lettuce) inherited a `kg` unit from the conversion. Worth a
+manual pass — see §8.
+
+--------------------------------------------------------------------------------
+## 4. Recipes (`recipes.json`)
+
+```
+{
+  "id": "roast-chicken-root-veg", "name": "roast chicken & root veg",
+  "desc": "...", "serves": 2,
+  "diet": {"low_fodmap": true, "gluten_free": true, "lactose_free": true},
+  "hero": "whole_chicken",              // the ingredient selection scores/labels this recipe by
+  "nut": {"kj":2700,"prot":48,"fib":7,"carb":35}, "waste": "...",
+  "steps": ["...", "..."],
+  "ingredients": [
+    {"ing":"whole_chicken","qty":1700.0,"unit":"g","role":"hero","note":"carcass → stock"},
+    {"ing":"wa_white_potatoes","qty":2000.0,"unit":"g","role":"shared","note":"shared 3 meals"},
+    {"ing":"thyme_fresh","qty":null,"unit":"pack","role":"pantry","note":"dries well"}
+  ]
+}
+```
+
+`role` drives both selection and client-side scaling:
+- **`hero`** — the ingredient the recipe is selected/scored/labelled by (one
+  per recipe, picked by protein priority: beef > lamb > pork > duck > chicken
+  > seafood > legume > egg, skipping pantry items like beef stock so a stock
+  cube can never outrank the actual protein).
+- **`scales`** — ordinary ingredients; cost scales with people ÷ serves.
+- **`shared`** — bag/bunch items explicitly noted as shared across meals
+  (bok choy bunch, potato bag); priced once per recipe, not re-scaled per
+  person, since the recipe's quantity already accounts for reuse.
+- **`pantry`** — condiments, oils, pastes, stock; can be marked "owned" in
+  the app to drop out of the shopping total.
+
+--------------------------------------------------------------------------------
+## 5. The generator pipeline (`generate-thisweek.py`)
+
+1. **Load** `ingredients.json` + `recipes.json`.
+2. **Fetch catalogues** (unchanged from v1 — SaleFinder svgData + per-item
+   search, same two endpoints, same token/saleGroup handling).
+3. **Price every ingredient once** (`price_ingredient_catalogue`): for each
+   ingredient, search both stores using its `search_terms`, convert the best
+   match into a genuine per-unit price ($/kg, $/L, $/ea or $/pack — not a
+   price scaled to any one recipe's portion), falling back to the bulk
+   svgData pool, then to the ingredient's `baseline` estimate (flagged
+   `est`). This is the step that used to happen per-selected-recipe; doing it
+   once per ingredient is what makes the whole bank costable for free, and
+   the request budget scales with ~100 ingredients rather than with however
+   many recipes get selected.
+4. **Cost every recipe** (`annotate_recipes`): for each recipe, sum its
+   ingredients' live prices (scaled by qty/role) into `cost`,
+   `cost_per_serve`, `saving`, `saving_pct`, and `hero_on_special`. Every
+   recipe in the bank gets this — not a pre-selected twelve.
+5. **Write `week-data.json`**: metadata + the full priced `ingredients` +
+   the full costed `recipes`. The app selects from this.
+
+Matching notes (unchanged from v1): brand/region words are stripped and
+plurals unified for catalogue matching.
+
+--------------------------------------------------------------------------------
+## 6. `week-data.json` schema (what the planner consumes)
+
+```
+{
+  "schema": 2,
+  "metadata": {
+    "generated", "week_start", "week_end",
+    "coles_saleid","coles_url","woolies_saleid","woolies_url",
+    "catalogue_start","catalogue_end",
+    "ingredients_matched","ingredients_total",
+    "recipes_on_special","total_possible_saving", "note"
+  },
+  "ingredients": { ...same shape as ingredients.json, prices refreshed... },
+  "recipes": [
+    {
+      ...same fields as recipes.json...,
+      "priced_ingredients": [
+        {"ing","label","qty","unit","role","note","now","was","flag"}
+      ],
+      "cost", "cost_per_serve", "saving", "saving_pct", "hero_on_special"
+    }
+  ]
+}
+```
+
+--------------------------------------------------------------------------------
+## 7. The planner (`index.html`)
+
+Single file: HTML + CSS (custom-property theme, unchanged visual identity) +
+vanilla JS. Three tabs — **1 Meals** (landing tab), **2 List**, **3 Setup** —
+reordered so the thing people open the app for is what they see first.
+
+- **Selection engine** (`selectWeek`): scores every recipe in the filtered
+  pool on the active savings mode, greedily builds the week honouring
+  protein diversity (no back-to-back category, max 3/category) and a small
+  **basket bonus** — a candidate sharing a non-hero ingredient with an
+  already-picked recipe this week scores ~12% higher, nudging selection
+  toward genuinely shared shopping (the "2kg potato bag split three ways"
+  pattern the recipe bank already documents in `waste` notes but v1 never
+  modelled).
+- **Four savings modes** (Setup tab, instant reshuffle on change):
+  **Balanced** (0.45·%off + 0.35·$/serve + 0.20·cheapness, all pool-relative
+  normalised), **Deepest discount** (maximise `saving_pct`), **Most $ saved**
+  (maximise `saving`/serve), **Cheapest week** (minimise `cost_per_serve`).
+- **Savings hero banner**: total $ + % saved this week, plus the single best
+  deal, shown at the top of the Meals tab instead of buried in Setup.
+- **Swap sheet** (tap "↻ Swap" on any meal): a ranked, filterable-by-protein
+  sheet of alternatives from the *entire* pool (not a blind next-index
+  cycle), sorted by the active savings mode, each row showing $/serve and
+  % saved.
+- **Dislikes** (Setup): protein-category chips; excluded from both
+  selection and the swap sheet.
+- **Pantry checklist** (Setup + List): tap a pantry ingredient to mark it
+  owned; it strikes through and drops out of the shopping total everywhere,
+  persisted across weeks.
+- **List tab**: shopping list aggregated by ingredient within store (not
+  repeated per-meal), was/now prices, per-item + total savings, Woolworths
+  online-delivery threshold helper.
+- **Custom recipes** ("+ Add a meal to the bank"): unchanged from v1 — type
+  a recipe or paste a URL (schema.org Recipe JSON-LD via a CORS proxy).
+  Custom recipes don't reference the ingredient catalogue, so they don't
+  scale with the people count and aren't scored for savings the way bank
+  recipes are — they're priced by whatever you type.
+- **Share plan**: unchanged mechanism (recipe IDs + settings encoded in the
+  URL hash), extended to carry savings mode and dislikes too.
+- **PWA**: installable, network-first service worker (cache bumped to v2).
+
+localStorage keys: `docket_settings_v2` (mode/days/people/day/store/diet/
+dislikes), `docket_plan_v2`, `docket_pantry_v2`, `docket_custom_recipes_v2`,
+`docket_proxy`.
+
+If `week-data.json` fails to load, the planner shows a tiny demo dataset.
+
+--------------------------------------------------------------------------------
+## 8. Known limitations / gotchas (read before "improving")
+
+- **Whole-item units.** A few ingredients (whole chicken, and likely a couple
+  of others) were converted with a `kg` unit because the source recipe
+  recorded a weight, but catalogues often advertise them "each". Worth a
+  manual override pass in `ingredients.json` (change `unit` to `ea` for the
+  handful that are genuinely each-priced) — low effort, meaningfully improves
+  pricing accuracy for those items.
+- **Savings depend on catalogue data.** Nothing shows a saving until a NEW
+  `week-data.json` exists with live `was` prices; an old file has none.
+- **Single-store mode estimates.** Forcing one retailer keeps the other
+  store's items priced at whatever was found (flagged), not necessarily that
+  store's own price.
+- **Share = snapshot**, not live sync. Re-share after changes.
+- **Custom recipes don't scale.** They carry flat prices you typed, so the
+  people-count stepper doesn't rescale them the way it does bank recipes.
+- **Basket-sharing is per-recipe, not cross-recipe.** The `shared` role
+  amortises a bag/bunch *within* a recipe's own note; the List tab doesn't
+  yet deduplicate, say, "ginger knob" if it's bought fresh in three different
+  recipes the same week — it aggregates by ingredient+store but sums rather
+  than caps at "you only need to buy this once." True unit-rounding
+  (you still need to buy a whole lime even if two recipes use "half") is a
+  genuinely fiddly follow-on, not attempted here.
+- **Protein detection is keyword-based** (ingredient base name). An unusual
+  protein name may fall into "other" and won't get a hero, though the
+  converter's priority list (beef > lamb > pork > duck > chicken > seafood >
+  legume > egg, pantry items excluded) now covers all 48 current recipes
+  correctly — verify new recipes' `hero` field when adding them by hand.
+
+--------------------------------------------------------------------------------
+## 9. Ideas to build on (backlog)
+
+- **Grow the bank via recipe "families"** — one base (stir-fry, traybake,
+  braise, curry, pasta) with a swappable hero slot. ~40 bases × 3–4 proteins
+  ≈ 140 recipes without authoring 140 from scratch, and it's the ideal shape
+  for savings selection (the hero binds to whatever's actually discounted).
+- **Cross-recipe basket deduplication** in the List tab — sum quantities of
+  the same ingredient across the week's meals before re-pricing, rather than
+  aggregating cost per (recipe, ingredient) pair.
+- **Whole-item unit overrides** (§8) — quick, meaningfully improves pricing
+  on the handful of each-priced bulk items.
+- **Custom recipes join the ingredient catalogue** — let a typed/imported
+  recipe reference existing slugs (with a "new ingredient" escape hatch) so
+  it scales with people and gets scored for savings like a bank recipe.
+- **Nutrition/budget targets** — weekly $ cap or protein/fibre goals as
+  additional soft constraints in `selectWeek`.
+
+--------------------------------------------------------------------------------
+## 10. Where to start a review
+
+1. Deploy as-is (see `DEPLOY.md`) and run the workflow once. Read the log —
+   step `[3/4]` should report most of the ~96 ingredients priced live.
+2. Open the app; it should land on **Meals** with a savings banner already
+   populated. Try each savings mode in Setup and watch the week reshuffle.
+   Try Swap on a meal, a dislike chip, marking a pantry item owned.
+3. Open `week-data.json` and spot-check a recipe's `priced_ingredients`
+   against `ingredients.json` — confirm `now`/`was` look sane for a
+   known-cheap and a known-expensive recipe.
+4. Then pick from §9. Recipe-family expansion is the highest-value,
+   lowest-risk lever, same as it was in v1 — it's just far more valuable now
+   that every recipe in the bank is actually priced and selectable, not just
+   whichever twelve the server happened to pick.
