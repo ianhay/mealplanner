@@ -1,20 +1,20 @@
 {
   "schema": 2,
   "metadata": {
-    "generated": "2026-08-03T06:06:15.948554",
-    "week_start": "this week",
-    "week_end": "next week",
+    "generated": "2026-08-03T06:11:29.764507",
+    "week_start": "2026-07-29",
+    "week_end": "2026-08-04",
     "coles_saleid": "66019",
     "coles_url": "https://www.coles.com.au/catalogues/view#view=list&saleId=66019&areaName=c-wa-met",
     "woolies_saleid": "66046",
     "woolies_url": "https://www.woolworths.com.au/shop/catalogue/view#view=list&saleId=66046&areaName=WA",
-    "note": "Catalogue scrape returned no items this week \u2014 all prices are bank baselines. Check the run log / selectors.",
-    "catalogue_start": null,
-    "catalogue_end": null,
-    "ingredients_matched": 0,
+    "note": "Priced 66 of 96 ingredients from this week's catalogue (66 by search, 0 by catalogue pool, 30 on bank baseline).",
+    "catalogue_start": "2026-07-29",
+    "catalogue_end": "2026-08-04",
+    "ingredients_matched": 66,
     "ingredients_total": 96,
-    "recipes_on_special": 0,
-    "total_possible_saving": 0.0
+    "recipes_on_special": 28,
+    "total_possible_saving": 315.16
   },
   "ingredients": {
     "whole_chicken": {
@@ -1367,9 +1367,9 @@
           "unit": "ea",
           "role": "hero",
           "note": "carcass \u2192 stock",
-          "now": 6.8,
+          "now": 7.65,
           "was": null,
-          "flag": "est"
+          "flag": "live"
         },
         {
           "ing": "wa_white_potatoes",
@@ -1378,9 +1378,9 @@
           "unit": "kg",
           "role": "shared",
           "note": "shared 3 meals",
-          "now": 6.0,
+          "now": 25.0,
           "was": null,
-          "flag": "est"
+          "flag": "live"
         },
         {
           "ing": "carrots",
@@ -1389,9 +1389,9 @@
           "unit": "ea",
           "role": "shared",
           "note": "half now, half for braise",
-          "now": 1.6,
+          "now": 6.8,
           "was": null,
-          "flag": "est"
+          "flag": "live"
         },
         {
           "ing": "thyme_fresh",
@@ -1405,8 +1405,8 @@
           "flag": "est"
         }
       ],
-      "cost": 17.4,
-      "cost_per_serve": 8.7,
+      "cost": 42.45,
+      "cost_per_serve": 21.22,
       "saving": 0.0,
       "saving_pct": 0.0,
       "hero_on_special": false
@@ -1466,9 +1466,9 @@
           "unit": "kg",
           "role": "hero",
           "note": null,
-          "now": 12.6,
-          "was": null,
-          "flag": "est"
+          "now": 16.8,
+          "was": 23.8,
+          "flag": "live"
         },
         {
           "ing": "cherry_tomatoes",
@@ -1488,16 +1488,16 @@
           "unit": "kg",
           "role": "shared",
           "note": "half here, half squid night",
-          "now": 3.0,
+          "now": 4.0,
           "was": null,
-          "flag": "est"
+          "flag": "live"
         }
       ],
-      "cost": 18.1,
-      "cost_per_serve": 9.05,
-      "saving": 0.0,
-      "saving_pct": 0.0,
-      "hero_on_special": false
+      "cost": 23.3,
+      "cost_per_serve": 11.65,
+      "saving": 7.0,
+      "saving_pct": 23.1,
+      "hero_on_special": true
     },
     {
       "id": "salmon-broccolini-mash",
@@ -1547,9 +1547,9 @@
           "unit": "kg",
           "role": "hero",
           "note": null,
-          "now": 13.6,
+          "now": 15.22,
           "was": null,
-          "flag": "est"
+          "flag": "live"
         },
         {
           "ing": "broccolini",
@@ -1563,8 +1563,8 @@
           "flag": "est"
         }
       ],
-      "cost": 18.2,
-      "cost_per_serve": 9.1,
+      "cost": 19.82,
+      "cost_per_serve": 9.91,
       "saving": 0.0,
       "saving_pct": 0.0,
       "hero_on_special": false
@@ -1626,7 +1626,7 @@
           "note": null,
           "now": 7.6,
           "was": null,
-          "flag": "est"
+          "flag": "live"
         },
         {
           "ing": "coles_light_soy",
@@ -1635,9 +1635,9 @@
           "unit": "L",
           "role": "pantry",
           "note": "pantry \u2014 lasts months",
-          "now": 3.0,
+          "now": 1.4,
           "was": null,
-          "flag": "est"
+          "flag": "live"
         },
         {
           "ing": "ginger_knob",
@@ -1651,8 +1651,8 @@
           "flag": "est"
         }
       ],
-      "cost": 11.8,
-      "cost_per_serve": 5.9,
+      "cost": 10.2,
+      "cost_per_serve": 5.1,
       "saving": 0.0,
       "saving_pct": 0.0,
       "hero_on_special": false
@@ -1712,9 +1712,9 @@
           "unit": "kg",
           "role": "hero",
           "note": null,
-          "now": 12.0,
-          "was": null,
-          "flag": "est"
+          "now": 7.5,
+          "was": 9.5,
+          "flag": "live"
         },
         {
           "ing": "woolworths_diced_tomatoes",
@@ -1739,11 +1739,11 @@
           "flag": "est"
         }
       ],
-      "cost": 17.2,
-      "cost_per_serve": 8.6,
-      "saving": 0.0,
-      "saving_pct": 0.0,
-      "hero_on_special": false
+      "cost": 12.7,
+      "cost_per_serve": 6.35,
+      "saving": 2.0,
+      "saving_pct": 13.6,
+      "hero_on_special": true
     },
     {
       "id": "pork-chips-rocket",
@@ -1800,9 +1800,9 @@
           "unit": "kg",
           "role": "hero",
           "note": null,
-          "now": 10.0,
-          "was": null,
-          "flag": "est"
+          "now": 5.5,
+          "was": 6.5,
+          "flag": "live"
         },
         {
           "ing": "mccain_airfryer_chips",
@@ -1811,9 +1811,9 @@
           "unit": "kg",
           "role": "scales",
           "note": "freezer \u2014 keeps",
-          "now": 2.75,
-          "was": null,
-          "flag": "est"
+          "now": 10.73,
+          "was": 21.45,
+          "flag": "live"
         },
         {
           "ing": "rocket",
@@ -1827,11 +1827,11 @@
           "flag": "est"
         }
       ],
-      "cost": 15.75,
-      "cost_per_serve": 7.88,
-      "saving": 0.0,
-      "saving_pct": 0.0,
-      "hero_on_special": false
+      "cost": 19.23,
+      "cost_per_serve": 9.62,
+      "saving": 11.72,
+      "saving_pct": 37.9,
+      "hero_on_special": true
     },
     {
       "id": "thai-red-curry-prawns",
@@ -1904,7 +1904,7 @@
           "note": null,
           "now": 7.6,
           "was": null,
-          "flag": "est"
+          "flag": "live"
         },
         {
           "ing": "thai_red_curry_paste_jar",
@@ -1913,9 +1913,9 @@
           "unit": "pack",
           "role": "pantry",
           "note": "lasts weeks",
-          "now": 4.5,
-          "was": null,
-          "flag": "est"
+          "now": 11.0,
+          "was": 22.0,
+          "flag": "live"
         },
         {
           "ing": "coconut_milk",
@@ -1924,9 +1924,9 @@
           "unit": "L",
           "role": "scales",
           "note": "whole can used",
-          "now": 2.2,
-          "was": null,
-          "flag": "est"
+          "now": 1.1,
+          "was": 2.2,
+          "flag": "live"
         },
         {
           "ing": "bok_choy",
@@ -1946,15 +1946,15 @@
           "unit": "ea",
           "role": "scales",
           "note": null,
-          "now": 1.6,
-          "was": null,
-          "flag": "est"
+          "now": 10.0,
+          "was": 20.0,
+          "flag": "live"
         }
       ],
-      "cost": 18.9,
-      "cost_per_serve": 9.45,
-      "saving": 0.0,
-      "saving_pct": 0.0,
+      "cost": 32.7,
+      "cost_per_serve": 16.35,
+      "saving": 22.1,
+      "saving_pct": 40.3,
       "hero_on_special": false
     },
     {
@@ -2037,9 +2037,9 @@
           "unit": "L",
           "role": "scales",
           "note": "whole can",
-          "now": 2.2,
-          "was": null,
-          "flag": "est"
+          "now": 1.1,
+          "was": 2.2,
+          "flag": "live"
         },
         {
           "ing": "rice_noodles",
@@ -2048,9 +2048,9 @@
           "unit": "kg",
           "role": "shared",
           "note": "half pack",
-          "now": 2.8,
-          "was": null,
-          "flag": "est"
+          "now": 0.53,
+          "was": 1.05,
+          "flag": "live"
         },
         {
           "ing": "raw_banana_prawns",
@@ -2061,7 +2061,7 @@
           "note": null,
           "now": 5.7,
           "was": null,
-          "flag": "est"
+          "flag": "live"
         },
         {
           "ing": "free_range_eggs",
@@ -2075,10 +2075,10 @@
           "flag": "est"
         }
       ],
-      "cost": 17.6,
-      "cost_per_serve": 8.8,
-      "saving": 0.0,
-      "saving_pct": 0.0,
+      "cost": 14.23,
+      "cost_per_serve": 7.12,
+      "saving": 1.62,
+      "saving_pct": 10.2,
       "hero_on_special": false
     },
     {
@@ -2143,9 +2143,9 @@
           "unit": "kg",
           "role": "hero",
           "note": null,
-          "now": 3.2,
-          "was": null,
-          "flag": "est"
+          "now": 3.0,
+          "was": 3.2,
+          "flag": "live"
         },
         {
           "ing": "thai_basil_bunch",
@@ -2165,9 +2165,9 @@
           "unit": "kg",
           "role": "shared",
           "note": "half pack",
-          "now": 2.8,
-          "was": null,
-          "flag": "est"
+          "now": 0.53,
+          "was": 1.05,
+          "flag": "live"
         },
         {
           "ing": "bok_choy",
@@ -2181,11 +2181,11 @@
           "flag": "est"
         }
       ],
-      "cost": 12.5,
-      "cost_per_serve": 6.25,
-      "saving": 0.0,
-      "saving_pct": 0.0,
-      "hero_on_special": false
+      "cost": 10.03,
+      "cost_per_serve": 5.02,
+      "saving": 0.72,
+      "saving_pct": 6.7,
+      "hero_on_special": true
     },
     {
       "id": "orange-chicken-stir-fry",
@@ -2249,9 +2249,9 @@
           "unit": "kg",
           "role": "hero",
           "note": null,
-          "now": 7.2,
-          "was": null,
-          "flag": "est"
+          "now": 3.38,
+          "was": 3.6,
+          "flag": "live"
         },
         {
           "ing": "bok_choy",
@@ -2287,11 +2287,11 @@
           "flag": "est"
         }
       ],
-      "cost": 12.28,
-      "cost_per_serve": 6.14,
-      "saving": 0.0,
-      "saving_pct": 0.0,
-      "hero_on_special": false
+      "cost": 8.46,
+      "cost_per_serve": 4.23,
+      "saving": 0.22,
+      "saving_pct": 2.5,
+      "hero_on_special": true
     },
     {
       "id": "satay-chicken-rice",
@@ -2355,9 +2355,9 @@
           "unit": "kg",
           "role": "hero",
           "note": null,
-          "now": 8.4,
+          "now": 4.92,
           "was": null,
-          "flag": "est"
+          "flag": "live"
         },
         {
           "ing": "peanut_butter",
@@ -2366,9 +2366,9 @@
           "unit": "pack",
           "role": "scales",
           "note": null,
-          "now": 0.0,
-          "was": null,
-          "flag": "est"
+          "now": 3.0,
+          "was": 6.0,
+          "flag": "live"
         },
         {
           "ing": "coconut_milk",
@@ -2377,9 +2377,9 @@
           "unit": "L",
           "role": "shared",
           "note": "use the other half elsewhere",
-          "now": 1.1,
-          "was": null,
-          "flag": "est"
+          "now": 0.55,
+          "was": 1.1,
+          "flag": "live"
         },
         {
           "ing": "lime",
@@ -2388,15 +2388,15 @@
           "unit": "ea",
           "role": "scales",
           "note": null,
-          "now": 0.8,
-          "was": null,
-          "flag": "est"
+          "now": 5.0,
+          "was": 10.0,
+          "flag": "live"
         }
       ],
-      "cost": 10.3,
-      "cost_per_serve": 5.15,
-      "saving": 0.0,
-      "saving_pct": 0.0,
+      "cost": 13.47,
+      "cost_per_serve": 6.74,
+      "saving": 8.55,
+      "saving_pct": 38.8,
       "hero_on_special": false
     },
     {
@@ -2454,9 +2454,9 @@
           "unit": "kg",
           "role": "hero",
           "note": null,
-          "now": 14.4,
+          "now": 15.22,
           "was": null,
-          "flag": "est"
+          "flag": "live"
         },
         {
           "ing": "white_miso_paste_jar",
@@ -2465,9 +2465,9 @@
           "unit": "pack",
           "role": "pantry",
           "note": "lasts months",
-          "now": 6.0,
-          "was": null,
-          "flag": "est"
+          "now": 12.5,
+          "was": 18.0,
+          "flag": "live"
         },
         {
           "ing": "bok_choy",
@@ -2481,10 +2481,10 @@
           "flag": "est"
         }
       ],
-      "cost": 23.4,
-      "cost_per_serve": 11.7,
-      "saving": 0.0,
-      "saving_pct": 0.0,
+      "cost": 30.72,
+      "cost_per_serve": 15.36,
+      "saving": 5.5,
+      "saving_pct": 15.2,
       "hero_on_special": false
     },
     {
@@ -2556,9 +2556,9 @@
           "unit": "pack",
           "role": "pantry",
           "note": "lasts weeks",
-          "now": 4.5,
-          "was": null,
-          "flag": "est"
+          "now": 5.0,
+          "was": 6.8,
+          "flag": "live"
         },
         {
           "ing": "chicken_breast",
@@ -2567,9 +2567,9 @@
           "unit": "kg",
           "role": "hero",
           "note": null,
-          "now": 4.8,
-          "was": null,
-          "flag": "est"
+          "now": 2.25,
+          "was": 2.4,
+          "flag": "live"
         },
         {
           "ing": "coconut_milk",
@@ -2578,9 +2578,9 @@
           "unit": "L",
           "role": "scales",
           "note": "halve a can",
-          "now": 1.1,
-          "was": null,
-          "flag": "est"
+          "now": 0.55,
+          "was": 1.1,
+          "flag": "live"
         },
         {
           "ing": "bok_choy",
@@ -2600,16 +2600,16 @@
           "unit": "ea",
           "role": "scales",
           "note": null,
-          "now": 0.8,
-          "was": null,
-          "flag": "est"
+          "now": 5.0,
+          "was": 10.0,
+          "flag": "live"
         }
       ],
-      "cost": 12.7,
-      "cost_per_serve": 6.35,
-      "saving": 0.0,
-      "saving_pct": 0.0,
-      "hero_on_special": false
+      "cost": 14.3,
+      "cost_per_serve": 7.15,
+      "saving": 7.5,
+      "saving_pct": 34.4,
+      "hero_on_special": true
     },
     {
       "id": "tandoori-chicken-rice",
@@ -2673,9 +2673,9 @@
           "unit": "kg",
           "role": "hero",
           "note": null,
-          "now": 7.2,
-          "was": null,
-          "flag": "est"
+          "now": 3.38,
+          "was": 3.6,
+          "flag": "live"
         },
         {
           "ing": "tandoori_paste_jar",
@@ -2695,9 +2695,9 @@
           "unit": "kg",
           "role": "scales",
           "note": "rest \u2192 breakfasts",
-          "now": 4.5,
-          "was": null,
-          "flag": "est"
+          "now": 6.25,
+          "was": 9.06,
+          "flag": "live"
         },
         {
           "ing": "cucumber",
@@ -2711,11 +2711,11 @@
           "flag": "est"
         }
       ],
-      "cost": 18.2,
-      "cost_per_serve": 9.1,
-      "saving": 0.0,
-      "saving_pct": 0.0,
-      "hero_on_special": false
+      "cost": 16.13,
+      "cost_per_serve": 8.06,
+      "saving": 3.03,
+      "saving_pct": 15.8,
+      "hero_on_special": true
     },
     {
       "id": "massaman-beef-rice",
@@ -2779,9 +2779,9 @@
           "unit": "kg",
           "role": "hero",
           "note": null,
-          "now": 7.2,
-          "was": null,
-          "flag": "est"
+          "now": 6.0,
+          "was": 7.6,
+          "flag": "live"
         },
         {
           "ing": "massaman_paste_jar",
@@ -2812,16 +2812,16 @@
           "unit": "pack",
           "role": "scales",
           "note": "pantry check",
-          "now": 0.0,
-          "was": null,
-          "flag": "est"
+          "now": 3.0,
+          "was": 6.0,
+          "flag": "live"
         }
       ],
-      "cost": 16.2,
-      "cost_per_serve": 8.1,
-      "saving": 0.0,
-      "saving_pct": 0.0,
-      "hero_on_special": false
+      "cost": 18.0,
+      "cost_per_serve": 9.0,
+      "saving": 4.6,
+      "saving_pct": 20.4,
+      "hero_on_special": true
     },
     {
       "id": "coconut-chicken-curry",
@@ -2878,9 +2878,9 @@
           "unit": "kg",
           "role": "hero",
           "note": null,
-          "now": 4.8,
-          "was": null,
-          "flag": "est"
+          "now": 2.25,
+          "was": 2.4,
+          "flag": "live"
         },
         {
           "ing": "bok_choy",
@@ -2905,11 +2905,11 @@
           "flag": "est"
         }
       ],
-      "cost": 9.0,
-      "cost_per_serve": 4.5,
-      "saving": 0.0,
-      "saving_pct": 0.0,
-      "hero_on_special": false
+      "cost": 6.45,
+      "cost_per_serve": 3.23,
+      "saving": 0.15,
+      "saving_pct": 2.3,
+      "hero_on_special": true
     },
     {
       "id": "peking-duck-orange",
@@ -2966,9 +2966,9 @@
           "unit": "kg",
           "role": "hero",
           "note": null,
-          "now": 10.0,
-          "was": null,
-          "flag": "est"
+          "now": 6.33,
+          "was": 8.73,
+          "flag": "live"
         },
         {
           "ing": "wa_navel_oranges",
@@ -2988,16 +2988,16 @@
           "unit": "pack",
           "role": "scales",
           "note": "allocate 200g",
-          "now": 0.0,
+          "now": 5.0,
           "was": null,
-          "flag": "est"
+          "flag": "live"
         }
       ],
-      "cost": 11.76,
-      "cost_per_serve": 5.88,
-      "saving": 0.0,
-      "saving_pct": 0.0,
-      "hero_on_special": false
+      "cost": 13.09,
+      "cost_per_serve": 6.54,
+      "saving": 2.4,
+      "saving_pct": 15.5,
+      "hero_on_special": true
     },
     {
       "id": "squid-chips-qukes",
@@ -3040,16 +3040,16 @@
           "unit": "kg",
           "role": "hero",
           "note": null,
-          "now": 6.0,
-          "was": null,
-          "flag": "est"
+          "now": 0.81,
+          "was": 1.03,
+          "flag": "live"
         }
       ],
-      "cost": 6.0,
-      "cost_per_serve": 3.0,
-      "saving": 0.0,
-      "saving_pct": 0.0,
-      "hero_on_special": false
+      "cost": 0.81,
+      "cost_per_serve": 0.41,
+      "saving": 0.22,
+      "saving_pct": 21.4,
+      "hero_on_special": true
     },
     {
       "id": "tuna-cherry-tom-pasta",
@@ -3113,9 +3113,9 @@
           "unit": "kg",
           "role": "hero",
           "note": null,
-          "now": 3.7,
-          "was": null,
-          "flag": "est"
+          "now": 4.48,
+          "was": 5.74,
+          "flag": "live"
         },
         {
           "ing": "pasta",
@@ -3124,9 +3124,9 @@
           "unit": "kg",
           "role": "shared",
           "note": "half bag",
-          "now": 1.0,
-          "was": null,
-          "flag": "est"
+          "now": 9.4,
+          "was": 18.8,
+          "flag": "live"
         },
         {
           "ing": "cherry_tomatoes",
@@ -3146,16 +3146,16 @@
           "unit": "kg",
           "role": "scales",
           "note": "rest \u2192 lunches",
-          "now": 17.5,
-          "was": null,
-          "flag": "est"
+          "now": 13.0,
+          "was": 26.0,
+          "flag": "live"
         }
       ],
-      "cost": 24.7,
-      "cost_per_serve": 12.35,
-      "saving": 0.0,
-      "saving_pct": 0.0,
-      "hero_on_special": false
+      "cost": 29.38,
+      "cost_per_serve": 14.69,
+      "saving": 23.66,
+      "saving_pct": 44.6,
+      "hero_on_special": true
     },
     {
       "id": "fried-rice-bacon-egg",
@@ -3205,9 +3205,9 @@
           "unit": "kg",
           "role": "hero",
           "note": "250g tonight \u2014 rest breakfasts/freezer",
-          "now": 13.0,
-          "was": null,
-          "flag": "est"
+          "now": 14.5,
+          "was": 19.0,
+          "flag": "live"
         },
         {
           "ing": "free_range_eggs",
@@ -3221,11 +3221,11 @@
           "flag": "est"
         }
       ],
-      "cost": 17.2,
-      "cost_per_serve": 8.6,
-      "saving": 0.0,
-      "saving_pct": 0.0,
-      "hero_on_special": false
+      "cost": 18.7,
+      "cost_per_serve": 9.35,
+      "saving": 4.5,
+      "saving_pct": 19.4,
+      "hero_on_special": true
     },
     {
       "id": "drumstick-traybake",
@@ -3275,9 +3275,9 @@
           "unit": "kg",
           "role": "hero",
           "note": "freeze half",
-          "now": 7.0,
+          "now": 21.86,
           "was": null,
-          "flag": "est"
+          "flag": "live"
         },
         {
           "ing": "wa_sweet_corn",
@@ -3288,11 +3288,11 @@
           "note": "\u00bd cob per serve",
           "now": 2.0,
           "was": null,
-          "flag": "est"
+          "flag": "live"
         }
       ],
-      "cost": 9.0,
-      "cost_per_serve": 4.5,
+      "cost": 23.86,
+      "cost_per_serve": 11.93,
       "saving": 0.0,
       "saving_pct": 0.0,
       "hero_on_special": false
@@ -3352,9 +3352,9 @@
           "unit": "kg",
           "role": "hero",
           "note": null,
-          "now": 6.0,
-          "was": null,
-          "flag": "est"
+          "now": 8.4,
+          "was": 12.0,
+          "flag": "live"
         },
         {
           "ing": "birds_eye_steam_fresh_veg",
@@ -3363,9 +3363,9 @@
           "unit": "kg",
           "role": "scales",
           "note": null,
-          "now": 3.6,
-          "was": null,
-          "flag": "est"
+          "now": 2.4,
+          "was": 3.0,
+          "flag": "live"
         },
         {
           "ing": "gold_kiwifruit",
@@ -3374,16 +3374,16 @@
           "unit": "ea",
           "role": "scales",
           "note": null,
-          "now": 6.48,
-          "was": null,
-          "flag": "est"
+          "now": 76.0,
+          "was": 152.0,
+          "flag": "live"
         }
       ],
-      "cost": 16.08,
-      "cost_per_serve": 8.04,
-      "saving": 0.0,
-      "saving_pct": 0.0,
-      "hero_on_special": false
+      "cost": 86.8,
+      "cost_per_serve": 43.4,
+      "saving": 80.2,
+      "saving_pct": 48.0,
+      "hero_on_special": true
     },
     {
       "id": "beef-fajita-strips",
@@ -3440,9 +3440,9 @@
           "unit": "kg",
           "role": "hero",
           "note": null,
-          "now": 9.6,
-          "was": null,
-          "flag": "est"
+          "now": 7.8,
+          "was": 15.6,
+          "flag": "live"
         },
         {
           "ing": "red_capsicum",
@@ -3451,9 +3451,9 @@
           "unit": "ea",
           "role": "scales",
           "note": null,
-          "now": 0.9,
-          "was": null,
-          "flag": "est"
+          "now": 11.0,
+          "was": 22.0,
+          "flag": "live"
         },
         {
           "ing": "bok_choy",
@@ -3467,11 +3467,11 @@
           "flag": "est"
         }
       ],
-      "cost": 13.5,
-      "cost_per_serve": 6.75,
-      "saving": 0.0,
-      "saving_pct": 0.0,
-      "hero_on_special": false
+      "cost": 21.8,
+      "cost_per_serve": 10.9,
+      "saving": 18.8,
+      "saving_pct": 46.3,
+      "hero_on_special": true
     },
     {
       "id": "pork-apple-ginger",
@@ -3535,9 +3535,9 @@
           "unit": "kg",
           "role": "hero",
           "note": null,
-          "now": 8.1,
-          "was": null,
-          "flag": "est"
+          "now": 4.95,
+          "was": 5.85,
+          "flag": "live"
         },
         {
           "ing": "granny_smith_apples",
@@ -3546,9 +3546,9 @@
           "unit": "ea",
           "role": "scales",
           "note": "low FODMAP",
-          "now": 1.5,
+          "now": 20.7,
           "was": null,
-          "flag": "est"
+          "flag": "live"
         },
         {
           "ing": "ginger_knob",
@@ -3568,16 +3568,16 @@
           "unit": "pack",
           "role": "scales",
           "note": "allocate 250g",
-          "now": 0.0,
+          "now": 5.0,
           "was": null,
-          "flag": "est"
+          "flag": "live"
         }
       ],
-      "cost": 10.8,
-      "cost_per_serve": 5.4,
-      "saving": 0.0,
-      "saving_pct": 0.0,
-      "hero_on_special": false
+      "cost": 31.85,
+      "cost_per_serve": 15.92,
+      "saving": 0.9,
+      "saving_pct": 2.7,
+      "hero_on_special": true
     },
     {
       "id": "tofu-peanut-noodles",
@@ -3652,9 +3652,9 @@
           "unit": "kg",
           "role": "shared",
           "note": "half pack",
-          "now": 2.8,
-          "was": null,
-          "flag": "est"
+          "now": 0.53,
+          "was": 1.05,
+          "flag": "live"
         },
         {
           "ing": "cucumber",
@@ -3674,15 +3674,15 @@
           "unit": "ea",
           "role": "scales",
           "note": null,
-          "now": 1.6,
-          "was": null,
-          "flag": "est"
+          "now": 10.0,
+          "was": 20.0,
+          "flag": "live"
         }
       ],
-      "cost": 9.4,
-      "cost_per_serve": 4.7,
-      "saving": 0.0,
-      "saving_pct": 0.0,
+      "cost": 15.53,
+      "cost_per_serve": 7.77,
+      "saving": 10.52,
+      "saving_pct": 40.4,
       "hero_on_special": false
     },
     {
@@ -3747,9 +3747,9 @@
           "unit": "kg",
           "role": "hero",
           "note": null,
-          "now": 4.8,
-          "was": null,
-          "flag": "est"
+          "now": 2.25,
+          "was": 2.4,
+          "flag": "live"
         },
         {
           "ing": "lemongrass_paste_jar",
@@ -3769,9 +3769,9 @@
           "unit": "L",
           "role": "shared",
           "note": "half can",
-          "now": 1.1,
-          "was": null,
-          "flag": "est"
+          "now": 0.55,
+          "was": 1.1,
+          "flag": "live"
         },
         {
           "ing": "lime",
@@ -3780,16 +3780,16 @@
           "unit": "ea",
           "role": "scales",
           "note": null,
-          "now": 0.8,
-          "was": null,
-          "flag": "est"
+          "now": 5.0,
+          "was": 10.0,
+          "flag": "live"
         }
       ],
-      "cost": 10.7,
-      "cost_per_serve": 5.35,
-      "saving": 0.0,
-      "saving_pct": 0.0,
-      "hero_on_special": false
+      "cost": 11.8,
+      "cost_per_serve": 5.9,
+      "saving": 5.7,
+      "saving_pct": 32.6,
+      "hero_on_special": true
     },
     {
       "id": "korean-beef-bibimbap",
@@ -3854,9 +3854,9 @@
           "unit": "kg",
           "role": "hero",
           "note": null,
-          "now": 9.6,
-          "was": null,
-          "flag": "est"
+          "now": 8.0,
+          "was": 9.6,
+          "flag": "live"
         },
         {
           "ing": "bok_choy",
@@ -3876,9 +3876,9 @@
           "unit": "pack",
           "role": "pantry",
           "note": null,
-          "now": 0.0,
-          "was": null,
-          "flag": "est"
+          "now": 13.0,
+          "was": 26.0,
+          "flag": "live"
         },
         {
           "ing": "free_range_eggs",
@@ -3892,11 +3892,11 @@
           "flag": "est"
         }
       ],
-      "cost": 13.3,
-      "cost_per_serve": 6.65,
-      "saving": 0.0,
-      "saving_pct": 0.0,
-      "hero_on_special": false
+      "cost": 24.7,
+      "cost_per_serve": 12.35,
+      "saving": 14.6,
+      "saving_pct": 37.2,
+      "hero_on_special": true
     },
     {
       "id": "vietnamese-caramel-chicken",
@@ -3953,9 +3953,9 @@
           "unit": "kg",
           "role": "hero",
           "note": null,
-          "now": 8.4,
+          "now": 4.92,
           "was": null,
-          "flag": "est"
+          "flag": "live"
         },
         {
           "ing": "ginger_knob",
@@ -3975,15 +3975,15 @@
           "unit": "ea",
           "role": "scales",
           "note": null,
-          "now": 0.8,
-          "was": null,
-          "flag": "est"
+          "now": 5.0,
+          "was": 10.0,
+          "flag": "live"
         }
       ],
-      "cost": 10.4,
-      "cost_per_serve": 5.2,
-      "saving": 0.0,
-      "saving_pct": 0.0,
+      "cost": 11.12,
+      "cost_per_serve": 5.56,
+      "saving": 5.0,
+      "saving_pct": 31.0,
       "hero_on_special": false
     },
     {
@@ -4034,9 +4034,9 @@
           "unit": "kg",
           "role": "hero",
           "note": null,
-          "now": 14.4,
+          "now": 15.22,
           "was": null,
-          "flag": "est"
+          "flag": "live"
         },
         {
           "ing": "bok_choy",
@@ -4050,8 +4050,8 @@
           "flag": "est"
         }
       ],
-      "cost": 17.4,
-      "cost_per_serve": 8.7,
+      "cost": 18.22,
+      "cost_per_serve": 9.11,
       "saving": 0.0,
       "saving_pct": 0.0,
       "hero_on_special": false
@@ -4111,9 +4111,9 @@
           "unit": "kg",
           "role": "hero",
           "note": null,
-          "now": 8.0,
-          "was": null,
-          "flag": "est"
+          "now": 0.9,
+          "was": 1.14,
+          "flag": "live"
         },
         {
           "ing": "thai_basil_bunch",
@@ -4138,11 +4138,11 @@
           "flag": "est"
         }
       ],
-      "cost": 12.7,
-      "cost_per_serve": 6.35,
-      "saving": 0.0,
-      "saving_pct": 0.0,
-      "hero_on_special": false
+      "cost": 5.6,
+      "cost_per_serve": 2.8,
+      "saving": 0.24,
+      "saving_pct": 4.1,
+      "hero_on_special": true
     },
     {
       "id": "green-curry-chicken",
@@ -4206,9 +4206,9 @@
           "unit": "kg",
           "role": "hero",
           "note": null,
-          "now": 4.8,
-          "was": null,
-          "flag": "est"
+          "now": 2.25,
+          "was": 2.4,
+          "flag": "live"
         },
         {
           "ing": "green_curry_paste_jar",
@@ -4217,9 +4217,9 @@
           "unit": "pack",
           "role": "pantry",
           "note": "lasts weeks",
-          "now": 5.5,
-          "was": null,
-          "flag": "est"
+          "now": 4.0,
+          "was": 5.0,
+          "flag": "live"
         },
         {
           "ing": "coconut_milk",
@@ -4228,9 +4228,9 @@
           "unit": "L",
           "role": "scales",
           "note": "whole can",
-          "now": 2.2,
-          "was": null,
-          "flag": "est"
+          "now": 1.1,
+          "was": 2.2,
+          "flag": "live"
         },
         {
           "ing": "bok_choy",
@@ -4244,11 +4244,11 @@
           "flag": "est"
         }
       ],
-      "cost": 17.0,
-      "cost_per_serve": 8.5,
-      "saving": 0.0,
-      "saving_pct": 0.0,
-      "hero_on_special": false
+      "cost": 11.85,
+      "cost_per_serve": 5.92,
+      "saving": 2.25,
+      "saving_pct": 16.0,
+      "hero_on_special": true
     },
     {
       "id": "slow-cooker-beef-stew",
@@ -4312,9 +4312,9 @@
           "unit": "kg",
           "role": "hero",
           "note": null,
-          "now": 10.8,
-          "was": null,
-          "flag": "est"
+          "now": 9.0,
+          "was": 11.4,
+          "flag": "live"
         },
         {
           "ing": "red_wine",
@@ -4323,9 +4323,9 @@
           "unit": "L",
           "role": "scales",
           "note": null,
-          "now": 4.0,
-          "was": null,
-          "flag": "est"
+          "now": 3.3,
+          "was": 6.6,
+          "flag": "live"
         },
         {
           "ing": "beef_stock",
@@ -4334,9 +4334,9 @@
           "unit": "L",
           "role": "pantry",
           "note": null,
-          "now": 1.5,
-          "was": null,
-          "flag": "est"
+          "now": 3.0,
+          "was": 3.8,
+          "flag": "live"
         },
         {
           "ing": "thyme_fresh",
@@ -4350,11 +4350,11 @@
           "flag": "est"
         }
       ],
-      "cost": 19.3,
-      "cost_per_serve": 9.65,
-      "saving": 0.0,
-      "saving_pct": 0.0,
-      "hero_on_special": false
+      "cost": 18.3,
+      "cost_per_serve": 9.15,
+      "saving": 6.5,
+      "saving_pct": 26.2,
+      "hero_on_special": true
     },
     {
       "id": "fish-tacos-lettuce-wraps",
@@ -4418,9 +4418,9 @@
           "unit": "kg",
           "role": "hero",
           "note": null,
-          "now": 9.6,
-          "was": null,
-          "flag": "est"
+          "now": 12.0,
+          "was": 24.0,
+          "flag": "live"
         },
         {
           "ing": "butter_lettuce_head",
@@ -4429,9 +4429,9 @@
           "unit": "pack",
           "role": "scales",
           "note": "whole used",
-          "now": 3.5,
+          "now": 7.65,
           "was": null,
-          "flag": "est"
+          "flag": "live"
         },
         {
           "ing": "lf_mayo",
@@ -4451,16 +4451,16 @@
           "unit": "ea",
           "role": "scales",
           "note": null,
-          "now": 0.8,
-          "was": null,
-          "flag": "est"
+          "now": 5.0,
+          "was": 10.0,
+          "flag": "live"
         }
       ],
-      "cost": 13.9,
-      "cost_per_serve": 6.95,
-      "saving": 0.0,
-      "saving_pct": 0.0,
-      "hero_on_special": false
+      "cost": 24.65,
+      "cost_per_serve": 12.32,
+      "saving": 17.0,
+      "saving_pct": 40.8,
+      "hero_on_special": true
     },
     {
       "id": "chicken-rice-bowl-fried-egg",
@@ -4510,9 +4510,9 @@
           "unit": "pack",
           "role": "hero",
           "note": "carcass \u2192 next week stock",
-          "now": 8.0,
+          "now": 7.65,
           "was": null,
-          "flag": "est"
+          "flag": "live"
         },
         {
           "ing": "free_range_eggs",
@@ -4526,8 +4526,8 @@
           "flag": "est"
         }
       ],
-      "cost": 9.4,
-      "cost_per_serve": 4.7,
+      "cost": 9.05,
+      "cost_per_serve": 4.53,
       "saving": 0.0,
       "saving_pct": 0.0,
       "hero_on_special": false
@@ -4587,9 +4587,9 @@
           "unit": "kg",
           "role": "hero",
           "note": null,
-          "now": 11.5,
+          "now": 13.0,
           "was": null,
-          "flag": "est"
+          "flag": "live"
         },
         {
           "ing": "beef_stock",
@@ -4598,9 +4598,9 @@
           "unit": "L",
           "role": "pantry",
           "note": null,
-          "now": 3.0,
-          "was": null,
-          "flag": "est"
+          "now": 6.0,
+          "was": 7.6,
+          "flag": "live"
         },
         {
           "ing": "ginger_knob",
@@ -4614,10 +4614,10 @@
           "flag": "est"
         }
       ],
-      "cost": 15.7,
-      "cost_per_serve": 7.85,
-      "saving": 0.0,
-      "saving_pct": 0.0,
+      "cost": 20.2,
+      "cost_per_serve": 10.1,
+      "saving": 1.6,
+      "saving_pct": 7.3,
       "hero_on_special": false
     },
     {
@@ -4683,9 +4683,9 @@
           "unit": "kg",
           "role": "shared",
           "note": "half pack",
-          "now": 2.8,
-          "was": null,
-          "flag": "est"
+          "now": 0.53,
+          "was": 1.05,
+          "flag": "live"
         },
         {
           "ing": "white_miso_paste",
@@ -4694,9 +4694,9 @@
           "unit": "pack",
           "role": "pantry",
           "note": null,
-          "now": 0.0,
-          "was": null,
-          "flag": "est"
+          "now": 12.5,
+          "was": 18.0,
+          "flag": "live"
         },
         {
           "ing": "free_range_eggs",
@@ -4721,10 +4721,10 @@
           "flag": "est"
         }
       ],
-      "cost": 7.2,
-      "cost_per_serve": 3.6,
-      "saving": 0.0,
-      "saving_pct": 0.0,
+      "cost": 17.43,
+      "cost_per_serve": 8.71,
+      "saving": 6.02,
+      "saving_pct": 25.7,
       "hero_on_special": false
     },
     {
@@ -4790,9 +4790,9 @@
           "unit": "kg",
           "role": "hero",
           "note": null,
-          "now": 7.2,
-          "was": null,
-          "flag": "est"
+          "now": 3.38,
+          "was": 3.6,
+          "flag": "live"
         },
         {
           "ing": "garam_masala",
@@ -4812,9 +4812,9 @@
           "unit": "pack",
           "role": "pantry",
           "note": "lasts weeks",
-          "now": 3.5,
-          "was": null,
-          "flag": "est"
+          "now": 6.0,
+          "was": 8.4,
+          "flag": "live"
         },
         {
           "ing": "lactose_free_cream",
@@ -4823,16 +4823,16 @@
           "unit": "L",
           "role": "scales",
           "note": "rest \u2192 breakfasts",
-          "now": 3.2,
-          "was": null,
-          "flag": "est"
+          "now": 4.9,
+          "was": 7.0,
+          "flag": "live"
         }
       ],
-      "cost": 13.9,
-      "cost_per_serve": 6.95,
-      "saving": 0.0,
-      "saving_pct": 0.0,
-      "hero_on_special": false
+      "cost": 14.28,
+      "cost_per_serve": 7.14,
+      "saving": 4.72,
+      "saving_pct": 24.8,
+      "hero_on_special": true
     },
     {
       "id": "charred-broccoli-beef",
@@ -4889,9 +4889,9 @@
           "unit": "kg",
           "role": "hero",
           "note": null,
-          "now": 9.6,
-          "was": null,
-          "flag": "est"
+          "now": 8.0,
+          "was": 9.6,
+          "flag": "live"
         },
         {
           "ing": "broccoli",
@@ -4900,9 +4900,9 @@
           "unit": "ea",
           "role": "scales",
           "note": "whole head used",
-          "now": 3.5,
+          "now": 2.7,
           "was": null,
-          "flag": "est"
+          "flag": "live"
         },
         {
           "ing": "sesame_oil",
@@ -4911,16 +4911,16 @@
           "unit": "pack",
           "role": "pantry",
           "note": null,
-          "now": 0.0,
-          "was": null,
-          "flag": "est"
+          "now": 13.0,
+          "was": 26.0,
+          "flag": "live"
         }
       ],
-      "cost": 13.1,
-      "cost_per_serve": 6.55,
-      "saving": 0.0,
-      "saving_pct": 0.0,
-      "hero_on_special": false
+      "cost": 23.7,
+      "cost_per_serve": 11.85,
+      "saving": 14.6,
+      "saving_pct": 38.1,
+      "hero_on_special": true
     },
     {
       "id": "coconut-dhal-rice",
@@ -4984,9 +4984,9 @@
           "unit": "kg",
           "role": "hero",
           "note": null,
-          "now": 0.0,
-          "was": null,
-          "flag": "est"
+          "now": 1.65,
+          "was": 3.3,
+          "flag": "live"
         },
         {
           "ing": "coconut_milk",
@@ -4995,9 +4995,9 @@
           "unit": "L",
           "role": "scales",
           "note": "whole can",
-          "now": 2.2,
-          "was": null,
-          "flag": "est"
+          "now": 1.1,
+          "was": 2.2,
+          "flag": "live"
         },
         {
           "ing": "turmeric",
@@ -5017,16 +5017,16 @@
           "unit": "ea",
           "role": "scales",
           "note": null,
-          "now": 0.8,
-          "was": null,
-          "flag": "est"
+          "now": 5.0,
+          "was": 10.0,
+          "flag": "live"
         }
       ],
-      "cost": 3.0,
-      "cost_per_serve": 1.5,
-      "saving": 0.0,
-      "saving_pct": 0.0,
-      "hero_on_special": false
+      "cost": 7.75,
+      "cost_per_serve": 3.88,
+      "saving": 7.75,
+      "saving_pct": 50.0,
+      "hero_on_special": true
     },
     {
       "id": "honey-soy-chicken-potatoes",
@@ -5076,9 +5076,9 @@
           "unit": "kg",
           "role": "hero",
           "note": null,
-          "now": 8.4,
+          "now": 4.92,
           "was": null,
-          "flag": "est"
+          "flag": "live"
         },
         {
           "ing": "potatoes",
@@ -5087,13 +5087,13 @@
           "unit": "pack",
           "role": "scales",
           "note": "allocate 250g",
-          "now": 0.0,
+          "now": 5.0,
           "was": null,
-          "flag": "est"
+          "flag": "live"
         }
       ],
-      "cost": 8.4,
-      "cost_per_serve": 4.2,
+      "cost": 9.92,
+      "cost_per_serve": 4.96,
       "saving": 0.0,
       "saving_pct": 0.0,
       "hero_on_special": false
@@ -5155,7 +5155,7 @@
           "note": null,
           "now": 5.7,
           "was": null,
-          "flag": "est"
+          "flag": "live"
         },
         {
           "ing": "free_range_eggs",
@@ -5175,13 +5175,13 @@
           "unit": "kg",
           "role": "scales",
           "note": "FODMAP-safe",
-          "now": 2.0,
+          "now": 0.42,
           "was": null,
-          "flag": "est"
+          "flag": "live"
         }
       ],
-      "cost": 9.1,
-      "cost_per_serve": 4.55,
+      "cost": 7.52,
+      "cost_per_serve": 3.76,
       "saving": 0.0,
       "saving_pct": 0.0,
       "hero_on_special": false
@@ -5262,15 +5262,15 @@
           "unit": "ea",
           "role": "scales",
           "note": null,
-          "now": 0.7,
-          "was": null,
-          "flag": "est"
+          "now": 52.0,
+          "was": 56.0,
+          "flag": "live"
         }
       ],
-      "cost": 13.3,
-      "cost_per_serve": 6.65,
-      "saving": 0.0,
-      "saving_pct": 0.0,
+      "cost": 64.6,
+      "cost_per_serve": 32.3,
+      "saving": 4.0,
+      "saving_pct": 5.8,
       "hero_on_special": false
     },
     {
@@ -5357,9 +5357,9 @@
           "unit": "L",
           "role": "scales",
           "note": null,
-          "now": 1.1,
-          "was": null,
-          "flag": "est"
+          "now": 0.55,
+          "was": 1.1,
+          "flag": "live"
         },
         {
           "ing": "fresh_spinach",
@@ -5373,10 +5373,10 @@
           "flag": "est"
         }
       ],
-      "cost": 10.9,
-      "cost_per_serve": 5.45,
-      "saving": 0.0,
-      "saving_pct": 0.0,
+      "cost": 10.35,
+      "cost_per_serve": 5.17,
+      "saving": 0.55,
+      "saving_pct": 5.0,
       "hero_on_special": false
     },
     {
@@ -5441,9 +5441,9 @@
           "unit": "kg",
           "role": "hero",
           "note": null,
-          "now": 9.5,
-          "was": null,
-          "flag": "est"
+          "now": 5.5,
+          "was": 6.5,
+          "flag": "live"
         },
         {
           "ing": "apple_cider",
@@ -5452,9 +5452,9 @@
           "unit": "L",
           "role": "scales",
           "note": null,
-          "now": 3.5,
+          "now": 1.38,
           "was": null,
-          "flag": "est"
+          "flag": "live"
         },
         {
           "ing": "granny_smith_apples",
@@ -5463,9 +5463,9 @@
           "unit": "ea",
           "role": "scales",
           "note": "low FODMAP",
-          "now": 1.0,
+          "now": 13.8,
           "was": null,
-          "flag": "est"
+          "flag": "live"
         },
         {
           "ing": "thyme_fresh",
@@ -5479,11 +5479,11 @@
           "flag": "est"
         }
       ],
-      "cost": 17.0,
-      "cost_per_serve": 8.5,
-      "saving": 0.0,
-      "saving_pct": 0.0,
-      "hero_on_special": false
+      "cost": 23.68,
+      "cost_per_serve": 11.84,
+      "saving": 1.0,
+      "saving_pct": 4.1,
+      "hero_on_special": true
     },
     {
       "id": "mussels-white-wine-rice",
@@ -5551,9 +5551,9 @@
           "unit": "L",
           "role": "scales",
           "note": null,
-          "now": 4.0,
+          "now": 0.75,
           "was": null,
-          "flag": "est"
+          "flag": "live"
         },
         {
           "ing": "parsley_thyme_fresh",
@@ -5567,8 +5567,8 @@
           "flag": "est"
         }
       ],
-      "cost": 22.0,
-      "cost_per_serve": 11.0,
+      "cost": 18.75,
+      "cost_per_serve": 9.38,
       "saving": 0.0,
       "saving_pct": 0.0,
       "hero_on_special": false
@@ -5635,9 +5635,9 @@
           "unit": "kg",
           "role": "hero",
           "note": null,
-          "now": 7.2,
-          "was": null,
-          "flag": "est"
+          "now": 6.0,
+          "was": 7.6,
+          "flag": "live"
         },
         {
           "ing": "butter_lettuce_head",
@@ -5646,9 +5646,9 @@
           "unit": "pack",
           "role": "scales",
           "note": "whole used",
-          "now": 3.5,
+          "now": 7.65,
           "was": null,
-          "flag": "est"
+          "flag": "live"
         },
         {
           "ing": "water_chestnuts",
@@ -5657,9 +5657,9 @@
           "unit": "kg",
           "role": "scales",
           "note": "whole can used",
-          "now": 2.2,
-          "was": null,
-          "flag": "est"
+          "now": 0.55,
+          "was": 1.1,
+          "flag": "live"
         },
         {
           "ing": "ginger_knob",
@@ -5673,11 +5673,11 @@
           "flag": "est"
         }
       ],
-      "cost": 14.1,
-      "cost_per_serve": 7.05,
-      "saving": 0.0,
-      "saving_pct": 0.0,
-      "hero_on_special": false
+      "cost": 15.4,
+      "cost_per_serve": 7.7,
+      "saving": 2.15,
+      "saving_pct": 12.3,
+      "hero_on_special": true
     },
     {
       "id": "baked-cod-tomato-olive",
@@ -5756,15 +5756,15 @@
           "unit": "kg",
           "role": "shared",
           "note": "shared",
-          "now": 1.75,
-          "was": null,
-          "flag": "est"
+          "now": 1.3,
+          "was": 2.6,
+          "flag": "live"
         }
       ],
-      "cost": 12.85,
-      "cost_per_serve": 6.42,
-      "saving": 0.0,
-      "saving_pct": 0.0,
+      "cost": 12.4,
+      "cost_per_serve": 6.2,
+      "saving": 1.3,
+      "saving_pct": 9.5,
       "hero_on_special": false
     },
     {
@@ -5836,9 +5836,9 @@
           "unit": "kg",
           "role": "hero",
           "note": null,
-          "now": 6.4,
-          "was": null,
-          "flag": "est"
+          "now": 3.0,
+          "was": 3.2,
+          "flag": "live"
         },
         {
           "ing": "peanut_butter",
@@ -5847,9 +5847,9 @@
           "unit": "pack",
           "role": "scales",
           "note": null,
-          "now": 0.0,
-          "was": null,
-          "flag": "est"
+          "now": 3.0,
+          "was": 6.0,
+          "flag": "live"
         },
         {
           "ing": "coconut_milk",
@@ -5858,9 +5858,9 @@
           "unit": "L",
           "role": "scales",
           "note": null,
-          "now": 1.1,
-          "was": null,
-          "flag": "est"
+          "now": 0.55,
+          "was": 1.1,
+          "flag": "live"
         },
         {
           "ing": "rice_noodles",
@@ -5869,9 +5869,9 @@
           "unit": "kg",
           "role": "shared",
           "note": "half pack",
-          "now": 2.8,
-          "was": null,
-          "flag": "est"
+          "now": 0.53,
+          "was": 1.05,
+          "flag": "live"
         },
         {
           "ing": "cucumber",
@@ -5885,11 +5885,11 @@
           "flag": "est"
         }
       ],
-      "cost": 11.8,
-      "cost_per_serve": 5.9,
-      "saving": 0.0,
-      "saving_pct": 0.0,
-      "hero_on_special": false
+      "cost": 8.58,
+      "cost_per_serve": 4.29,
+      "saving": 4.27,
+      "saving_pct": 33.2,
+      "hero_on_special": true
     }
   ]
 }
