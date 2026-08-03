@@ -1,20 +1,20 @@
 {
   "schema": 2,
   "metadata": {
-    "generated": "2026-08-03T06:11:29.764507",
+    "generated": "2026-08-03T06:51:25.290884",
     "week_start": "2026-07-29",
     "week_end": "2026-08-04",
     "coles_saleid": "66019",
     "coles_url": "https://www.coles.com.au/catalogues/view#view=list&saleId=66019&areaName=c-wa-met",
     "woolies_saleid": "66046",
     "woolies_url": "https://www.woolworths.com.au/shop/catalogue/view#view=list&saleId=66046&areaName=WA",
-    "note": "Priced 66 of 96 ingredients from this week's catalogue (66 by search, 0 by catalogue pool, 30 on bank baseline).",
+    "note": "Priced 64 of 96 ingredients from this week's catalogue (64 by search, 0 by catalogue pool, 32 on bank baseline).",
     "catalogue_start": "2026-07-29",
     "catalogue_end": "2026-08-04",
-    "ingredients_matched": 66,
+    "ingredients_matched": 64,
     "ingredients_total": 96,
-    "recipes_on_special": 28,
-    "total_possible_saving": 315.16
+    "recipes_on_special": 26,
+    "total_possible_saving": 314.7
   },
   "ingredients": {
     "whole_chicken": {
@@ -1369,7 +1369,19 @@
           "note": "carcass \u2192 stock",
           "now": 7.65,
           "was": null,
-          "flag": "live"
+          "flag": "live",
+          "by_store": {
+            "c": {
+              "now": 7.65,
+              "was": null,
+              "flag": "live"
+            },
+            "w": {
+              "now": 6.8,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "wa_white_potatoes",
@@ -1380,7 +1392,19 @@
           "note": "shared 3 meals",
           "now": 25.0,
           "was": null,
-          "flag": "live"
+          "flag": "live",
+          "by_store": {
+            "c": {
+              "now": 25.0,
+              "was": null,
+              "flag": "live"
+            },
+            "w": {
+              "now": 6.0,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "carrots",
@@ -1391,7 +1415,19 @@
           "note": "half now, half for braise",
           "now": 6.8,
           "was": null,
-          "flag": "live"
+          "flag": "live",
+          "by_store": {
+            "c": {
+              "now": 6.8,
+              "was": null,
+              "flag": "live"
+            },
+            "w": {
+              "now": 1.6,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "thyme_fresh",
@@ -1402,7 +1438,19 @@
           "note": "dries well",
           "now": 3.0,
           "was": null,
-          "flag": "est"
+          "flag": "est",
+          "by_store": {
+            "c": {
+              "now": 3.0,
+              "was": null,
+              "flag": "est"
+            },
+            "w": {
+              "now": 3.0,
+              "was": null,
+              "flag": "est"
+            }
+          }
         }
       ],
       "cost": 42.45,
@@ -1468,7 +1516,19 @@
           "note": null,
           "now": 16.8,
           "was": 23.8,
-          "flag": "live"
+          "flag": "live",
+          "by_store": {
+            "c": {
+              "now": 16.8,
+              "was": 23.8,
+              "flag": "live"
+            },
+            "w": {
+              "now": 12.6,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "cherry_tomatoes",
@@ -1479,7 +1539,19 @@
           "note": null,
           "now": 2.5,
           "was": null,
-          "flag": "est"
+          "flag": "est",
+          "by_store": {
+            "c": {
+              "now": 2.5,
+              "was": null,
+              "flag": "est"
+            },
+            "w": {
+              "now": 2.5,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "qukes_baby_cucumbers",
@@ -1490,7 +1562,19 @@
           "note": "half here, half squid night",
           "now": 4.0,
           "was": null,
-          "flag": "live"
+          "flag": "live",
+          "by_store": {
+            "c": {
+              "now": 4.0,
+              "was": null,
+              "flag": "live"
+            },
+            "w": {
+              "now": 3.0,
+              "was": null,
+              "flag": "est"
+            }
+          }
         }
       ],
       "cost": 23.3,
@@ -1549,7 +1633,19 @@
           "note": null,
           "now": 15.22,
           "was": null,
-          "flag": "live"
+          "flag": "live",
+          "by_store": {
+            "c": {
+              "now": 15.22,
+              "was": null,
+              "flag": "live"
+            },
+            "w": {
+              "now": 13.6,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "broccolini",
@@ -1560,7 +1656,19 @@
           "note": "stems \u2192 stir-fry",
           "now": 4.6,
           "was": null,
-          "flag": "est"
+          "flag": "est",
+          "by_store": {
+            "c": {
+              "now": 4.6,
+              "was": null,
+              "flag": "est"
+            },
+            "w": {
+              "now": 4.6,
+              "was": null,
+              "flag": "est"
+            }
+          }
         }
       ],
       "cost": 19.82,
@@ -1626,7 +1734,19 @@
           "note": null,
           "now": 7.6,
           "was": null,
-          "flag": "live"
+          "flag": "live",
+          "by_store": {
+            "c": {
+              "now": 7.6,
+              "was": null,
+              "flag": "live"
+            },
+            "w": {
+              "now": 7.6,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "coles_light_soy",
@@ -1637,7 +1757,19 @@
           "note": "pantry \u2014 lasts months",
           "now": 1.4,
           "was": null,
-          "flag": "live"
+          "flag": "live",
+          "by_store": {
+            "c": {
+              "now": 1.4,
+              "was": null,
+              "flag": "live"
+            },
+            "w": {
+              "now": 3.0,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "ginger_knob",
@@ -1648,7 +1780,19 @@
           "note": "keeps weeks",
           "now": 1.2,
           "was": null,
-          "flag": "est"
+          "flag": "est",
+          "by_store": {
+            "c": {
+              "now": 1.2,
+              "was": null,
+              "flag": "est"
+            },
+            "w": {
+              "now": 1.2,
+              "was": null,
+              "flag": "est"
+            }
+          }
         }
       ],
       "cost": 10.2,
@@ -1714,7 +1858,19 @@
           "note": null,
           "now": 7.5,
           "was": 9.5,
-          "flag": "live"
+          "flag": "live",
+          "by_store": {
+            "c": {
+              "now": 7.5,
+              "was": 9.5,
+              "flag": "live"
+            },
+            "w": {
+              "now": 12.0,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "woolworths_diced_tomatoes",
@@ -1725,7 +1881,19 @@
           "note": "both cans used",
           "now": 2.2,
           "was": null,
-          "flag": "est"
+          "flag": "est",
+          "by_store": {
+            "c": {
+              "now": 2.2,
+              "was": null,
+              "flag": "est"
+            },
+            "w": {
+              "now": 2.2,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "rosemary_fresh",
@@ -1736,7 +1904,19 @@
           "note": "dries well",
           "now": 3.0,
           "was": null,
-          "flag": "est"
+          "flag": "est",
+          "by_store": {
+            "c": {
+              "now": 3.0,
+              "was": null,
+              "flag": "est"
+            },
+            "w": {
+              "now": 3.0,
+              "was": null,
+              "flag": "est"
+            }
+          }
         }
       ],
       "cost": 12.7,
@@ -1802,7 +1982,19 @@
           "note": null,
           "now": 5.5,
           "was": 6.5,
-          "flag": "live"
+          "flag": "live",
+          "by_store": {
+            "c": {
+              "now": 5.5,
+              "was": 6.5,
+              "flag": "live"
+            },
+            "w": {
+              "now": 10.0,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "mccain_airfryer_chips",
@@ -1813,7 +2005,19 @@
           "note": "freezer \u2014 keeps",
           "now": 10.73,
           "was": 21.45,
-          "flag": "live"
+          "flag": "live",
+          "by_store": {
+            "c": {
+              "now": 10.73,
+              "was": 21.45,
+              "flag": "live"
+            },
+            "w": {
+              "now": 2.75,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "rocket",
@@ -1824,7 +2028,19 @@
           "note": "rest \u2192 lunches",
           "now": 3.0,
           "was": null,
-          "flag": "est"
+          "flag": "est",
+          "by_store": {
+            "c": {
+              "now": 3.0,
+              "was": null,
+              "flag": "est"
+            },
+            "w": {
+              "now": 3.0,
+              "was": null,
+              "flag": "est"
+            }
+          }
         }
       ],
       "cost": 19.23,
@@ -1904,7 +2120,19 @@
           "note": null,
           "now": 7.6,
           "was": null,
-          "flag": "live"
+          "flag": "live",
+          "by_store": {
+            "c": {
+              "now": 7.6,
+              "was": null,
+              "flag": "live"
+            },
+            "w": {
+              "now": 7.6,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "thai_red_curry_paste_jar",
@@ -1915,7 +2143,19 @@
           "note": "lasts weeks",
           "now": 11.0,
           "was": 22.0,
-          "flag": "live"
+          "flag": "live",
+          "by_store": {
+            "c": {
+              "now": 11.0,
+              "was": 22.0,
+              "flag": "live"
+            },
+            "w": {
+              "now": 4.5,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "coconut_milk",
@@ -1926,7 +2166,19 @@
           "note": "whole can used",
           "now": 1.1,
           "was": 2.2,
-          "flag": "live"
+          "flag": "live",
+          "by_store": {
+            "c": {
+              "now": 1.1,
+              "was": 2.2,
+              "flag": "live"
+            },
+            "w": {
+              "now": 2.2,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "bok_choy",
@@ -1937,7 +2189,19 @@
           "note": "shared with stir-fries",
           "now": 3.0,
           "was": null,
-          "flag": "est"
+          "flag": "est",
+          "by_store": {
+            "c": {
+              "now": 3.0,
+              "was": null,
+              "flag": "est"
+            },
+            "w": {
+              "now": 3.0,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "lime",
@@ -1948,7 +2212,19 @@
           "note": null,
           "now": 10.0,
           "was": 20.0,
-          "flag": "live"
+          "flag": "live",
+          "by_store": {
+            "c": {
+              "now": 10.0,
+              "was": 20.0,
+              "flag": "live"
+            },
+            "w": {
+              "now": 1.6,
+              "was": null,
+              "flag": "est"
+            }
+          }
         }
       ],
       "cost": 32.7,
@@ -2028,7 +2304,19 @@
           "note": "lasts weeks",
           "now": 5.5,
           "was": null,
-          "flag": "est"
+          "flag": "est",
+          "by_store": {
+            "c": {
+              "now": 5.5,
+              "was": null,
+              "flag": "est"
+            },
+            "w": {
+              "now": 5.5,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "coconut_milk",
@@ -2039,7 +2327,19 @@
           "note": "whole can",
           "now": 1.1,
           "was": 2.2,
-          "flag": "live"
+          "flag": "live",
+          "by_store": {
+            "c": {
+              "now": 1.1,
+              "was": 2.2,
+              "flag": "live"
+            },
+            "w": {
+              "now": 2.2,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "rice_noodles",
@@ -2050,7 +2350,19 @@
           "note": "half pack",
           "now": 0.53,
           "was": 1.05,
-          "flag": "live"
+          "flag": "live",
+          "by_store": {
+            "c": {
+              "now": 0.53,
+              "was": 1.05,
+              "flag": "live"
+            },
+            "w": {
+              "now": 2.8,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "raw_banana_prawns",
@@ -2061,7 +2373,19 @@
           "note": null,
           "now": 5.7,
           "was": null,
-          "flag": "live"
+          "flag": "live",
+          "by_store": {
+            "c": {
+              "now": 5.7,
+              "was": null,
+              "flag": "live"
+            },
+            "w": {
+              "now": 5.7,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "free_range_eggs",
@@ -2072,7 +2396,19 @@
           "note": "rest \u2192 breakfasts",
           "now": 1.4,
           "was": null,
-          "flag": "est"
+          "flag": "est",
+          "by_store": {
+            "c": {
+              "now": 1.4,
+              "was": null,
+              "flag": "est"
+            },
+            "w": {
+              "now": 1.4,
+              "was": null,
+              "flag": "est"
+            }
+          }
         }
       ],
       "cost": 14.23,
@@ -2145,7 +2481,19 @@
           "note": null,
           "now": 3.0,
           "was": 3.2,
-          "flag": "live"
+          "flag": "live",
+          "by_store": {
+            "c": {
+              "now": 3.0,
+              "was": 3.2,
+              "flag": "live"
+            },
+            "w": {
+              "now": 3.2,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "thai_basil_bunch",
@@ -2156,7 +2504,19 @@
           "note": "whole bunch used",
           "now": 3.5,
           "was": null,
-          "flag": "est"
+          "flag": "est",
+          "by_store": {
+            "c": {
+              "now": 3.5,
+              "was": null,
+              "flag": "est"
+            },
+            "w": {
+              "now": 3.5,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "rice_noodles",
@@ -2167,7 +2527,19 @@
           "note": "half pack",
           "now": 0.53,
           "was": 1.05,
-          "flag": "live"
+          "flag": "live",
+          "by_store": {
+            "c": {
+              "now": 0.53,
+              "was": 1.05,
+              "flag": "live"
+            },
+            "w": {
+              "now": 2.8,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "bok_choy",
@@ -2178,7 +2550,19 @@
           "note": null,
           "now": 3.0,
           "was": null,
-          "flag": "est"
+          "flag": "est",
+          "by_store": {
+            "c": {
+              "now": 3.0,
+              "was": null,
+              "flag": "est"
+            },
+            "w": {
+              "now": 3.0,
+              "was": null,
+              "flag": "est"
+            }
+          }
         }
       ],
       "cost": 10.03,
@@ -2251,7 +2635,19 @@
           "note": null,
           "now": 3.38,
           "was": 3.6,
-          "flag": "live"
+          "flag": "live",
+          "by_store": {
+            "c": {
+              "now": 3.38,
+              "was": 3.6,
+              "flag": "live"
+            },
+            "w": {
+              "now": 7.2,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "bok_choy",
@@ -2262,7 +2658,19 @@
           "note": null,
           "now": 3.0,
           "was": null,
-          "flag": "est"
+          "flag": "est",
+          "by_store": {
+            "c": {
+              "now": 3.0,
+              "was": null,
+              "flag": "est"
+            },
+            "w": {
+              "now": 3.0,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "orange",
@@ -2273,7 +2681,19 @@
           "note": "shared with other meals",
           "now": 0.88,
           "was": null,
-          "flag": "est"
+          "flag": "est",
+          "by_store": {
+            "c": {
+              "now": 0.88,
+              "was": null,
+              "flag": "est"
+            },
+            "w": {
+              "now": 0.88,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "ginger_knob",
@@ -2284,7 +2704,19 @@
           "note": "keeps weeks",
           "now": 1.2,
           "was": null,
-          "flag": "est"
+          "flag": "est",
+          "by_store": {
+            "c": {
+              "now": 1.2,
+              "was": null,
+              "flag": "est"
+            },
+            "w": {
+              "now": 1.2,
+              "was": null,
+              "flag": "est"
+            }
+          }
         }
       ],
       "cost": 8.46,
@@ -2357,7 +2789,19 @@
           "note": null,
           "now": 4.92,
           "was": null,
-          "flag": "live"
+          "flag": "live",
+          "by_store": {
+            "c": {
+              "now": 4.92,
+              "was": null,
+              "flag": "live"
+            },
+            "w": {
+              "now": 8.4,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "peanut_butter",
@@ -2368,7 +2812,19 @@
           "note": null,
           "now": 3.0,
           "was": 6.0,
-          "flag": "live"
+          "flag": "live",
+          "by_store": {
+            "c": {
+              "now": 3.0,
+              "was": 6.0,
+              "flag": "live"
+            },
+            "w": {
+              "now": 0.0,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "coconut_milk",
@@ -2379,7 +2835,19 @@
           "note": "use the other half elsewhere",
           "now": 0.55,
           "was": 1.1,
-          "flag": "live"
+          "flag": "live",
+          "by_store": {
+            "c": {
+              "now": 0.55,
+              "was": 1.1,
+              "flag": "live"
+            },
+            "w": {
+              "now": 1.1,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "lime",
@@ -2390,7 +2858,19 @@
           "note": null,
           "now": 5.0,
           "was": 10.0,
-          "flag": "live"
+          "flag": "live",
+          "by_store": {
+            "c": {
+              "now": 5.0,
+              "was": 10.0,
+              "flag": "live"
+            },
+            "w": {
+              "now": 0.8,
+              "was": null,
+              "flag": "est"
+            }
+          }
         }
       ],
       "cost": 13.47,
@@ -2456,7 +2936,19 @@
           "note": null,
           "now": 15.22,
           "was": null,
-          "flag": "live"
+          "flag": "live",
+          "by_store": {
+            "c": {
+              "now": 15.22,
+              "was": null,
+              "flag": "live"
+            },
+            "w": {
+              "now": 14.4,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "white_miso_paste_jar",
@@ -2467,7 +2959,19 @@
           "note": "lasts months",
           "now": 12.5,
           "was": 18.0,
-          "flag": "live"
+          "flag": "live",
+          "by_store": {
+            "c": {
+              "now": 12.5,
+              "was": 18.0,
+              "flag": "live"
+            },
+            "w": {
+              "now": 6.0,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "bok_choy",
@@ -2478,7 +2982,19 @@
           "note": null,
           "now": 3.0,
           "was": null,
-          "flag": "est"
+          "flag": "est",
+          "by_store": {
+            "c": {
+              "now": 3.0,
+              "was": null,
+              "flag": "est"
+            },
+            "w": {
+              "now": 3.0,
+              "was": null,
+              "flag": "est"
+            }
+          }
         }
       ],
       "cost": 30.72,
@@ -2558,7 +3074,19 @@
           "note": "lasts weeks",
           "now": 5.0,
           "was": 6.8,
-          "flag": "live"
+          "flag": "live",
+          "by_store": {
+            "c": {
+              "now": 5.0,
+              "was": 6.8,
+              "flag": "live"
+            },
+            "w": {
+              "now": 4.5,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "chicken_breast",
@@ -2569,7 +3097,19 @@
           "note": null,
           "now": 2.25,
           "was": 2.4,
-          "flag": "live"
+          "flag": "live",
+          "by_store": {
+            "c": {
+              "now": 2.25,
+              "was": 2.4,
+              "flag": "live"
+            },
+            "w": {
+              "now": 4.8,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "coconut_milk",
@@ -2580,7 +3120,19 @@
           "note": "halve a can",
           "now": 0.55,
           "was": 1.1,
-          "flag": "live"
+          "flag": "live",
+          "by_store": {
+            "c": {
+              "now": 0.55,
+              "was": 1.1,
+              "flag": "live"
+            },
+            "w": {
+              "now": 1.1,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "bok_choy",
@@ -2591,7 +3143,19 @@
           "note": null,
           "now": 1.5,
           "was": null,
-          "flag": "est"
+          "flag": "est",
+          "by_store": {
+            "c": {
+              "now": 1.5,
+              "was": null,
+              "flag": "est"
+            },
+            "w": {
+              "now": 1.5,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "lime",
@@ -2602,7 +3166,19 @@
           "note": null,
           "now": 5.0,
           "was": 10.0,
-          "flag": "live"
+          "flag": "live",
+          "by_store": {
+            "c": {
+              "now": 5.0,
+              "was": 10.0,
+              "flag": "live"
+            },
+            "w": {
+              "now": 0.8,
+              "was": null,
+              "flag": "est"
+            }
+          }
         }
       ],
       "cost": 14.3,
@@ -2675,7 +3251,19 @@
           "note": null,
           "now": 3.38,
           "was": 3.6,
-          "flag": "live"
+          "flag": "live",
+          "by_store": {
+            "c": {
+              "now": 3.38,
+              "was": 3.6,
+              "flag": "live"
+            },
+            "w": {
+              "now": 7.2,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "tandoori_paste_jar",
@@ -2686,7 +3274,19 @@
           "note": "lasts weeks",
           "now": 5.0,
           "was": null,
-          "flag": "est"
+          "flag": "est",
+          "by_store": {
+            "c": {
+              "now": 5.0,
+              "was": null,
+              "flag": "est"
+            },
+            "w": {
+              "now": 5.0,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "lactose_free_yoghurt",
@@ -2697,7 +3297,19 @@
           "note": "rest \u2192 breakfasts",
           "now": 6.25,
           "was": 9.06,
-          "flag": "live"
+          "flag": "live",
+          "by_store": {
+            "c": {
+              "now": 6.25,
+              "was": 9.06,
+              "flag": "live"
+            },
+            "w": {
+              "now": 4.5,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "cucumber",
@@ -2708,7 +3320,19 @@
           "note": null,
           "now": 1.5,
           "was": null,
-          "flag": "est"
+          "flag": "est",
+          "by_store": {
+            "c": {
+              "now": 1.5,
+              "was": null,
+              "flag": "est"
+            },
+            "w": {
+              "now": 1.5,
+              "was": null,
+              "flag": "est"
+            }
+          }
         }
       ],
       "cost": 16.13,
@@ -2781,7 +3405,19 @@
           "note": null,
           "now": 6.0,
           "was": 7.6,
-          "flag": "live"
+          "flag": "live",
+          "by_store": {
+            "c": {
+              "now": 6.0,
+              "was": 7.6,
+              "flag": "live"
+            },
+            "w": {
+              "now": 7.2,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "massaman_paste_jar",
@@ -2792,7 +3428,19 @@
           "note": "lasts weeks",
           "now": 5.5,
           "was": null,
-          "flag": "est"
+          "flag": "est",
+          "by_store": {
+            "c": {
+              "now": 5.5,
+              "was": null,
+              "flag": "est"
+            },
+            "w": {
+              "now": 5.5,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "tamarind_paste",
@@ -2803,7 +3451,19 @@
           "note": "tamarind lasts months",
           "now": 3.5,
           "was": null,
-          "flag": "est"
+          "flag": "est",
+          "by_store": {
+            "c": {
+              "now": 3.5,
+              "was": null,
+              "flag": "est"
+            },
+            "w": {
+              "now": 3.5,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "peanut_butter",
@@ -2814,7 +3474,19 @@
           "note": "pantry check",
           "now": 3.0,
           "was": 6.0,
-          "flag": "live"
+          "flag": "live",
+          "by_store": {
+            "c": {
+              "now": 3.0,
+              "was": 6.0,
+              "flag": "live"
+            },
+            "w": {
+              "now": 0.0,
+              "was": null,
+              "flag": "est"
+            }
+          }
         }
       ],
       "cost": 18.0,
@@ -2880,7 +3552,19 @@
           "note": null,
           "now": 2.25,
           "was": 2.4,
-          "flag": "live"
+          "flag": "live",
+          "by_store": {
+            "c": {
+              "now": 2.25,
+              "was": 2.4,
+              "flag": "live"
+            },
+            "w": {
+              "now": 4.8,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "bok_choy",
@@ -2891,7 +3575,19 @@
           "note": null,
           "now": 3.0,
           "was": null,
-          "flag": "est"
+          "flag": "est",
+          "by_store": {
+            "c": {
+              "now": 3.0,
+              "was": null,
+              "flag": "est"
+            },
+            "w": {
+              "now": 3.0,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "ginger_knob",
@@ -2902,7 +3598,19 @@
           "note": "keeps weeks",
           "now": 1.2,
           "was": null,
-          "flag": "est"
+          "flag": "est",
+          "by_store": {
+            "c": {
+              "now": 1.2,
+              "was": null,
+              "flag": "est"
+            },
+            "w": {
+              "now": 1.2,
+              "was": null,
+              "flag": "est"
+            }
+          }
         }
       ],
       "cost": 6.45,
@@ -2968,7 +3676,19 @@
           "note": null,
           "now": 6.33,
           "was": 8.73,
-          "flag": "live"
+          "flag": "live",
+          "by_store": {
+            "c": {
+              "now": 6.33,
+              "was": 8.73,
+              "flag": "live"
+            },
+            "w": {
+              "now": 10.0,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "wa_navel_oranges",
@@ -2979,7 +3699,19 @@
           "note": "$3.50/kg both stores",
           "now": 1.76,
           "was": null,
-          "flag": "est"
+          "flag": "est",
+          "by_store": {
+            "c": {
+              "now": 1.76,
+              "was": null,
+              "flag": "est"
+            },
+            "w": {
+              "now": 1.76,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "potatoes",
@@ -2990,7 +3722,19 @@
           "note": "allocate 200g",
           "now": 5.0,
           "was": null,
-          "flag": "live"
+          "flag": "live",
+          "by_store": {
+            "c": {
+              "now": 5.0,
+              "was": null,
+              "flag": "live"
+            },
+            "w": {
+              "now": 0.0,
+              "was": null,
+              "flag": "est"
+            }
+          }
         }
       ],
       "cost": 13.09,
@@ -3040,16 +3784,28 @@
           "unit": "kg",
           "role": "hero",
           "note": null,
-          "now": 0.81,
-          "was": 1.03,
-          "flag": "live"
+          "now": 6.0,
+          "was": null,
+          "flag": "est",
+          "by_store": {
+            "c": {
+              "now": 6.0,
+              "was": null,
+              "flag": "est"
+            },
+            "w": {
+              "now": 6.0,
+              "was": null,
+              "flag": "est"
+            }
+          }
         }
       ],
-      "cost": 0.81,
-      "cost_per_serve": 0.41,
-      "saving": 0.22,
-      "saving_pct": 21.4,
-      "hero_on_special": true
+      "cost": 6.0,
+      "cost_per_serve": 3.0,
+      "saving": 0.0,
+      "saving_pct": 0.0,
+      "hero_on_special": false
     },
     {
       "id": "tuna-cherry-tom-pasta",
@@ -3115,7 +3871,19 @@
           "note": null,
           "now": 4.48,
           "was": 5.74,
-          "flag": "live"
+          "flag": "live",
+          "by_store": {
+            "c": {
+              "now": 4.48,
+              "was": 5.74,
+              "flag": "live"
+            },
+            "w": {
+              "now": 3.7,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "pasta",
@@ -3126,7 +3894,19 @@
           "note": "half bag",
           "now": 9.4,
           "was": 18.8,
-          "flag": "live"
+          "flag": "live",
+          "by_store": {
+            "c": {
+              "now": 9.4,
+              "was": 18.8,
+              "flag": "live"
+            },
+            "w": {
+              "now": 1.0,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "cherry_tomatoes",
@@ -3137,7 +3917,19 @@
           "note": null,
           "now": 2.5,
           "was": null,
-          "flag": "est"
+          "flag": "est",
+          "by_store": {
+            "c": {
+              "now": 2.5,
+              "was": null,
+              "flag": "est"
+            },
+            "w": {
+              "now": 2.5,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "kalamata_olives",
@@ -3148,7 +3940,19 @@
           "note": "rest \u2192 lunches",
           "now": 13.0,
           "was": 26.0,
-          "flag": "live"
+          "flag": "live",
+          "by_store": {
+            "c": {
+              "now": 13.0,
+              "was": 26.0,
+              "flag": "live"
+            },
+            "w": {
+              "now": 17.5,
+              "was": null,
+              "flag": "est"
+            }
+          }
         }
       ],
       "cost": 29.38,
@@ -3207,7 +4011,19 @@
           "note": "250g tonight \u2014 rest breakfasts/freezer",
           "now": 14.5,
           "was": 19.0,
-          "flag": "live"
+          "flag": "live",
+          "by_store": {
+            "c": {
+              "now": 14.5,
+              "was": 19.0,
+              "flag": "live"
+            },
+            "w": {
+              "now": 13.0,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "free_range_eggs",
@@ -3218,7 +4034,19 @@
           "note": "rest \u2192 breakfasts",
           "now": 4.2,
           "was": null,
-          "flag": "est"
+          "flag": "est",
+          "by_store": {
+            "c": {
+              "now": 4.2,
+              "was": null,
+              "flag": "est"
+            },
+            "w": {
+              "now": 4.2,
+              "was": null,
+              "flag": "est"
+            }
+          }
         }
       ],
       "cost": 18.7,
@@ -3277,7 +4105,19 @@
           "note": "freeze half",
           "now": 21.86,
           "was": null,
-          "flag": "live"
+          "flag": "live",
+          "by_store": {
+            "c": {
+              "now": 21.86,
+              "was": null,
+              "flag": "live"
+            },
+            "w": {
+              "now": 7.0,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "wa_sweet_corn",
@@ -3288,7 +4128,19 @@
           "note": "\u00bd cob per serve",
           "now": 2.0,
           "was": null,
-          "flag": "live"
+          "flag": "live",
+          "by_store": {
+            "c": {
+              "now": 2.0,
+              "was": null,
+              "flag": "live"
+            },
+            "w": {
+              "now": 2.0,
+              "was": null,
+              "flag": "est"
+            }
+          }
         }
       ],
       "cost": 23.86,
@@ -3354,7 +4206,19 @@
           "note": null,
           "now": 8.4,
           "was": 12.0,
-          "flag": "live"
+          "flag": "live",
+          "by_store": {
+            "c": {
+              "now": 8.4,
+              "was": 12.0,
+              "flag": "live"
+            },
+            "w": {
+              "now": 6.0,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "birds_eye_steam_fresh_veg",
@@ -3365,7 +4229,19 @@
           "note": null,
           "now": 2.4,
           "was": 3.0,
-          "flag": "live"
+          "flag": "live",
+          "by_store": {
+            "c": {
+              "now": 2.4,
+              "was": 3.0,
+              "flag": "live"
+            },
+            "w": {
+              "now": 3.6,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "gold_kiwifruit",
@@ -3376,7 +4252,19 @@
           "note": null,
           "now": 76.0,
           "was": 152.0,
-          "flag": "live"
+          "flag": "live",
+          "by_store": {
+            "c": {
+              "now": 76.0,
+              "was": 152.0,
+              "flag": "live"
+            },
+            "w": {
+              "now": 6.48,
+              "was": null,
+              "flag": "est"
+            }
+          }
         }
       ],
       "cost": 86.8,
@@ -3442,7 +4330,19 @@
           "note": null,
           "now": 7.8,
           "was": 15.6,
-          "flag": "live"
+          "flag": "live",
+          "by_store": {
+            "c": {
+              "now": 7.8,
+              "was": 15.6,
+              "flag": "live"
+            },
+            "w": {
+              "now": 9.6,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "red_capsicum",
@@ -3453,7 +4353,19 @@
           "note": null,
           "now": 11.0,
           "was": 22.0,
-          "flag": "live"
+          "flag": "live",
+          "by_store": {
+            "c": {
+              "now": 11.0,
+              "was": 22.0,
+              "flag": "live"
+            },
+            "w": {
+              "now": 0.9,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "bok_choy",
@@ -3464,7 +4376,19 @@
           "note": null,
           "now": 3.0,
           "was": null,
-          "flag": "est"
+          "flag": "est",
+          "by_store": {
+            "c": {
+              "now": 3.0,
+              "was": null,
+              "flag": "est"
+            },
+            "w": {
+              "now": 3.0,
+              "was": null,
+              "flag": "est"
+            }
+          }
         }
       ],
       "cost": 21.8,
@@ -3537,7 +4461,19 @@
           "note": null,
           "now": 4.95,
           "was": 5.85,
-          "flag": "live"
+          "flag": "live",
+          "by_store": {
+            "c": {
+              "now": 4.95,
+              "was": 5.85,
+              "flag": "live"
+            },
+            "w": {
+              "now": 8.1,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "granny_smith_apples",
@@ -3548,7 +4484,19 @@
           "note": "low FODMAP",
           "now": 20.7,
           "was": null,
-          "flag": "live"
+          "flag": "live",
+          "by_store": {
+            "c": {
+              "now": 20.7,
+              "was": null,
+              "flag": "live"
+            },
+            "w": {
+              "now": 1.5,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "ginger_knob",
@@ -3559,7 +4507,19 @@
           "note": "keeps weeks",
           "now": 1.2,
           "was": null,
-          "flag": "est"
+          "flag": "est",
+          "by_store": {
+            "c": {
+              "now": 1.2,
+              "was": null,
+              "flag": "est"
+            },
+            "w": {
+              "now": 1.2,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "potatoes",
@@ -3570,7 +4530,19 @@
           "note": "allocate 250g",
           "now": 5.0,
           "was": null,
-          "flag": "live"
+          "flag": "live",
+          "by_store": {
+            "c": {
+              "now": 5.0,
+              "was": null,
+              "flag": "live"
+            },
+            "w": {
+              "now": 0.0,
+              "was": null,
+              "flag": "est"
+            }
+          }
         }
       ],
       "cost": 31.85,
@@ -3643,7 +4615,19 @@
           "note": "whole block used",
           "now": 3.5,
           "was": null,
-          "flag": "est"
+          "flag": "est",
+          "by_store": {
+            "c": {
+              "now": 3.5,
+              "was": null,
+              "flag": "est"
+            },
+            "w": {
+              "now": 3.5,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "rice_noodles",
@@ -3654,7 +4638,19 @@
           "note": "half pack",
           "now": 0.53,
           "was": 1.05,
-          "flag": "live"
+          "flag": "live",
+          "by_store": {
+            "c": {
+              "now": 0.53,
+              "was": 1.05,
+              "flag": "live"
+            },
+            "w": {
+              "now": 2.8,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "cucumber",
@@ -3665,7 +4661,19 @@
           "note": null,
           "now": 1.5,
           "was": null,
-          "flag": "est"
+          "flag": "est",
+          "by_store": {
+            "c": {
+              "now": 1.5,
+              "was": null,
+              "flag": "est"
+            },
+            "w": {
+              "now": 1.5,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "lime",
@@ -3676,7 +4684,19 @@
           "note": null,
           "now": 10.0,
           "was": 20.0,
-          "flag": "live"
+          "flag": "live",
+          "by_store": {
+            "c": {
+              "now": 10.0,
+              "was": 20.0,
+              "flag": "live"
+            },
+            "w": {
+              "now": 1.6,
+              "was": null,
+              "flag": "est"
+            }
+          }
         }
       ],
       "cost": 15.53,
@@ -3749,7 +4769,19 @@
           "note": null,
           "now": 2.25,
           "was": 2.4,
-          "flag": "live"
+          "flag": "live",
+          "by_store": {
+            "c": {
+              "now": 2.25,
+              "was": 2.4,
+              "flag": "live"
+            },
+            "w": {
+              "now": 4.8,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "lemongrass_paste_jar",
@@ -3760,7 +4792,19 @@
           "note": "lasts months",
           "now": 4.0,
           "was": null,
-          "flag": "est"
+          "flag": "est",
+          "by_store": {
+            "c": {
+              "now": 4.0,
+              "was": null,
+              "flag": "est"
+            },
+            "w": {
+              "now": 4.0,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "coconut_milk",
@@ -3771,7 +4815,19 @@
           "note": "half can",
           "now": 0.55,
           "was": 1.1,
-          "flag": "live"
+          "flag": "live",
+          "by_store": {
+            "c": {
+              "now": 0.55,
+              "was": 1.1,
+              "flag": "live"
+            },
+            "w": {
+              "now": 1.1,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "lime",
@@ -3782,7 +4838,19 @@
           "note": null,
           "now": 5.0,
           "was": 10.0,
-          "flag": "live"
+          "flag": "live",
+          "by_store": {
+            "c": {
+              "now": 5.0,
+              "was": 10.0,
+              "flag": "live"
+            },
+            "w": {
+              "now": 0.8,
+              "was": null,
+              "flag": "est"
+            }
+          }
         }
       ],
       "cost": 11.8,
@@ -3856,7 +4924,19 @@
           "note": null,
           "now": 8.0,
           "was": 9.6,
-          "flag": "live"
+          "flag": "live",
+          "by_store": {
+            "c": {
+              "now": 8.0,
+              "was": 9.6,
+              "flag": "live"
+            },
+            "w": {
+              "now": 9.6,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "bok_choy",
@@ -3867,7 +4947,19 @@
           "note": null,
           "now": 3.0,
           "was": null,
-          "flag": "est"
+          "flag": "est",
+          "by_store": {
+            "c": {
+              "now": 3.0,
+              "was": null,
+              "flag": "est"
+            },
+            "w": {
+              "now": 3.0,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "sesame_oil",
@@ -3878,7 +4970,19 @@
           "note": null,
           "now": 13.0,
           "was": 26.0,
-          "flag": "live"
+          "flag": "live",
+          "by_store": {
+            "c": {
+              "now": 13.0,
+              "was": 26.0,
+              "flag": "live"
+            },
+            "w": {
+              "now": 0.0,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "free_range_eggs",
@@ -3889,7 +4993,19 @@
           "note": null,
           "now": 0.7,
           "was": null,
-          "flag": "est"
+          "flag": "est",
+          "by_store": {
+            "c": {
+              "now": 0.7,
+              "was": null,
+              "flag": "est"
+            },
+            "w": {
+              "now": 0.7,
+              "was": null,
+              "flag": "est"
+            }
+          }
         }
       ],
       "cost": 24.7,
@@ -3955,7 +5071,19 @@
           "note": null,
           "now": 4.92,
           "was": null,
-          "flag": "live"
+          "flag": "live",
+          "by_store": {
+            "c": {
+              "now": 4.92,
+              "was": null,
+              "flag": "live"
+            },
+            "w": {
+              "now": 8.4,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "ginger_knob",
@@ -3966,7 +5094,19 @@
           "note": "keeps weeks",
           "now": 1.2,
           "was": null,
-          "flag": "est"
+          "flag": "est",
+          "by_store": {
+            "c": {
+              "now": 1.2,
+              "was": null,
+              "flag": "est"
+            },
+            "w": {
+              "now": 1.2,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "lime",
@@ -3977,7 +5117,19 @@
           "note": null,
           "now": 5.0,
           "was": 10.0,
-          "flag": "live"
+          "flag": "live",
+          "by_store": {
+            "c": {
+              "now": 5.0,
+              "was": 10.0,
+              "flag": "live"
+            },
+            "w": {
+              "now": 0.8,
+              "was": null,
+              "flag": "est"
+            }
+          }
         }
       ],
       "cost": 11.12,
@@ -4036,7 +5188,19 @@
           "note": null,
           "now": 15.22,
           "was": null,
-          "flag": "live"
+          "flag": "live",
+          "by_store": {
+            "c": {
+              "now": 15.22,
+              "was": null,
+              "flag": "live"
+            },
+            "w": {
+              "now": 14.4,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "bok_choy",
@@ -4047,7 +5211,19 @@
           "note": null,
           "now": 3.0,
           "was": null,
-          "flag": "est"
+          "flag": "est",
+          "by_store": {
+            "c": {
+              "now": 3.0,
+              "was": null,
+              "flag": "est"
+            },
+            "w": {
+              "now": 3.0,
+              "was": null,
+              "flag": "est"
+            }
+          }
         }
       ],
       "cost": 18.22,
@@ -4111,9 +5287,21 @@
           "unit": "kg",
           "role": "hero",
           "note": null,
-          "now": 0.9,
-          "was": 1.14,
-          "flag": "live"
+          "now": 8.0,
+          "was": null,
+          "flag": "est",
+          "by_store": {
+            "c": {
+              "now": 8.0,
+              "was": null,
+              "flag": "est"
+            },
+            "w": {
+              "now": 8.0,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "thai_basil_bunch",
@@ -4124,7 +5312,19 @@
           "note": "whole bunch",
           "now": 3.5,
           "was": null,
-          "flag": "est"
+          "flag": "est",
+          "by_store": {
+            "c": {
+              "now": 3.5,
+              "was": null,
+              "flag": "est"
+            },
+            "w": {
+              "now": 3.5,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "ginger_knob",
@@ -4135,14 +5335,26 @@
           "note": null,
           "now": 1.2,
           "was": null,
-          "flag": "est"
+          "flag": "est",
+          "by_store": {
+            "c": {
+              "now": 1.2,
+              "was": null,
+              "flag": "est"
+            },
+            "w": {
+              "now": 1.2,
+              "was": null,
+              "flag": "est"
+            }
+          }
         }
       ],
-      "cost": 5.6,
-      "cost_per_serve": 2.8,
-      "saving": 0.24,
-      "saving_pct": 4.1,
-      "hero_on_special": true
+      "cost": 12.7,
+      "cost_per_serve": 6.35,
+      "saving": 0.0,
+      "saving_pct": 0.0,
+      "hero_on_special": false
     },
     {
       "id": "green-curry-chicken",
@@ -4208,7 +5420,19 @@
           "note": null,
           "now": 2.25,
           "was": 2.4,
-          "flag": "live"
+          "flag": "live",
+          "by_store": {
+            "c": {
+              "now": 2.25,
+              "was": 2.4,
+              "flag": "live"
+            },
+            "w": {
+              "now": 4.8,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "green_curry_paste_jar",
@@ -4219,7 +5443,19 @@
           "note": "lasts weeks",
           "now": 4.0,
           "was": 5.0,
-          "flag": "live"
+          "flag": "live",
+          "by_store": {
+            "c": {
+              "now": 4.0,
+              "was": 5.0,
+              "flag": "live"
+            },
+            "w": {
+              "now": 5.5,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "coconut_milk",
@@ -4230,7 +5466,19 @@
           "note": "whole can",
           "now": 1.1,
           "was": 2.2,
-          "flag": "live"
+          "flag": "live",
+          "by_store": {
+            "c": {
+              "now": 1.1,
+              "was": 2.2,
+              "flag": "live"
+            },
+            "w": {
+              "now": 2.2,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "bok_choy",
@@ -4241,7 +5489,19 @@
           "note": null,
           "now": 4.5,
           "was": null,
-          "flag": "est"
+          "flag": "est",
+          "by_store": {
+            "c": {
+              "now": 4.5,
+              "was": null,
+              "flag": "est"
+            },
+            "w": {
+              "now": 4.5,
+              "was": null,
+              "flag": "est"
+            }
+          }
         }
       ],
       "cost": 11.85,
@@ -4314,7 +5574,19 @@
           "note": null,
           "now": 9.0,
           "was": 11.4,
-          "flag": "live"
+          "flag": "live",
+          "by_store": {
+            "c": {
+              "now": 9.0,
+              "was": 11.4,
+              "flag": "live"
+            },
+            "w": {
+              "now": 10.8,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "red_wine",
@@ -4325,7 +5597,19 @@
           "note": null,
           "now": 3.3,
           "was": 6.6,
-          "flag": "live"
+          "flag": "live",
+          "by_store": {
+            "c": {
+              "now": 3.3,
+              "was": 6.6,
+              "flag": "live"
+            },
+            "w": {
+              "now": 4.0,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "beef_stock",
@@ -4336,7 +5620,19 @@
           "note": null,
           "now": 3.0,
           "was": 3.8,
-          "flag": "live"
+          "flag": "live",
+          "by_store": {
+            "c": {
+              "now": 3.0,
+              "was": 3.8,
+              "flag": "live"
+            },
+            "w": {
+              "now": 1.5,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "thyme_fresh",
@@ -4347,7 +5643,19 @@
           "note": "dries well",
           "now": 3.0,
           "was": null,
-          "flag": "est"
+          "flag": "est",
+          "by_store": {
+            "c": {
+              "now": 3.0,
+              "was": null,
+              "flag": "est"
+            },
+            "w": {
+              "now": 3.0,
+              "was": null,
+              "flag": "est"
+            }
+          }
         }
       ],
       "cost": 18.3,
@@ -4420,7 +5728,19 @@
           "note": null,
           "now": 12.0,
           "was": 24.0,
-          "flag": "live"
+          "flag": "live",
+          "by_store": {
+            "c": {
+              "now": 12.0,
+              "was": 24.0,
+              "flag": "live"
+            },
+            "w": {
+              "now": 9.6,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "butter_lettuce_head",
@@ -4431,7 +5751,19 @@
           "note": "whole used",
           "now": 7.65,
           "was": null,
-          "flag": "live"
+          "flag": "live",
+          "by_store": {
+            "c": {
+              "now": 7.65,
+              "was": null,
+              "flag": "live"
+            },
+            "w": {
+              "now": 3.5,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "lf_mayo",
@@ -4442,7 +5774,19 @@
           "note": null,
           "now": 0.0,
           "was": null,
-          "flag": "est"
+          "flag": "est",
+          "by_store": {
+            "c": {
+              "now": 0.0,
+              "was": null,
+              "flag": "est"
+            },
+            "w": {
+              "now": 0.0,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "lime",
@@ -4453,7 +5797,19 @@
           "note": null,
           "now": 5.0,
           "was": 10.0,
-          "flag": "live"
+          "flag": "live",
+          "by_store": {
+            "c": {
+              "now": 5.0,
+              "was": 10.0,
+              "flag": "live"
+            },
+            "w": {
+              "now": 0.8,
+              "was": null,
+              "flag": "est"
+            }
+          }
         }
       ],
       "cost": 24.65,
@@ -4512,7 +5868,19 @@
           "note": "carcass \u2192 next week stock",
           "now": 7.65,
           "was": null,
-          "flag": "live"
+          "flag": "live",
+          "by_store": {
+            "c": {
+              "now": 7.65,
+              "was": null,
+              "flag": "live"
+            },
+            "w": {
+              "now": 8.0,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "free_range_eggs",
@@ -4523,7 +5891,19 @@
           "note": null,
           "now": 1.4,
           "was": null,
-          "flag": "est"
+          "flag": "est",
+          "by_store": {
+            "c": {
+              "now": 1.4,
+              "was": null,
+              "flag": "est"
+            },
+            "w": {
+              "now": 1.4,
+              "was": null,
+              "flag": "est"
+            }
+          }
         }
       ],
       "cost": 9.05,
@@ -4589,7 +5969,19 @@
           "note": null,
           "now": 13.0,
           "was": null,
-          "flag": "live"
+          "flag": "live",
+          "by_store": {
+            "c": {
+              "now": 13.0,
+              "was": null,
+              "flag": "live"
+            },
+            "w": {
+              "now": 11.5,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "beef_stock",
@@ -4600,7 +5992,19 @@
           "note": null,
           "now": 6.0,
           "was": 7.6,
-          "flag": "live"
+          "flag": "live",
+          "by_store": {
+            "c": {
+              "now": 6.0,
+              "was": 7.6,
+              "flag": "live"
+            },
+            "w": {
+              "now": 3.0,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "ginger_knob",
@@ -4611,7 +6015,19 @@
           "note": "keeps weeks",
           "now": 1.2,
           "was": null,
-          "flag": "est"
+          "flag": "est",
+          "by_store": {
+            "c": {
+              "now": 1.2,
+              "was": null,
+              "flag": "est"
+            },
+            "w": {
+              "now": 1.2,
+              "was": null,
+              "flag": "est"
+            }
+          }
         }
       ],
       "cost": 20.2,
@@ -4685,7 +6101,19 @@
           "note": "half pack",
           "now": 0.53,
           "was": 1.05,
-          "flag": "live"
+          "flag": "live",
+          "by_store": {
+            "c": {
+              "now": 0.53,
+              "was": 1.05,
+              "flag": "live"
+            },
+            "w": {
+              "now": 2.8,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "white_miso_paste",
@@ -4696,7 +6124,19 @@
           "note": null,
           "now": 12.5,
           "was": 18.0,
-          "flag": "live"
+          "flag": "live",
+          "by_store": {
+            "c": {
+              "now": 12.5,
+              "was": 18.0,
+              "flag": "live"
+            },
+            "w": {
+              "now": 0.0,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "free_range_eggs",
@@ -4707,7 +6147,19 @@
           "note": null,
           "now": 1.4,
           "was": null,
-          "flag": "est"
+          "flag": "est",
+          "by_store": {
+            "c": {
+              "now": 1.4,
+              "was": null,
+              "flag": "est"
+            },
+            "w": {
+              "now": 1.4,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "bok_choy",
@@ -4718,7 +6170,19 @@
           "note": null,
           "now": 3.0,
           "was": null,
-          "flag": "est"
+          "flag": "est",
+          "by_store": {
+            "c": {
+              "now": 3.0,
+              "was": null,
+              "flag": "est"
+            },
+            "w": {
+              "now": 3.0,
+              "was": null,
+              "flag": "est"
+            }
+          }
         }
       ],
       "cost": 17.43,
@@ -4792,7 +6256,19 @@
           "note": null,
           "now": 3.38,
           "was": 3.6,
-          "flag": "live"
+          "flag": "live",
+          "by_store": {
+            "c": {
+              "now": 3.38,
+              "was": 3.6,
+              "flag": "live"
+            },
+            "w": {
+              "now": 7.2,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "garam_masala",
@@ -4803,7 +6279,19 @@
           "note": null,
           "now": 0.0,
           "was": null,
-          "flag": "est"
+          "flag": "est",
+          "by_store": {
+            "c": {
+              "now": 0.0,
+              "was": null,
+              "flag": "est"
+            },
+            "w": {
+              "now": 0.0,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "tomato_paste",
@@ -4814,7 +6302,19 @@
           "note": "lasts weeks",
           "now": 6.0,
           "was": 8.4,
-          "flag": "live"
+          "flag": "live",
+          "by_store": {
+            "c": {
+              "now": 6.0,
+              "was": 8.4,
+              "flag": "live"
+            },
+            "w": {
+              "now": 3.5,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "lactose_free_cream",
@@ -4825,7 +6325,19 @@
           "note": "rest \u2192 breakfasts",
           "now": 4.9,
           "was": 7.0,
-          "flag": "live"
+          "flag": "live",
+          "by_store": {
+            "c": {
+              "now": 4.9,
+              "was": 7.0,
+              "flag": "live"
+            },
+            "w": {
+              "now": 3.2,
+              "was": null,
+              "flag": "est"
+            }
+          }
         }
       ],
       "cost": 14.28,
@@ -4891,7 +6403,19 @@
           "note": null,
           "now": 8.0,
           "was": 9.6,
-          "flag": "live"
+          "flag": "live",
+          "by_store": {
+            "c": {
+              "now": 8.0,
+              "was": 9.6,
+              "flag": "live"
+            },
+            "w": {
+              "now": 9.6,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "broccoli",
@@ -4902,7 +6426,19 @@
           "note": "whole head used",
           "now": 2.7,
           "was": null,
-          "flag": "live"
+          "flag": "live",
+          "by_store": {
+            "c": {
+              "now": 2.7,
+              "was": null,
+              "flag": "live"
+            },
+            "w": {
+              "now": 3.5,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "sesame_oil",
@@ -4913,7 +6449,19 @@
           "note": null,
           "now": 13.0,
           "was": 26.0,
-          "flag": "live"
+          "flag": "live",
+          "by_store": {
+            "c": {
+              "now": 13.0,
+              "was": 26.0,
+              "flag": "live"
+            },
+            "w": {
+              "now": 0.0,
+              "was": null,
+              "flag": "est"
+            }
+          }
         }
       ],
       "cost": 23.7,
@@ -4986,7 +6534,19 @@
           "note": null,
           "now": 1.65,
           "was": 3.3,
-          "flag": "live"
+          "flag": "live",
+          "by_store": {
+            "c": {
+              "now": 1.65,
+              "was": 3.3,
+              "flag": "live"
+            },
+            "w": {
+              "now": 0.0,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "coconut_milk",
@@ -4997,7 +6557,19 @@
           "note": "whole can",
           "now": 1.1,
           "was": 2.2,
-          "flag": "live"
+          "flag": "live",
+          "by_store": {
+            "c": {
+              "now": 1.1,
+              "was": 2.2,
+              "flag": "live"
+            },
+            "w": {
+              "now": 2.2,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "turmeric",
@@ -5008,7 +6580,19 @@
           "note": null,
           "now": 0.0,
           "was": null,
-          "flag": "est"
+          "flag": "est",
+          "by_store": {
+            "c": {
+              "now": 0.0,
+              "was": null,
+              "flag": "est"
+            },
+            "w": {
+              "now": 0.0,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "lime",
@@ -5019,7 +6603,19 @@
           "note": null,
           "now": 5.0,
           "was": 10.0,
-          "flag": "live"
+          "flag": "live",
+          "by_store": {
+            "c": {
+              "now": 5.0,
+              "was": 10.0,
+              "flag": "live"
+            },
+            "w": {
+              "now": 0.8,
+              "was": null,
+              "flag": "est"
+            }
+          }
         }
       ],
       "cost": 7.75,
@@ -5078,7 +6674,19 @@
           "note": null,
           "now": 4.92,
           "was": null,
-          "flag": "live"
+          "flag": "live",
+          "by_store": {
+            "c": {
+              "now": 4.92,
+              "was": null,
+              "flag": "live"
+            },
+            "w": {
+              "now": 8.4,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "potatoes",
@@ -5089,7 +6697,19 @@
           "note": "allocate 250g",
           "now": 5.0,
           "was": null,
-          "flag": "live"
+          "flag": "live",
+          "by_store": {
+            "c": {
+              "now": 5.0,
+              "was": null,
+              "flag": "live"
+            },
+            "w": {
+              "now": 0.0,
+              "was": null,
+              "flag": "est"
+            }
+          }
         }
       ],
       "cost": 9.92,
@@ -5155,7 +6775,19 @@
           "note": null,
           "now": 5.7,
           "was": null,
-          "flag": "live"
+          "flag": "live",
+          "by_store": {
+            "c": {
+              "now": 5.7,
+              "was": null,
+              "flag": "live"
+            },
+            "w": {
+              "now": 5.7,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "free_range_eggs",
@@ -5166,7 +6798,19 @@
           "note": null,
           "now": 1.4,
           "was": null,
-          "flag": "est"
+          "flag": "est",
+          "by_store": {
+            "c": {
+              "now": 1.4,
+              "was": null,
+              "flag": "est"
+            },
+            "w": {
+              "now": 1.4,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "frozen_peas",
@@ -5177,7 +6821,19 @@
           "note": "FODMAP-safe",
           "now": 0.42,
           "was": null,
-          "flag": "live"
+          "flag": "live",
+          "by_store": {
+            "c": {
+              "now": 0.42,
+              "was": null,
+              "flag": "live"
+            },
+            "w": {
+              "now": 2.0,
+              "was": null,
+              "flag": "est"
+            }
+          }
         }
       ],
       "cost": 7.52,
@@ -5242,7 +6898,19 @@
           "note": null,
           "now": 9.6,
           "was": null,
-          "flag": "est"
+          "flag": "est",
+          "by_store": {
+            "c": {
+              "now": 9.6,
+              "was": null,
+              "flag": "est"
+            },
+            "w": {
+              "now": 9.6,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "dill_or_thyme_fresh",
@@ -5253,7 +6921,19 @@
           "note": "dries well",
           "now": 3.0,
           "was": null,
-          "flag": "est"
+          "flag": "est",
+          "by_store": {
+            "c": {
+              "now": 3.0,
+              "was": null,
+              "flag": "est"
+            },
+            "w": {
+              "now": 3.0,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "lemon",
@@ -5264,7 +6944,19 @@
           "note": null,
           "now": 52.0,
           "was": 56.0,
-          "flag": "live"
+          "flag": "live",
+          "by_store": {
+            "c": {
+              "now": 52.0,
+              "was": 56.0,
+              "flag": "live"
+            },
+            "w": {
+              "now": 0.7,
+              "was": null,
+              "flag": "est"
+            }
+          }
         }
       ],
       "cost": 64.6,
@@ -5337,7 +7029,19 @@
           "note": null,
           "now": 1.8,
           "was": null,
-          "flag": "est"
+          "flag": "est",
+          "by_store": {
+            "c": {
+              "now": 1.8,
+              "was": null,
+              "flag": "est"
+            },
+            "w": {
+              "now": 1.8,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "curry_paste_jar",
@@ -5348,7 +7052,19 @@
           "note": "lasts weeks",
           "now": 5.0,
           "was": null,
-          "flag": "est"
+          "flag": "est",
+          "by_store": {
+            "c": {
+              "now": 5.0,
+              "was": null,
+              "flag": "est"
+            },
+            "w": {
+              "now": 5.0,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "coconut_milk",
@@ -5359,7 +7075,19 @@
           "note": null,
           "now": 0.55,
           "was": 1.1,
-          "flag": "live"
+          "flag": "live",
+          "by_store": {
+            "c": {
+              "now": 0.55,
+              "was": 1.1,
+              "flag": "live"
+            },
+            "w": {
+              "now": 1.1,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "fresh_spinach",
@@ -5370,7 +7098,19 @@
           "note": "fully used",
           "now": 3.0,
           "was": null,
-          "flag": "est"
+          "flag": "est",
+          "by_store": {
+            "c": {
+              "now": 3.0,
+              "was": null,
+              "flag": "est"
+            },
+            "w": {
+              "now": 3.0,
+              "was": null,
+              "flag": "est"
+            }
+          }
         }
       ],
       "cost": 10.35,
@@ -5443,7 +7183,19 @@
           "note": null,
           "now": 5.5,
           "was": 6.5,
-          "flag": "live"
+          "flag": "live",
+          "by_store": {
+            "c": {
+              "now": 5.5,
+              "was": 6.5,
+              "flag": "live"
+            },
+            "w": {
+              "now": 9.5,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "apple_cider",
@@ -5454,7 +7206,19 @@
           "note": null,
           "now": 1.38,
           "was": null,
-          "flag": "live"
+          "flag": "live",
+          "by_store": {
+            "c": {
+              "now": 1.38,
+              "was": null,
+              "flag": "live"
+            },
+            "w": {
+              "now": 3.5,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "granny_smith_apples",
@@ -5465,7 +7229,19 @@
           "note": "low FODMAP",
           "now": 13.8,
           "was": null,
-          "flag": "live"
+          "flag": "live",
+          "by_store": {
+            "c": {
+              "now": 13.8,
+              "was": null,
+              "flag": "live"
+            },
+            "w": {
+              "now": 1.0,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "thyme_fresh",
@@ -5476,7 +7252,19 @@
           "note": "dries well",
           "now": 3.0,
           "was": null,
-          "flag": "est"
+          "flag": "est",
+          "by_store": {
+            "c": {
+              "now": 3.0,
+              "was": null,
+              "flag": "est"
+            },
+            "w": {
+              "now": 3.0,
+              "was": null,
+              "flag": "est"
+            }
+          }
         }
       ],
       "cost": 23.68,
@@ -5542,7 +7330,19 @@
           "note": null,
           "now": 12.0,
           "was": null,
-          "flag": "est"
+          "flag": "est",
+          "by_store": {
+            "c": {
+              "now": 12.0,
+              "was": null,
+              "flag": "est"
+            },
+            "w": {
+              "now": 12.0,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "white_wine",
@@ -5553,7 +7353,19 @@
           "note": null,
           "now": 0.75,
           "was": null,
-          "flag": "live"
+          "flag": "live",
+          "by_store": {
+            "c": {
+              "now": 0.75,
+              "was": null,
+              "flag": "live"
+            },
+            "w": {
+              "now": 4.0,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "parsley_thyme_fresh",
@@ -5564,7 +7376,19 @@
           "note": "whole bunches used",
           "now": 6.0,
           "was": null,
-          "flag": "est"
+          "flag": "est",
+          "by_store": {
+            "c": {
+              "now": 6.0,
+              "was": null,
+              "flag": "est"
+            },
+            "w": {
+              "now": 6.0,
+              "was": null,
+              "flag": "est"
+            }
+          }
         }
       ],
       "cost": 18.75,
@@ -5637,7 +7461,19 @@
           "note": null,
           "now": 6.0,
           "was": 7.6,
-          "flag": "live"
+          "flag": "live",
+          "by_store": {
+            "c": {
+              "now": 6.0,
+              "was": 7.6,
+              "flag": "live"
+            },
+            "w": {
+              "now": 7.2,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "butter_lettuce_head",
@@ -5648,7 +7484,19 @@
           "note": "whole used",
           "now": 7.65,
           "was": null,
-          "flag": "live"
+          "flag": "live",
+          "by_store": {
+            "c": {
+              "now": 7.65,
+              "was": null,
+              "flag": "live"
+            },
+            "w": {
+              "now": 3.5,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "water_chestnuts",
@@ -5659,7 +7507,19 @@
           "note": "whole can used",
           "now": 0.55,
           "was": 1.1,
-          "flag": "live"
+          "flag": "live",
+          "by_store": {
+            "c": {
+              "now": 0.55,
+              "was": 1.1,
+              "flag": "live"
+            },
+            "w": {
+              "now": 2.2,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "ginger_knob",
@@ -5670,7 +7530,19 @@
           "note": "keeps weeks",
           "now": 1.2,
           "was": null,
-          "flag": "est"
+          "flag": "est",
+          "by_store": {
+            "c": {
+              "now": 1.2,
+              "was": null,
+              "flag": "est"
+            },
+            "w": {
+              "now": 1.2,
+              "was": null,
+              "flag": "est"
+            }
+          }
         }
       ],
       "cost": 15.4,
@@ -5736,7 +7608,19 @@
           "note": null,
           "now": 9.6,
           "was": null,
-          "flag": "est"
+          "flag": "est",
+          "by_store": {
+            "c": {
+              "now": 9.6,
+              "was": null,
+              "flag": "est"
+            },
+            "w": {
+              "now": 9.6,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "cherry_tomatoes",
@@ -5747,7 +7631,19 @@
           "note": "shared",
           "now": 1.5,
           "was": null,
-          "flag": "est"
+          "flag": "est",
+          "by_store": {
+            "c": {
+              "now": 1.5,
+              "was": null,
+              "flag": "est"
+            },
+            "w": {
+              "now": 1.5,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "kalamata_olives",
@@ -5758,7 +7654,19 @@
           "note": "shared",
           "now": 1.3,
           "was": 2.6,
-          "flag": "live"
+          "flag": "live",
+          "by_store": {
+            "c": {
+              "now": 1.3,
+              "was": 2.6,
+              "flag": "live"
+            },
+            "w": {
+              "now": 1.75,
+              "was": null,
+              "flag": "est"
+            }
+          }
         }
       ],
       "cost": 12.4,
@@ -5838,7 +7746,19 @@
           "note": null,
           "now": 3.0,
           "was": 3.2,
-          "flag": "live"
+          "flag": "live",
+          "by_store": {
+            "c": {
+              "now": 3.0,
+              "was": 3.2,
+              "flag": "live"
+            },
+            "w": {
+              "now": 6.4,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "peanut_butter",
@@ -5849,7 +7769,19 @@
           "note": null,
           "now": 3.0,
           "was": 6.0,
-          "flag": "live"
+          "flag": "live",
+          "by_store": {
+            "c": {
+              "now": 3.0,
+              "was": 6.0,
+              "flag": "live"
+            },
+            "w": {
+              "now": 0.0,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "coconut_milk",
@@ -5860,7 +7792,19 @@
           "note": null,
           "now": 0.55,
           "was": 1.1,
-          "flag": "live"
+          "flag": "live",
+          "by_store": {
+            "c": {
+              "now": 0.55,
+              "was": 1.1,
+              "flag": "live"
+            },
+            "w": {
+              "now": 1.1,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "rice_noodles",
@@ -5871,7 +7815,19 @@
           "note": "half pack",
           "now": 0.53,
           "was": 1.05,
-          "flag": "live"
+          "flag": "live",
+          "by_store": {
+            "c": {
+              "now": 0.53,
+              "was": 1.05,
+              "flag": "live"
+            },
+            "w": {
+              "now": 2.8,
+              "was": null,
+              "flag": "est"
+            }
+          }
         },
         {
           "ing": "cucumber",
@@ -5882,7 +7838,19 @@
           "note": null,
           "now": 1.5,
           "was": null,
-          "flag": "est"
+          "flag": "est",
+          "by_store": {
+            "c": {
+              "now": 1.5,
+              "was": null,
+              "flag": "est"
+            },
+            "w": {
+              "now": 1.5,
+              "was": null,
+              "flag": "est"
+            }
+          }
         }
       ],
       "cost": 8.58,
