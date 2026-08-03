@@ -448,7 +448,7 @@
 </div>
 
 <script>
-const APP_VERSION = "0.4.1";
+const APP_VERSION = "0.4.2";
 console.log("Meal Planner v" + APP_VERSION + " (schema 2, client-side selection)");
 
 /* ============================================================
@@ -661,11 +661,16 @@ function slotFactor(slot, r){ return slot.people/(r.serves||2); }
 // live one for it, rather than relabelling the blended (store_pref) price —
 // otherwise "Shop at Coles" would show Woolworths numbers under a Coles label.
 function effectivePrice(pi){
+  // Single-store mode must show THIS store's own number — live if we found
+  // one, that store's own baseline estimate otherwise — never the blended
+  // cross-store default, which skews toward whichever store had more live
+  // matches. Falling back to the blended default here was the bug: when
+  // Woolworths had zero live matches, "Shop at Woolworths" silently showed
+  // Coles-flavoured numbers instead of Woolworths' own baseline.
   if(settings.shopStore!=="both" && pi.by_store && pi.by_store[settings.shopStore]){
-    const sp = pi.by_store[settings.shopStore];
-    if(sp.flag==="live" || !pi.ing) return sp;   // custom items have no by_store; pi itself is authoritative
+    return pi.by_store[settings.shopStore];
   }
-  return pi;
+  return pi;   // 'both' mode, or a custom recipe row with no by_store at all
 }
 function slotCost(slot, r){
   let c=0;
@@ -1138,9 +1143,16 @@ function runDiagnostics(){
     settings.shopStore = savedStore;
   }
 
-  // 5. Coles-only vs Woolworths-only should genuinely differ
-  if(storeTotals.c===storeTotals.w){
-    push("WARN", `Coles-only and Woolworths-only totals are identical ($${storeTotals.c.toFixed(2)}) for this week's plan — check by_store isn't duplicating one store's price. If §3 above also failed, re-run the generator first.`);
+  // 5. Coles-only vs Woolworths-only should genuinely differ WHEN their live
+  //    coverage differs. If coverage is symmetric (both near-zero, or both
+  //    near-total and coincidentally equal), identical totals are expected
+  //    and not a bug. If coverage clearly differs but totals don't, that's
+  //    now unambiguous — the store split isn't being applied.
+  const coverageDiffers = Math.abs(livePctC-livePctW) > 15;
+  if(storeTotals.c===storeTotals.w && coverageDiffers){
+    push("FAIL", `Coles-only and Woolworths-only totals are IDENTICAL ($${storeTotals.c.toFixed(2)}) despite live-price coverage clearly differing (Coles ${livePctC.toFixed(0)}% vs Woolworths ${livePctW.toFixed(0)}%) — the store split isn't being applied somewhere. This is a code bug, not a data one.`);
+  } else if(storeTotals.c===storeTotals.w){
+    push("OK", `Coles-only and Woolworths-only totals are identical ($${storeTotals.c.toFixed(2)}) — expected, since live coverage is similar at both stores (see §3 above)`);
   } else {
     push("OK", `Coles-only ($${storeTotals.c.toFixed(2)}) and Woolworths-only ($${storeTotals.w.toFixed(2)}) totals genuinely differ`);
   }

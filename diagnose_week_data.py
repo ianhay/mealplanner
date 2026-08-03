@@ -174,9 +174,7 @@ def slot_factor(people, serves):
 
 def effective_price(pi, shop_store):
     if shop_store != "both" and pi.get("by_store") and shop_store in pi["by_store"]:
-        sp = pi["by_store"][shop_store]
-        if sp.get("flag") == "live" or not pi.get("ing"):
-            return sp
+        return pi["by_store"][shop_store]
     return pi
 
 def slot_cost_saving(r, people, shop_store, pantry_owned):
@@ -231,9 +229,11 @@ def check_hero_list_reconciliation(week, results):
                                  f"matches list (${list_total:.2f})"))
 
 def check_single_store_actually_differs(week, results):
-    """If 'Shop at Coles' and 'Shop at Woolworths' produce IDENTICAL totals
-    for a sample week, by_store probably isn't wired through end to end —
-    it'd mean every ingredient's two store prices are coincidentally equal."""
+    """If 'Shop at Coles' and 'Shop at Woolworths' produce identical totals
+    while their live-price coverage clearly differs, the store split isn't
+    being applied somewhere — a code bug, not a data one. If coverage is
+    similar at both stores (both near-zero or both near-total), identical
+    totals are the expected, correct outcome."""
     recs = week.get("recipes", [])
     if len(recs) < 3:
         return
@@ -241,9 +241,31 @@ def check_single_store_actually_differs(week, results):
     totals = {}
     for shop_store in ("c", "w"):
         totals[shop_store] = round(sum(slot_cost_saving(r, 2, shop_store, set())[0] for r in sample), 2)
-    if totals["c"] == totals["w"]:
-        results.append((WARN, f"Coles-only and Woolworths-only totals are identical (${totals['c']:.2f}) "
-                               f"for this sample — check by_store isn't just duplicating one store's price"))
+
+    seen, live_c, live_w = set(), 0, 0
+    for r in recs:
+        for pi in r.get("priced_ingredients", []):
+            slug = pi.get("ing")
+            if not slug or slug in seen:
+                continue
+            seen.add(slug)
+            bs = pi.get("by_store") or {}
+            if bs.get("c", {}).get("flag") == "live":
+                live_c += 1
+            if bs.get("w", {}).get("flag") == "live":
+                live_w += 1
+    n = len(seen) or 1
+    live_pct_c, live_pct_w = live_c / n * 100, live_w / n * 100
+    coverage_differs = abs(live_pct_c - live_pct_w) > 15
+
+    if totals["c"] == totals["w"] and coverage_differs:
+        results.append((FAIL,
+            f"Coles-only and Woolworths-only totals are IDENTICAL (${totals['c']:.2f}) despite live "
+            f"coverage clearly differing (Coles {live_pct_c:.0f}% vs Woolworths {live_pct_w:.0f}%) — "
+            f"the store split isn't being applied somewhere. This is a code bug, not a data one."))
+    elif totals["c"] == totals["w"]:
+        results.append((OK, f"Coles-only and Woolworths-only totals are identical (${totals['c']:.2f}) — "
+                             f"expected, since live coverage is similar at both stores"))
     else:
         results.append((OK, f"Coles-only (${totals['c']:.2f}) and Woolworths-only (${totals['w']:.2f}) "
                              f"totals genuinely differ for this sample"))

@@ -12,7 +12,40 @@ built around `recipe-bank.json` + `thisweek.json` + a server-side "pick 12").
 --------------------------------------------------------------------------------
 ## 1. What changed from v1, and why
 
-### v0.4.0 (this update)
+### v0.4.2 (this update)
+
+Found via the in-app diagnostics doing exactly what it's for: a real report
+showed Coles at 70% live coverage and Woolworths at 0%, yet all three
+shop-store totals were identical — a combination only possible if the store
+split wasn't actually being applied.
+
+- **`effectivePrice()` had a real bug.** When the chosen store had no live
+  price for an ingredient, it fell back to the recipe's *blended* default
+  instead of that store's own baseline. The blended default skews toward
+  whichever store had more live matches — so with Woolworths at 0% live,
+  "Shop at Woolworths" was silently showing Coles-flavoured numbers instead
+  of Woolworths' own baseline estimate. Fixed in both `index.html` and the
+  standalone `diagnose_week_data.py`, which had the identical bug in its own
+  Python reimplementation of the same function — worth remembering that any
+  logic duplicated between the app and the diagnostics script needs the same
+  fix applied twice, since the diagnostics existing to catch the app's bugs
+  doesn't help if it shares the bug.
+- **Diagnostics sharpened**: the "Coles-only vs Woolworths-only" check now
+  uses the live-coverage percentages (added in v0.4.1) to tell "identical
+  totals because coverage happens to be similar at both stores" (fine, OK)
+  apart from "identical totals despite coverage clearly differing" (a real
+  bug, now FAIL rather than a vague WARN).
+
+### v0.4.1
+
+Added the live-coverage breakdown to diagnostics (structural `by_store`
+presence vs an ingredient actually having a *live* price at each store),
+after "100% carry by_store data" alone turned out not to distinguish "the
+store split works" from "everything fell back to the same baseline at both
+stores" — two very different situations that look identical from the
+headline-total check alone.
+
+### v0.4.0
 
 - **Renamed "The Docket" → "Meal Planner"** everywhere user-facing (title,
   heading, PWA name, console log, share-sheet text). Internal-only names
