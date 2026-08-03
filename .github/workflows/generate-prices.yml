@@ -65,7 +65,7 @@ jobs:
     - name: Commit and push
       if: success()
       run: |
-        git config user.name "Docket Bot"
+        git config user.name "Meal Planner Bot"
         git config user.email "docket-bot@example.com"
         git add week-data.json
         git commit -m "Weekly price update: $(date -d 'next wednesday' +'%a %d %b')" || { echo "No changes to commit"; exit 0; }
