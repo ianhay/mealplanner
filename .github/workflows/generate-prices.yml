@@ -52,7 +52,7 @@ jobs:
         COLES_RETAILER_ID: ${{ vars.COLES_RETAILER_ID || '148' }}
         COLES_LOCATION_ID: ${{ vars.COLES_LOCATION_ID || '9045' }}
         COLES_TOKEN: ${{ secrets.COLES_TOKEN }}
-        WOOLIES_CATALOGUE_ID: ${{ vars.WOOLIES_CATALOGUE_ID || '66367' }}
+        WOOLIES_CATALOGUE_ID: ${{ vars.WOOLIES_CATALOGUE_ID || '66794' }}
         WOOLIES_RETAILER_ID: ${{ vars.WOOLIES_RETAILER_ID || '126' }}
         WOOLIES_LOCATION_ID: ${{ vars.WOOLIES_LOCATION_ID || '22287' }}
         WOOLIES_TOKEN: ${{ secrets.WOOLIES_TOKEN }}
