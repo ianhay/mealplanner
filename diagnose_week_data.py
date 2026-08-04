@@ -209,16 +209,19 @@ def simulate_list_total(recipes_in_plan, people, shop_store, pantry_owned):
 
 def check_hero_list_reconciliation(week, results):
     recs = week.get("recipes", [])
+    ings = week.get("ingredients", {})
     if len(recs) < 3:
         results.append((WARN, "too few recipes to simulate a week"))
         return
     sample = sorted(recs, key=lambda r: -r.get("saving_pct", 0))[:5]
+    store_saved = {}
     for shop_store in ("both", "c", "w"):
-        hero_cost = 0.0
+        hero_cost = hero_saved = 0.0
         for r in sample:
             c, s = slot_cost_saving(r, 2, shop_store, set())
-            hero_cost += c
+            hero_cost += c; hero_saved += s
         hero_cost = round(hero_cost, 2)
+        store_saved[shop_store] = round(hero_saved, 2)
         list_total = simulate_list_total(sample, 2, shop_store, set())
         if abs(hero_cost - list_total) > 0.01:
             results.append((FAIL,
@@ -226,7 +229,35 @@ def check_hero_list_reconciliation(week, results):
                 f"list total ${list_total:.2f} (diff ${abs(hero_cost-list_total):.2f})"))
         else:
             results.append((OK, f"shopStore={shop_store}: headline (${hero_cost:.2f}) "
-                                 f"matches list (${list_total:.2f})"))
+                                 f"matches list (${list_total:.2f}), saved ${hero_saved:.2f}"))
+
+    # If a store shows $0 saved, work out whether that's because this
+    # SAMPLE just doesn't include any of that store's specials, or because
+    # the store has zero discounts ANYWHERE in the catalogue (implausible
+    # for a real catalogue — points at a 'was' price extraction bug).
+    for code in ("c", "w"):
+        if store_saved.get(code, 0) > 0.01:
+            continue
+        live_total = live_with_discount = 0
+        for meta in ings.values():
+            sp = (meta.get("by_store") or {}).get(code)
+            if sp and sp.get("flag") == "live":
+                live_total += 1
+                if sp.get("was") and sp["was"] > sp.get("now", 0):
+                    live_with_discount += 1
+        label = "Coles" if code == "c" else "Woolworths"
+        if live_total == 0:
+            continue   # already covered by check_store_coverage
+        if live_with_discount == 0:
+            results.append((WARN,
+                f"{label} shows $0 saved AND has zero discounted items anywhere in the catalogue "
+                f"(0/{live_total} live {label} prices have a 'was' > 'now') — worth double-checking "
+                f"'was' price extraction for {label} specifically."))
+        else:
+            results.append((OK,
+                f"{label} shows $0 saved for this sample, but the catalogue has "
+                f"{live_with_discount}/{live_total} live {label} items genuinely on special — "
+                f"this sample just doesn't happen to use any of them."))
 
 def check_single_store_actually_differs(week, results):
     """If 'Shop at Coles' and 'Shop at Woolworths' produce identical totals

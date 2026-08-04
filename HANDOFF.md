@@ -12,6 +12,31 @@ built around `recipe-bank.json` + `thisweek.json` + a server-side "pick 12").
 --------------------------------------------------------------------------------
 ## 1. What changed from v1, and why
 
+### v0.5.1 (this update)
+
+Diagnostics reported "OK" on cost reconciliation for `shopStore=w` while the
+user saw $0 saved — a real gap: the reconciliation check only ever compared
+`cost`, never `saving`, so it couldn't tell "genuinely no Woolworths
+specials matched this week" (expected, not a bug) from "a real bug
+suppressing the saved figure specifically" (only `slotSaving`/`was`-price
+handling, not `slotCost`, would be affected).
+
+- **Diagnostics now report the `saved` figure per store mode**, and — the
+  useful part — when a store shows $0 saved, cross-check the *whole
+  catalogue* (not just this week's 5-recipe plan) for whether that store has
+  ANY discounted item at all. Zero discounts anywhere in ~96 ingredients for
+  a real supermarket catalogue is implausible and now WARNs, pointing at
+  `was`-price extraction for that store specifically. If the catalogue does
+  have discounts but this week's specific plan just doesn't touch any of
+  them, it says that plainly instead — that's expected behaviour, not a bug,
+  and the fix in that case is "try Deepest discount mode" or "swap a meal,"
+  not a code change.
+- No code fix in this update beyond diagnostics — deliberately: without
+  knowing which of the two cases it is, changing `slotSaving`/`effectivePrice`
+  further risked fixing a bug that might not exist. Run diagnostics again
+  after this ships; the new §4b line will say definitively which case you're
+  in.
+
 ### v0.5.0 (this update)
 
 - **Shopping list now shows quantities**, not just price — "700 g Chicken

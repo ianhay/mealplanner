@@ -454,7 +454,7 @@
 </div>
 
 <script>
-const APP_VERSION = "0.5.0";
+const APP_VERSION = "0.5.1";
 console.log("Meal Planner v" + APP_VERSION + " (schema 2, client-side selection)");
 
 /* ============================================================
@@ -1170,25 +1170,49 @@ function runDiagnostics(){
   // 4. headline vs list reconciliation, across all three store modes, using
   //    the CURRENT plan and the app's real functions (temporarily switching
   //    shopStore, then restoring it — no visible flicker since nothing
-  //    re-renders until this function returns).
+  //    re-renders until this function returns). Also report the SAVED
+  //    figure per mode — cost reconciling doesn't guarantee saved is sane,
+  //    they're computed by different code paths (slotCost vs slotSaving).
   const savedStore = settings.shopStore;
-  const storeTotals = {};
+  const storeTotals = {}, storeSaved = {};
   try{
     ["both","c","w"].forEach(mode=>{
       settings.shopStore = mode;
       const t = weekTotals();
       const {items} = listItems();
       const listTotal = items.filter(i=>!i.owned).reduce((s,i)=>s+i.p,0);
-      storeTotals[mode] = t.cost;
+      storeTotals[mode] = t.cost; storeSaved[mode] = t.saving;
       if(Math.abs(t.cost-listTotal) > 0.01){
         push("FAIL", `shopStore=${mode}: headline $${t.cost.toFixed(2)} != list $${listTotal.toFixed(2)} (diff $${Math.abs(t.cost-listTotal).toFixed(2)})`);
       } else {
-        push("OK", `shopStore=${mode}: headline ($${t.cost.toFixed(2)}) matches list ($${listTotal.toFixed(2)})`);
+        push("OK", `shopStore=${mode}: headline ($${t.cost.toFixed(2)}) matches list ($${listTotal.toFixed(2)}), saved $${t.saving.toFixed(2)}`);
       }
     });
   } finally {
     settings.shopStore = savedStore;
   }
+
+  // 4b. If a store mode shows $0 saved, work out whether that's because
+  //     nothing in THIS WEEK'S PLAN happens to be discounted at that store,
+  //     or because that store has zero discounts ANYWHERE in the whole
+  //     catalogue (which would point at a real bug in reading 'was' prices
+  //     for that store, since it'd be statistically implausible for a real
+  //     catalogue to have zero specials across 96 ingredients).
+  ["c","w"].forEach(code=>{
+    if(storeSaved[code] > 0.01) return;
+    let liveWithDiscount = 0, liveTotal = 0;
+    Object.values(ings).forEach(meta=>{
+      const sp = (meta.by_store||{})[code];
+      if(sp && sp.flag==="live"){ liveTotal++; if(sp.was && sp.was>sp.now) liveWithDiscount++; }
+    });
+    const label = code==="c"?"Coles":"Woolworths";
+    if(liveTotal===0) return;   // already covered by §3
+    if(liveWithDiscount===0){
+      push("WARN", `${label} shows $0 saved AND has zero discounted items anywhere in the catalogue (0/${liveTotal} live ${label} prices have a 'was' > 'now') — worth double-checking 'was' price extraction for ${label} specifically, since a real catalogue having no specials at all is unusual.`);
+    } else {
+      push("OK", `${label} shows $0 saved for this week's plan, but the catalogue does have ${liveWithDiscount}/${liveTotal} live ${label} items genuinely on special — this plan's specific recipes just don't happen to use any of them. Try Deepest discount mode or Reshuffle, or swap a meal for one on special at ${label}.`);
+    }
+  });
 
   // 5. Coles-only vs Woolworths-only should genuinely differ WHEN their live
   //    coverage differs. If coverage is symmetric (both near-zero, or both
