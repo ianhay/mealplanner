@@ -12,6 +12,28 @@ built around `recipe-bank.json` + `thisweek.json` + a server-side "pick 12").
 --------------------------------------------------------------------------------
 ## 1. What changed from v1, and why
 
+### v0.5.2 (this update)
+
+A run failed with 403 Forbidden on *every* SaleFinder endpoint, for *both*
+stores, plus woolworths.com.au directly — right after a previous run had
+worked fine. That signature (blanket failure across unrelated domains,
+right after success) means the requesting IP itself got blocked, not
+anything wrong with catalogue IDs or config — see §8 "Known operational
+risk: IP blocking" for the full explanation and why this is largely outside
+this codebase's control.
+
+What the code *can* do, and now does: `sf_search` (the per-ingredient
+search, ~700 requests per run in a tight burst with zero pacing previously
+— exactly the pattern that trips rate-based blocking) now paces requests
+(~0.12s apart) and trips a circuit breaker after 4 consecutive failures on
+a store, immediately falling back to baseline for everything remaining
+instead of continuing to hammer a server that's already blocking it. Tested
+against both a sustained-failure fixture (breaker trips after exactly 4
+real HTTP calls, zero further requests attempted) and an isolated-failures
+fixture (breaker correctly does NOT trip when failures aren't consecutive).
+No fix for the root cause is possible from inside this codebase — if it
+recurs, re-run later, or see §8 for the non-code mitigations.
+
 ### v0.5.1 (this update)
 
 Diagnostics reported "OK" on cost reconciliation for `shopStore=w` while the
@@ -411,6 +433,28 @@ If `week-data.json` fails to load, the planner shows a tiny demo dataset.
 --------------------------------------------------------------------------------
 ## 8. Known limitations / gotchas (read before "improving")
 
+- **Known operational risk: IP blocking.** GitHub Actions runners share IP
+  pools that anti-bot systems (Cloudflare and similar) sometimes blocklist
+  outright, independent of anything in this code. The signature: every
+  SaleFinder endpoint AND woolworths.com.au directly all return 403 in the
+  same run, right after a previous run worked fine — that's the requesting
+  IP being blocked, not a config or catalogue-id problem (compare against
+  §1's earlier entries, which were genuine config bugs with a different,
+  narrower failure signature — e.g. only one store affected, or a specific
+  endpoint). This is largely out of the code's control, but two things help:
+  - The generator now paces requests (~0.12s between calls) and trips a
+    circuit breaker after 4 consecutive failures on a store, immediately
+    falling back to baseline for everything remaining rather than
+    continuing to hammer a blocking server for hundreds more doomed
+    requests. This makes a blocked run fail fast and cleanly instead of
+    grinding through ~700 timeouts, and avoids extending the block by
+    continuing to hit a server that's already refusing you.
+  - If it happens: just re-run the workflow later (IP-reputation blocks are
+    often temporary, sometimes clearing within the hour). If it recurs
+    often, the durable fixes are outside this codebase — a self-hosted
+    runner on a non-cloud/residential IP, or routing requests through a
+    proxy — not something worth solving here speculatively without being
+    able to confirm which mitigation the actual blocking system responds to.
 - **Whole-item units.** A few ingredients (whole chicken, and likely a couple
   of others) were converted with a `kg` unit because the source recipe
   recorded a weight, but catalogues often advertise them "each". Worth a

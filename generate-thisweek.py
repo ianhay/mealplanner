@@ -20,6 +20,7 @@ import os
 import sys
 import html
 import subprocess
+import time
 from datetime import datetime
 from typing import Dict, List
 import requests
@@ -395,12 +396,21 @@ def parse_salefinder_search_html(content_html: str, store: str) -> List[Dict]:
 
 _SF_SEARCH_CACHE = {}   # (store, query) -> [candidates]
 
+_SF_FAIL_STREAK = {"coles": 0, "woolworths": 0}
+_SF_BLOCKED = {"coles": False, "woolworths": False}
+_SF_BREAKER_THRESHOLD = 4   # consecutive failures before we stop hammering a blocked store
+
 def sf_search(store: str, query: str) -> List[Dict]:
     """Search a store's current catalogue for `query`. Cached; [] on miss/failure."""
     store = store.lower()
     key = (store, query.lower())
     if key in _SF_SEARCH_CACHE:
         return _SF_SEARCH_CACHE[key]
+    if _SF_BLOCKED.get(store):
+        # already tripped the breaker this run — don't fire another doomed
+        # request, just fall back to baseline for everything remaining
+        _SF_SEARCH_CACHE[key] = []
+        return []
     cfg = SALEFINDER.get(store, {})
     scfg = SF_SEARCH.get(store, {})
     sale, loc = cfg.get("catalogue"), cfg.get("location")
@@ -423,9 +433,20 @@ def sf_search(store: str, query: str) -> List[Dict]:
         resp.raise_for_status()
         data = _strip_jsonp(resp.text)
         cands = parse_salefinder_search_html(data.get("content", ""), store)
+        _SF_FAIL_STREAK[store] = 0
+        time.sleep(0.12)   # pace requests — a tight burst is what trips rate-based blocking
     except Exception as e:
         print(f"  [SF search] {store} '{query}' failed ({e})")
         cands = []
+        _SF_FAIL_STREAK[store] = _SF_FAIL_STREAK.get(store, 0) + 1
+        if _SF_FAIL_STREAK[store] >= _SF_BREAKER_THRESHOLD and not _SF_BLOCKED[store]:
+            _SF_BLOCKED[store] = True
+            print(f"  [SF search] {store}: {_SF_FAIL_STREAK[store]} consecutive failures — "
+                  f"this looks like the requesting IP is being blocked (not a config problem, "
+                  f"since it was working minutes/hours ago), so no point continuing to hammer it. "
+                  f"Stopping live search for {store} for the rest of this run; everything else "
+                  f"falls back to the bank baseline. See HANDOFF.md 'Known operational risk: "
+                  f"IP blocking' for what to do about this.")
     _SF_SEARCH_CACHE[key] = cands
     return cands
 
