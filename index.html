@@ -144,6 +144,11 @@
   .recipebox.open{display:block}
   .recipebox ol{padding-left:18px}
   .recipebox li{margin-bottom:4px}
+  .recipebox .ingredients{list-style:none;padding:0;margin:0 0 4px}
+  .recipebox .ingredients li{display:flex;gap:6px;margin-bottom:5px}
+  .recipebox .ingredients b{color:var(--ih-primary);font-family:'IBM Plex Mono',ui-monospace,monospace;font-weight:600;flex:0 0 auto;min-width:52px}
+  .recipebox .rb-sub{font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ih-text-secondary);font-weight:700;margin:10px 0 6px}
+  .recipebox .rb-sub:first-child{margin-top:0}
   .savebar{font-size:.8rem;color:var(--ih-text-secondary);margin-bottom:14px;display:flex;justify-content:space-between;align-items:center;gap:8px}
   .savebar b{color:var(--ih-text)}
   .shufflebtn{border:1.5px solid var(--ih-border);background:var(--ih-surface);border-radius:4px;font:inherit;font-size:.74rem;font-weight:600;padding:7px 11px;cursor:pointer;color:var(--ih-primary);white-space:nowrap}
@@ -159,6 +164,7 @@
   .ritem label small{display:block;color:var(--ih-text-secondary);font-size:.68rem}
   .ritem .pr{white-space:nowrap}
   .ritem .was{text-decoration:line-through;color:var(--ih-text-secondary);margin-right:5px}
+  .ritem .qty{color:var(--ih-primary);font-family:'IBM Plex Mono',ui-monospace,monospace;font-weight:600;font-size:.78rem}
   .ritem.done label{text-decoration:line-through;color:var(--ih-text-secondary)}
   .ritem.owned label{text-decoration:line-through;color:var(--ih-text-secondary)}
   .rtotal{border-top:1px dashed var(--ih-border);margin-top:12px;padding-top:10px}
@@ -448,7 +454,7 @@
 </div>
 
 <script>
-const APP_VERSION = "0.4.3";
+const APP_VERSION = "0.5.0";
 console.log("Meal Planner v" + APP_VERSION + " (schema 2, client-side selection)");
 
 /* ============================================================
@@ -481,6 +487,7 @@ function normalizeBankRecipe(r){
   const priced = (r.priced_ingredients||[]).map(pi=>({
     ing: pi.ing, label: pi.label, role: pi.role, note: pi.note,
     now: pi.now, was: pi.was, flag: pi.flag, by_store: pi.by_store||null,
+    qty: pi.qty, unit: pi.unit,
     store: (WEEK.ingredients[pi.ing]||{}).store_pref || "e",
   }));
   return {
@@ -656,6 +663,38 @@ function findRecipe(id){ return ALL.find(r=>r.id===id); }
    SCALING + COSTING for a plan slot
    ============================================================ */
 function slotFactor(slot, r){ return slot.people/(r.serves||2); }
+function recipeIngredientsHtml(r, slot){
+  const f = slotFactor(slot, r);
+  const rows = r.priced.map(pi=>{
+    const scales = (pi.role==="hero"||pi.role==="scales");
+    const qty = (pi.qty!=null) ? pi.qty*(scales?f:1) : null;
+    const qtyLabel = formatQty(pi.unit, qty);
+    const noteTag = pi.note ? ` <small style="color:var(--ih-text-secondary)">(${pi.note})</small>` : "";
+    return `<li>${qtyLabel?`<b>${qtyLabel}</b>`:'<b></b>'}<span>${pi.label}${noteTag}</span></li>`;
+  }).join("");
+  return `<div class="rb-sub">Ingredients · serves ${slot.people}</div><ul class="ingredients">${rows}</ul>`;
+}
+// Format a scaled quantity for a given ingredient unit. kg/L ingredients are
+// stored (and scaled) in grams/ml; ea items in whole-ish counts; pack items
+// have no meaningful quantity number at all (a jar is a jar).
+function formatQty(unit, qty){
+  if(qty==null || !isFinite(qty)) return "";
+  if(unit==="kg"){
+    if(qty>=1000){ const kg=qty/1000; return (Number.isInteger(kg)?kg:Math.round(kg*10)/10)+" kg"; }
+    return Math.round(qty)+" g";
+  }
+  if(unit==="L"){
+    if(qty>=1000){ const l=qty/1000; return (Number.isInteger(l)?l:Math.round(l*10)/10)+" L"; }
+    return Math.round(qty)+" ml";
+  }
+  if(unit==="ea"){
+    // you can't buy half an egg — round up to a whole unit to actually purchase,
+    // even though the underlying cost math keeps the exact scaled fraction
+    const n=Math.ceil(qty-1e-9);
+    return n+"×";
+  }
+  return "";
+}
 // Resolve the price to actually use for an ingredient row: if the household
 // is shopping at one store only, use THAT store's own price when we have a
 // live one for it, rather than relabelling the blended (store_pref) price —
@@ -766,7 +805,7 @@ function renderMeals(){
         <button onclick="openSwap(${i})">↻ Swap</button>
         <button class="recipe" onclick="this.closest('.meal').querySelector('.recipebox').classList.toggle('open')">Recipe</button>
       </div>
-      <div class="recipebox"><ol>${(r.steps||[]).map(s=>`<li>${s}</li>`).join("")}</ol></div>`;
+      <div class="recipebox">${recipeIngredientsHtml(r,slot)}<div class="rb-sub">Method</div><ol>${(r.steps||[]).map(s=>`<li>${s}</li>`).join("")}</ol></div>`;
     wrap.appendChild(el);
   });
   const live=plan.filter(s=>!s.skipped);
@@ -834,19 +873,26 @@ function listItems(){
     r.priced.forEach(pi=>{
       const store = settings.shopStore!=="both" ? settings.shopStore : pi.store;
       const ep = effectivePrice(pi);
-      const factor = (pi.role==="hero"||pi.role==="scales") ? f : 1;
+      const scales = (pi.role==="hero"||pi.role==="scales");
+      const factor = scales ? f : 1;
       const key = (pi.ing||("c:"+pi.label))+"|"+store;
       const now = (ep.now||0)*factor, was = ep.was?ep.was*factor:null;
       const owned = pi.ing && pantryOwned[pi.ing];
+      const unit = pi.unit || (pi.ing && WEEK.ingredients[pi.ing] ? WEEK.ingredients[pi.ing].unit : null);
+      const qty = (pi.qty!=null) ? pi.qty*factor : null;
       if(map.has(key)){
         const e=map.get(key); e.p+=now; if(was) e.was=(e.was||0)+was; e.meals.add(r.name);
+        if(qty!=null) e.qty = (e.qty||0)+qty;
       } else {
         map.set(key, {n:pi.label, s:store, p:now, was, note:pi.note, ing:pi.ing,
-                       pantry: pi.role==="pantry", owned, meals:new Set([r.name])});
+                       pantry: pi.role==="pantry", owned, meals:new Set([r.name]),
+                       qty, unit});
       }
     });
   });
-  return {items:[...map.values()], meals:src.map(s=>findRecipe(s.id)).filter(Boolean)};
+  const items = [...map.values()];
+  items.forEach(it=>{ it.qtyLabel = formatQty(it.unit, it.qty); });
+  return {items, meals:src.map(s=>findRecipe(s.id)).filter(Boolean)};
 }
 function receiptGroups(items){
   if(settings.shopStore==="c") return [{code:"c",label:"Coles (one shop)",items:items.slice()}];
@@ -877,9 +923,10 @@ function renderReceipt(){
       const sv=(it.was&&it.was>it.p)?`<span class="savebadge"> save $${(it.was-it.p).toFixed(2)}</span>`:"";
       const ownedAttr = it.ing ? `onclick="toggleOwned('${it.ing}')"` : "";
       const cursor = it.ing ? "cursor:pointer" : "";
+      const qtyTag = it.qtyLabel ? `<b class="qty">${it.qtyLabel}</b> ` : "";
       return `<div class="ritem${it.owned?' owned':''}" ${it.ing?`style="${cursor}"`:""} ${ownedAttr}>
         <input type="checkbox" ${it.owned?"checked":""} ${it.ing?"":"disabled"} onclick="event.stopPropagation()" onchange="toggleOwned('${it.ing||''}')">
-        <label>${it.n}${it.pantry?' <small style="display:inline">(pantry)</small>':''}${it.note?`<small>♻ ${it.note}</small>`:""}</label>
+        <label>${qtyTag}${it.n}${it.pantry?' <small style="display:inline">(pantry)</small>':''}${it.note?`<small>♻ ${it.note}</small>`:""}</label>
         <span class="pr">${it.was?`<span class="was">$${it.was.toFixed(2)}</span>`:""}${it.p?"$"+it.p.toFixed(2):"—"}${it.owned?"":sv}</span></div>`;
     }).join("");
     return `<div class="rgroup"><span class="gdot" style="background:${dot(g.code)}"></span>${g.label}</div>${rows}<div style="border-top:1px dashed #ddd;margin:10px 0;padding-top:10px;font-size:.75rem;color:#999"><b>${g.label.split(' ')[0]}: $${total.toFixed(2)}</b></div>`;
@@ -894,7 +941,7 @@ function renderReceipt(){
   const rng=catalogueRange();
 
   document.getElementById("receipt").innerHTML=`
-    <div class="rhead"><b>THE DOCKET</b><br>${meals.length} dinners · shop ${settings.shopDay}${rng?` · ${rng}`:""}</div>
+    <div class="rhead"><b>SHOPPING LIST</b><br>${meals.length} dinners · shop ${settings.shopDay}${rng?` · ${rng}`:""}</div>
     ${groups.map(mkgrp).join("")}
     <div class="rtotal"><div><span>TOTAL</span><span class="big">$${grand.toFixed(2)}</span></div></div>
     ${savedLine}${caveat}`;
@@ -905,7 +952,7 @@ function copyList(share){
   let txt=`Shopping list — ${meals.length} dinners from ${settings.shopDay}\n`;
   groups.forEach(g=>{
     const active=g.items.filter(i=>!i.owned);
-    txt+=`\n${g.label}:\n`+active.map(i=>`☐ ${i.n}${i.p?` — $${i.p.toFixed(2)}`:""}${(i.was&&i.was>i.p)?` (save $${(i.was-i.p).toFixed(2)})`:""}`).join("\n")+"\n";
+    txt+=`\n${g.label}:\n`+active.map(i=>`☐ ${i.qtyLabel?i.qtyLabel+' ':''}${i.n}${i.p?` — $${i.p.toFixed(2)}`:""}${(i.was&&i.was>i.p)?` (save $${(i.was-i.p).toFixed(2)})`:""}`).join("\n")+"\n";
   });
   const saved=items.filter(i=>!i.owned).reduce((s,i)=>s+((i.was&&i.was>i.p)?i.was-i.p:0),0);
   if(saved>0) txt+=`\nSaved $${saved.toFixed(2)} on specials.\n`;

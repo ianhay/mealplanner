@@ -12,6 +12,25 @@ built around `recipe-bank.json` + `thisweek.json` + a server-side "pick 12").
 --------------------------------------------------------------------------------
 ## 1. What changed from v1, and why
 
+### v0.5.0 (this update)
+
+- **Shopping list now shows quantities**, not just price — "700 g Chicken
+  breast", "3× Free-range eggs", "1.5 L Coconut milk" — aggregated across
+  every recipe in the week that uses the same ingredient, and correctly
+  scaled by each recipe's people count before summing. `ea`-unit quantities
+  round up (`Math.ceil`) for the *displayed* purchase quantity — you can't
+  buy half an egg — while the underlying cost math still uses the exact
+  scaled fraction, since that's the more honest price estimate.
+- **Recipe view now shows an ingredient list**, scaled to that meal's people
+  count, above the method steps — previously the "Recipe" expand only
+  showed the method, never the ingredients or how much of each to use.
+- Fixed a leftover **"THE DOCKET"** in the shopping-list receipt header
+  (missed in the earlier rename pass because it was all-caps and the
+  find/replace was case-sensitive) → **"SHOPPING LIST"**.
+- Quantity formatting lives in one shared `formatQty(unit, qty)`, used by
+  both the shopping list and the recipe view, so the two can't drift out of
+  sync with each other.
+
 ### v0.4.3 (this update)
 
 Traced the Woolworths 0%-live-coverage issue from the last update to its
