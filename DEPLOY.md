@@ -57,7 +57,7 @@ gh variable set COLES_LOCATION_ID    --repo <you>/mealplanner --body "9045"
 gh variable set WOOLIES_RETAILER_ID  --repo <you>/mealplanner --body "126"
 gh variable set WOOLIES_LOCATION_ID  --repo <you>/mealplanner --body "22287"
 gh variable set COLES_CATALOGUE_ID   --repo <you>/mealplanner --body "66233"
-gh variable set WOOLIES_CATALOGUE_ID --repo <you>/mealplanner --body "66367"
+gh variable set WOOLIES_CATALOGUE_ID --repo <you>/mealplanner --body "66794"   # current as of Aug 2026 — SF_AUTO_RESOLVE=1 (below) should keep this current automatically after the first run
 gh variable set SF_AUTO_RESOLVE      --repo <you>/mealplanner --body "1"
 ```
 

@@ -24,7 +24,7 @@ gh variable set WOOLIES_LOCATION_ID  --repo "$REPO" --body "22287"
 
 # --- changes weekly (update these two each cycle) ---
 gh variable set COLES_CATALOGUE_ID   --repo "$REPO" --body "66233"
-gh variable set WOOLIES_CATALOGUE_ID --repo "$REPO" --body "66367"
+gh variable set WOOLIES_CATALOGUE_ID --repo "$REPO" --body "66794"   # current as of Aug 2026
 
 echo
 echo "Done. Current repository variables:"

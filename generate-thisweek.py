@@ -434,17 +434,17 @@ def sf_resolve_catalogue_id(store: str):
     Best-effort: ask SaleFinder for the retailer's current catalogue id so the
     weekly id never has to be set by hand. Returns a string id or None. The env
     Variable still wins as an explicit override; this is only used to fill a gap.
-    NOTE: only verifiable when run against the live endpoint (not in the sandbox).
     """
     cfg = SALEFINDER.get(store.lower(), {})
     scfg = SF_SEARCH.get(store.lower(), {})
     ret, loc = cfg.get("retailer"), cfg.get("location")
     if not (ret and loc):
+        print(f"  [SF resolve] {store}: no retailer/location configured, skipping")
         return None
     params = {
         "format": "json", "token": scfg.get("token", _SF_DEFAULT_TOKEN),
         "saleGroup": scfg.get("saleGroup", "97"), "locationId": loc,
-        "order": "oldestfirst",
+        "order": "newestfirst",   # was 'oldestfirst' — that asked for the WRONG end of the list
     }
     url = f"https://embed.salefinder.com.au/catalogues/view/{ret}/"
     try:
@@ -452,13 +452,22 @@ def sf_resolve_catalogue_id(store: str):
             "User-Agent": "Mozilla/5.0", "Referer": "https://embed.salefinder.com.au/"})
         resp.raise_for_status()
         data = _strip_jsonp(resp.text)
-        ids = _re_sf.findall(r'saleId=(\d+)', data.get("content", ""))
+        content = data.get("content", "")
+        ids = _re_sf.findall(r'saleId=(\d+)', content)
         if not ids:
+            # fall back to scanning the whole payload, not just 'content' —
+            # some responses carry the id elsewhere (e.g. top-level fields)
+            ids = _re_sf.findall(r'saleId["\']?\s*[:=]\s*["\']?(\d+)', resp.text)
+        if not ids:
+            print(f"  [SF resolve] {store}: request succeeded (HTTP {resp.status_code}, "
+                  f"{len(resp.text)} bytes) but found no saleId in the response — "
+                  f"SaleFinder's response shape may have changed, or retailer={ret}/"
+                  f"location={loc} isn't returning a current catalogue. "
+                  f"First 200 chars: {resp.text[:200]!r}")
             return None
-        # the live "this week" flyer is the most recent (largest) id on offer
         return max(ids, key=lambda x: int(x))
     except Exception as e:
-        print(f"  [SF resolve] {store} failed ({e})")
+        print(f"  [SF resolve] {store}: request failed ({type(e).__name__}: {e})")
         return None
 
 def fetch_catalogue(url: str, store_name: str) -> List[Dict]:

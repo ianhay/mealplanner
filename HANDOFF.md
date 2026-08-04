@@ -12,6 +12,29 @@ built around `recipe-bank.json` + `thisweek.json` + a server-side "pick 12").
 --------------------------------------------------------------------------------
 ## 1. What changed from v1, and why
 
+### v0.4.3 (this update)
+
+Traced the Woolworths 0%-live-coverage issue from the last update to its
+root cause, using the Actions log plus a real live SaleFinder response the
+user captured directly (proof the endpoint and retailer/location IDs were
+never the problem — catalogue `66367` had simply expired).
+
+- **Stale catalogue ID**: `WOOLIES_CATALOGUE_ID` was pinned to `66367`,
+  which SaleFinder now returns 0 products for. The current one (at time of
+  writing) is `66794`. This needs updating in the repo's Variables — code
+  can't fix a stale external ID by itself.
+- **`sf_resolve_catalogue_id` was silently useless for Woolworths**, and
+  would have kept being useless every week: it requested catalogues
+  `order=oldestfirst`, which is backwards for "give me the current one," and
+  on finding no `saleId` in the response it returned `None` with no
+  diagnostic output at all — so a real failure looked identical to "nothing
+  to resolve." Fixed: `order=newestfirst`, a fallback scan of the whole
+  response body (not just the `content` field) if the primary regex finds
+  nothing, and — most importantly — real diagnostic output on every failure
+  path (HTTP status, response length, first 200 characters) so a future
+  failure is debuggable from the Actions log alone instead of a dead end
+  requiring exactly this kind of manual investigation again.
+
 ### v0.4.2 (this update)
 
 Found via the in-app diagnostics doing exactly what it's for: a real report
