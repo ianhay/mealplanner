@@ -1,20 +1,20 @@
 {
   "schema": 2,
   "metadata": {
-    "generated": "2026-08-11T22:45:00.407678",
-    "week_start": "2026-08-12",
-    "week_end": "2026-08-18",
+    "generated": "2026-08-18T22:24:47.482465",
+    "week_start": "2026-08-19",
+    "week_end": "2026-08-25",
     "coles_saleid": "66019",
     "coles_url": "https://www.coles.com.au/catalogues/view#view=list&saleId=66019&areaName=c-wa-met",
     "woolies_saleid": "66046",
     "woolies_url": "https://www.woolworths.com.au/shop/catalogue/view#view=list&saleId=66046&areaName=WA",
-    "note": "Priced 8 of 96 ingredients from this week's catalogue (8 by search, 0 by catalogue pool, 88 on bank baseline).",
-    "catalogue_start": "2026-08-12",
-    "catalogue_end": "2026-08-18",
-    "ingredients_matched": 8,
+    "note": "Priced 54 of 96 ingredients from this week's catalogue (53 by search, 1 by catalogue pool, 42 on bank baseline).",
+    "catalogue_start": "2026-08-19",
+    "catalogue_end": "2026-08-25",
+    "ingredients_matched": 54,
     "ingredients_total": 96,
-    "recipes_on_special": 8,
-    "total_possible_saving": 22.8
+    "recipes_on_special": 21,
+    "total_possible_saving": 141.04
   },
   "ingredients": {
     "whole_chicken": {
@@ -1367,14 +1367,14 @@
           "unit": "ea",
           "role": "hero",
           "note": "carcass \u2192 stock",
-          "now": 6.8,
+          "now": 14.0,
           "was": null,
-          "flag": "est",
+          "flag": "live",
           "by_store": {
             "c": {
-              "now": 6.8,
+              "now": 14.0,
               "was": null,
-              "flag": "est"
+              "flag": "live"
             },
             "w": {
               "now": 6.8,
@@ -1390,14 +1390,14 @@
           "unit": "kg",
           "role": "shared",
           "note": "shared 3 meals",
-          "now": 6.0,
-          "was": null,
-          "flag": "est",
+          "now": 15.2,
+          "was": 20.9,
+          "flag": "live",
           "by_store": {
             "c": {
-              "now": 6.0,
-              "was": null,
-              "flag": "est"
+              "now": 15.2,
+              "was": 20.9,
+              "flag": "live"
             },
             "w": {
               "now": 6.0,
@@ -1453,10 +1453,10 @@
           }
         }
       ],
-      "cost": 17.4,
-      "cost_per_serve": 8.7,
-      "saving": 0.0,
-      "saving_pct": 0.0,
+      "cost": 33.8,
+      "cost_per_serve": 16.9,
+      "saving": 5.7,
+      "saving_pct": 14.4,
       "hero_on_special": false
     },
     {
@@ -1514,14 +1514,14 @@
           "unit": "kg",
           "role": "hero",
           "note": null,
-          "now": 12.6,
-          "was": null,
-          "flag": "est",
+          "now": 18.2,
+          "was": 23.8,
+          "flag": "live",
           "by_store": {
             "c": {
-              "now": 12.6,
-              "was": null,
-              "flag": "est"
+              "now": 18.2,
+              "was": 23.8,
+              "flag": "live"
             },
             "w": {
               "now": 12.6,
@@ -1560,14 +1560,14 @@
           "unit": "kg",
           "role": "shared",
           "note": "half here, half squid night",
-          "now": 3.0,
+          "now": 0.72,
           "was": null,
-          "flag": "est",
+          "flag": "live",
           "by_store": {
             "c": {
-              "now": 3.0,
+              "now": 0.72,
               "was": null,
-              "flag": "est"
+              "flag": "live"
             },
             "w": {
               "now": 3.0,
@@ -1577,11 +1577,11 @@
           }
         }
       ],
-      "cost": 18.1,
-      "cost_per_serve": 9.05,
-      "saving": 0.0,
-      "saving_pct": 0.0,
-      "hero_on_special": false
+      "cost": 21.42,
+      "cost_per_serve": 10.71,
+      "saving": 5.6,
+      "saving_pct": 20.7,
+      "hero_on_special": true
     },
     {
       "id": "salmon-broccolini-mash",
@@ -1631,14 +1631,14 @@
           "unit": "kg",
           "role": "hero",
           "note": null,
-          "now": 13.6,
-          "was": null,
-          "flag": "est",
+          "now": 25.6,
+          "was": 33.6,
+          "flag": "live",
           "by_store": {
             "c": {
-              "now": 13.6,
-              "was": null,
-              "flag": "est"
+              "now": 25.6,
+              "was": 33.6,
+              "flag": "live"
             },
             "w": {
               "now": 13.6,
@@ -1671,11 +1671,11 @@
           }
         }
       ],
-      "cost": 18.2,
-      "cost_per_serve": 9.1,
-      "saving": 0.0,
-      "saving_pct": 0.0,
-      "hero_on_special": false
+      "cost": 30.2,
+      "cost_per_serve": 15.1,
+      "saving": 8.0,
+      "saving_pct": 20.9,
+      "hero_on_special": true
     },
     {
       "id": "prawn-ginger-stir-fry",
@@ -1734,12 +1734,12 @@
           "note": null,
           "now": 7.6,
           "was": null,
-          "flag": "est",
+          "flag": "live",
           "by_store": {
             "c": {
               "now": 7.6,
               "was": null,
-              "flag": "est"
+              "flag": "live"
             },
             "w": {
               "now": 7.6,
@@ -1755,14 +1755,14 @@
           "unit": "L",
           "role": "pantry",
           "note": "pantry \u2014 lasts months",
-          "now": 3.0,
+          "now": 2.25,
           "was": null,
-          "flag": "est",
+          "flag": "live",
           "by_store": {
             "c": {
-              "now": 3.0,
+              "now": 2.25,
               "was": null,
-              "flag": "est"
+              "flag": "live"
             },
             "w": {
               "now": 3.0,
@@ -1795,8 +1795,8 @@
           }
         }
       ],
-      "cost": 11.8,
-      "cost_per_serve": 5.9,
+      "cost": 11.05,
+      "cost_per_serve": 5.52,
       "saving": 0.0,
       "saving_pct": 0.0,
       "hero_on_special": false
@@ -1856,13 +1856,13 @@
           "unit": "kg",
           "role": "hero",
           "note": null,
-          "now": 6.0,
-          "was": 9.0,
+          "now": 13.34,
+          "was": 15.0,
           "flag": "live",
           "by_store": {
             "c": {
-              "now": 6.0,
-              "was": 9.0,
+              "now": 13.34,
+              "was": 15.0,
               "flag": "live"
             },
             "w": {
@@ -1919,10 +1919,10 @@
           }
         }
       ],
-      "cost": 11.2,
-      "cost_per_serve": 5.6,
-      "saving": 3.0,
-      "saving_pct": 21.1,
+      "cost": 18.54,
+      "cost_per_serve": 9.27,
+      "saving": 1.66,
+      "saving_pct": 8.2,
       "hero_on_special": true
     },
     {
@@ -1980,14 +1980,14 @@
           "unit": "kg",
           "role": "hero",
           "note": null,
-          "now": 10.0,
-          "was": null,
-          "flag": "est",
+          "now": 5.5,
+          "was": 6.5,
+          "flag": "live",
           "by_store": {
             "c": {
-              "now": 10.0,
-              "was": null,
-              "flag": "est"
+              "now": 5.5,
+              "was": 6.5,
+              "flag": "live"
             },
             "w": {
               "now": 10.0,
@@ -2003,14 +2003,14 @@
           "unit": "kg",
           "role": "scales",
           "note": "freezer \u2014 keeps",
-          "now": 2.75,
-          "was": null,
-          "flag": "est",
+          "now": 2.25,
+          "was": 4.5,
+          "flag": "live",
           "by_store": {
             "c": {
-              "now": 2.75,
-              "was": null,
-              "flag": "est"
+              "now": 2.25,
+              "was": 4.5,
+              "flag": "live"
             },
             "w": {
               "now": 2.75,
@@ -2043,11 +2043,11 @@
           }
         }
       ],
-      "cost": 15.75,
-      "cost_per_serve": 7.88,
-      "saving": 0.0,
-      "saving_pct": 0.0,
-      "hero_on_special": false
+      "cost": 10.75,
+      "cost_per_serve": 5.38,
+      "saving": 3.25,
+      "saving_pct": 23.2,
+      "hero_on_special": true
     },
     {
       "id": "thai-red-curry-prawns",
@@ -2120,12 +2120,12 @@
           "note": null,
           "now": 7.6,
           "was": null,
-          "flag": "est",
+          "flag": "live",
           "by_store": {
             "c": {
               "now": 7.6,
               "was": null,
-              "flag": "est"
+              "flag": "live"
             },
             "w": {
               "now": 7.6,
@@ -2141,14 +2141,14 @@
           "unit": "pack",
           "role": "pantry",
           "note": "lasts weeks",
-          "now": 4.5,
-          "was": null,
-          "flag": "est",
+          "now": 4.0,
+          "was": 5.0,
+          "flag": "live",
           "by_store": {
             "c": {
-              "now": 4.5,
-              "was": null,
-              "flag": "est"
+              "now": 4.0,
+              "was": 5.0,
+              "flag": "live"
             },
             "w": {
               "now": 4.5,
@@ -2164,14 +2164,14 @@
           "unit": "L",
           "role": "scales",
           "note": "whole can used",
-          "now": 2.2,
-          "was": null,
-          "flag": "est",
+          "now": 3.96,
+          "was": 6.6,
+          "flag": "live",
           "by_store": {
             "c": {
-              "now": 2.2,
-              "was": null,
-              "flag": "est"
+              "now": 3.96,
+              "was": 6.6,
+              "flag": "live"
             },
             "w": {
               "now": 2.2,
@@ -2227,10 +2227,10 @@
           }
         }
       ],
-      "cost": 18.9,
-      "cost_per_serve": 9.45,
-      "saving": 0.0,
-      "saving_pct": 0.0,
+      "cost": 20.16,
+      "cost_per_serve": 10.08,
+      "saving": 3.64,
+      "saving_pct": 15.3,
       "hero_on_special": false
     },
     {
@@ -2325,14 +2325,14 @@
           "unit": "L",
           "role": "scales",
           "note": "whole can",
-          "now": 2.2,
-          "was": null,
-          "flag": "est",
+          "now": 3.96,
+          "was": 6.6,
+          "flag": "live",
           "by_store": {
             "c": {
-              "now": 2.2,
-              "was": null,
-              "flag": "est"
+              "now": 3.96,
+              "was": 6.6,
+              "flag": "live"
             },
             "w": {
               "now": 2.2,
@@ -2348,14 +2348,14 @@
           "unit": "kg",
           "role": "shared",
           "note": "half pack",
-          "now": 2.8,
-          "was": null,
-          "flag": "est",
+          "now": 0.68,
+          "was": 1.35,
+          "flag": "live",
           "by_store": {
             "c": {
-              "now": 2.8,
-              "was": null,
-              "flag": "est"
+              "now": 0.68,
+              "was": 1.35,
+              "flag": "live"
             },
             "w": {
               "now": 2.8,
@@ -2373,12 +2373,12 @@
           "note": null,
           "now": 5.7,
           "was": null,
-          "flag": "est",
+          "flag": "live",
           "by_store": {
             "c": {
               "now": 5.7,
               "was": null,
-              "flag": "est"
+              "flag": "live"
             },
             "w": {
               "now": 5.7,
@@ -2411,10 +2411,10 @@
           }
         }
       ],
-      "cost": 17.6,
-      "cost_per_serve": 8.8,
-      "saving": 0.0,
-      "saving_pct": 0.0,
+      "cost": 17.24,
+      "cost_per_serve": 8.62,
+      "saving": 3.31,
+      "saving_pct": 16.1,
       "hero_on_special": false
     },
     {
@@ -2479,13 +2479,13 @@
           "unit": "kg",
           "role": "hero",
           "note": null,
-          "now": 4.8,
-          "was": 7.2,
+          "now": 5.6,
+          "was": null,
           "flag": "live",
           "by_store": {
             "c": {
-              "now": 4.8,
-              "was": 7.2,
+              "now": 5.6,
+              "was": null,
               "flag": "live"
             },
             "w": {
@@ -2525,14 +2525,14 @@
           "unit": "kg",
           "role": "shared",
           "note": "half pack",
-          "now": 2.8,
-          "was": null,
-          "flag": "est",
+          "now": 0.68,
+          "was": 1.35,
+          "flag": "live",
           "by_store": {
             "c": {
-              "now": 2.8,
-              "was": null,
-              "flag": "est"
+              "now": 0.68,
+              "was": 1.35,
+              "flag": "live"
             },
             "w": {
               "now": 2.8,
@@ -2565,11 +2565,11 @@
           }
         }
       ],
-      "cost": 14.1,
-      "cost_per_serve": 7.05,
-      "saving": 2.4,
-      "saving_pct": 14.5,
-      "hero_on_special": true
+      "cost": 12.78,
+      "cost_per_serve": 6.39,
+      "saving": 0.67,
+      "saving_pct": 5.0,
+      "hero_on_special": false
     },
     {
       "id": "orange-chicken-stir-fry",
@@ -2633,14 +2633,14 @@
           "unit": "kg",
           "role": "hero",
           "note": null,
-          "now": 7.2,
+          "now": 4.05,
           "was": null,
-          "flag": "est",
+          "flag": "live",
           "by_store": {
             "c": {
-              "now": 7.2,
+              "now": 4.05,
               "was": null,
-              "flag": "est"
+              "flag": "live"
             },
             "w": {
               "now": 7.2,
@@ -2679,14 +2679,14 @@
           "unit": "pack",
           "role": "shared",
           "note": "shared with other meals",
-          "now": 0.88,
+          "now": 3.5,
           "was": null,
-          "flag": "est",
+          "flag": "live",
           "by_store": {
             "c": {
-              "now": 0.88,
+              "now": 3.5,
               "was": null,
-              "flag": "est"
+              "flag": "live"
             },
             "w": {
               "now": 0.88,
@@ -2719,8 +2719,8 @@
           }
         }
       ],
-      "cost": 12.28,
-      "cost_per_serve": 6.14,
+      "cost": 11.75,
+      "cost_per_serve": 5.88,
       "saving": 0.0,
       "saving_pct": 0.0,
       "hero_on_special": false
@@ -2787,14 +2787,14 @@
           "unit": "kg",
           "role": "hero",
           "note": null,
-          "now": 8.4,
+          "now": 6.3,
           "was": null,
-          "flag": "est",
+          "flag": "live",
           "by_store": {
             "c": {
-              "now": 8.4,
+              "now": 6.3,
               "was": null,
-              "flag": "est"
+              "flag": "live"
             },
             "w": {
               "now": 8.4,
@@ -2810,14 +2810,14 @@
           "unit": "pack",
           "role": "scales",
           "note": null,
-          "now": 0.0,
-          "was": null,
-          "flag": "est",
+          "now": 4.5,
+          "was": 5.8,
+          "flag": "live",
           "by_store": {
             "c": {
-              "now": 0.0,
-              "was": null,
-              "flag": "est"
+              "now": 4.5,
+              "was": 5.8,
+              "flag": "live"
             },
             "w": {
               "now": 0.0,
@@ -2833,14 +2833,14 @@
           "unit": "L",
           "role": "shared",
           "note": "use the other half elsewhere",
-          "now": 1.1,
-          "was": null,
-          "flag": "est",
+          "now": 1.98,
+          "was": 3.3,
+          "flag": "live",
           "by_store": {
             "c": {
-              "now": 1.1,
-              "was": null,
-              "flag": "est"
+              "now": 1.98,
+              "was": 3.3,
+              "flag": "live"
             },
             "w": {
               "now": 1.1,
@@ -2873,10 +2873,10 @@
           }
         }
       ],
-      "cost": 10.3,
-      "cost_per_serve": 5.15,
-      "saving": 0.0,
-      "saving_pct": 0.0,
+      "cost": 13.58,
+      "cost_per_serve": 6.79,
+      "saving": 2.62,
+      "saving_pct": 16.2,
       "hero_on_special": false
     },
     {
@@ -2934,14 +2934,14 @@
           "unit": "kg",
           "role": "hero",
           "note": null,
-          "now": 14.4,
-          "was": null,
-          "flag": "est",
+          "now": 25.6,
+          "was": 33.6,
+          "flag": "live",
           "by_store": {
             "c": {
-              "now": 14.4,
-              "was": null,
-              "flag": "est"
+              "now": 25.6,
+              "was": 33.6,
+              "flag": "live"
             },
             "w": {
               "now": 14.4,
@@ -2957,14 +2957,14 @@
           "unit": "pack",
           "role": "pantry",
           "note": "lasts months",
-          "now": 6.0,
-          "was": null,
-          "flag": "est",
+          "now": 4.0,
+          "was": 5.5,
+          "flag": "live",
           "by_store": {
             "c": {
-              "now": 6.0,
-              "was": null,
-              "flag": "est"
+              "now": 4.0,
+              "was": 5.5,
+              "flag": "live"
             },
             "w": {
               "now": 6.0,
@@ -2997,11 +2997,11 @@
           }
         }
       ],
-      "cost": 23.4,
-      "cost_per_serve": 11.7,
-      "saving": 0.0,
-      "saving_pct": 0.0,
-      "hero_on_special": false
+      "cost": 32.6,
+      "cost_per_serve": 16.3,
+      "saving": 9.5,
+      "saving_pct": 22.6,
+      "hero_on_special": true
     },
     {
       "id": "tom-yum-chicken-rice",
@@ -3095,14 +3095,14 @@
           "unit": "kg",
           "role": "hero",
           "note": null,
-          "now": 4.8,
+          "now": 2.7,
           "was": null,
-          "flag": "est",
+          "flag": "live",
           "by_store": {
             "c": {
-              "now": 4.8,
+              "now": 2.7,
               "was": null,
-              "flag": "est"
+              "flag": "live"
             },
             "w": {
               "now": 4.8,
@@ -3118,14 +3118,14 @@
           "unit": "L",
           "role": "scales",
           "note": "halve a can",
-          "now": 1.1,
-          "was": null,
-          "flag": "est",
+          "now": 1.98,
+          "was": 3.3,
+          "flag": "live",
           "by_store": {
             "c": {
-              "now": 1.1,
-              "was": null,
-              "flag": "est"
+              "now": 1.98,
+              "was": 3.3,
+              "flag": "live"
             },
             "w": {
               "now": 1.1,
@@ -3181,10 +3181,10 @@
           }
         }
       ],
-      "cost": 12.7,
-      "cost_per_serve": 6.35,
-      "saving": 0.0,
-      "saving_pct": 0.0,
+      "cost": 11.48,
+      "cost_per_serve": 5.74,
+      "saving": 1.32,
+      "saving_pct": 10.3,
       "hero_on_special": false
     },
     {
@@ -3249,14 +3249,14 @@
           "unit": "kg",
           "role": "hero",
           "note": null,
-          "now": 7.2,
+          "now": 4.05,
           "was": null,
-          "flag": "est",
+          "flag": "live",
           "by_store": {
             "c": {
-              "now": 7.2,
+              "now": 4.05,
               "was": null,
-              "flag": "est"
+              "flag": "live"
             },
             "w": {
               "now": 7.2,
@@ -3295,14 +3295,14 @@
           "unit": "kg",
           "role": "scales",
           "note": "rest \u2192 breakfasts",
-          "now": 4.5,
-          "was": null,
-          "flag": "est",
+          "now": 8.2,
+          "was": 11.62,
+          "flag": "live",
           "by_store": {
             "c": {
-              "now": 4.5,
-              "was": null,
-              "flag": "est"
+              "now": 8.2,
+              "was": 11.62,
+              "flag": "live"
             },
             "w": {
               "now": 4.5,
@@ -3335,10 +3335,10 @@
           }
         }
       ],
-      "cost": 18.2,
-      "cost_per_serve": 9.1,
-      "saving": 0.0,
-      "saving_pct": 0.0,
+      "cost": 18.75,
+      "cost_per_serve": 9.38,
+      "saving": 3.42,
+      "saving_pct": 15.4,
       "hero_on_special": false
     },
     {
@@ -3403,13 +3403,13 @@
           "unit": "kg",
           "role": "hero",
           "note": null,
-          "now": 4.8,
-          "was": 7.2,
+          "now": 10.67,
+          "was": 12.0,
           "flag": "live",
           "by_store": {
             "c": {
-              "now": 4.8,
-              "was": 7.2,
+              "now": 10.67,
+              "was": 12.0,
               "flag": "live"
             },
             "w": {
@@ -3472,14 +3472,14 @@
           "unit": "pack",
           "role": "scales",
           "note": "pantry check",
-          "now": 0.0,
-          "was": null,
-          "flag": "est",
+          "now": 4.5,
+          "was": 5.8,
+          "flag": "live",
           "by_store": {
             "c": {
-              "now": 0.0,
-              "was": null,
-              "flag": "est"
+              "now": 4.5,
+              "was": 5.8,
+              "flag": "live"
             },
             "w": {
               "now": 0.0,
@@ -3489,10 +3489,10 @@
           }
         }
       ],
-      "cost": 13.8,
-      "cost_per_serve": 6.9,
-      "saving": 2.4,
-      "saving_pct": 14.8,
+      "cost": 24.17,
+      "cost_per_serve": 12.09,
+      "saving": 2.63,
+      "saving_pct": 9.8,
       "hero_on_special": true
     },
     {
@@ -3550,14 +3550,14 @@
           "unit": "kg",
           "role": "hero",
           "note": null,
-          "now": 4.8,
+          "now": 2.7,
           "was": null,
-          "flag": "est",
+          "flag": "live",
           "by_store": {
             "c": {
-              "now": 4.8,
+              "now": 2.7,
               "was": null,
-              "flag": "est"
+              "flag": "live"
             },
             "w": {
               "now": 4.8,
@@ -3613,8 +3613,8 @@
           }
         }
       ],
-      "cost": 9.0,
-      "cost_per_serve": 4.5,
+      "cost": 6.9,
+      "cost_per_serve": 3.45,
       "saving": 0.0,
       "saving_pct": 0.0,
       "hero_on_special": false
@@ -3674,14 +3674,14 @@
           "unit": "kg",
           "role": "hero",
           "note": null,
-          "now": 10.0,
-          "was": null,
-          "flag": "est",
+          "now": 6.33,
+          "was": 8.73,
+          "flag": "live",
           "by_store": {
             "c": {
-              "now": 10.0,
-              "was": null,
-              "flag": "est"
+              "now": 6.33,
+              "was": 8.73,
+              "flag": "live"
             },
             "w": {
               "now": 10.0,
@@ -3697,14 +3697,14 @@
           "unit": "ea",
           "role": "scales",
           "note": "$3.50/kg both stores",
-          "now": 1.76,
+          "now": 7.0,
           "was": null,
-          "flag": "est",
+          "flag": "live",
           "by_store": {
             "c": {
-              "now": 1.76,
+              "now": 7.0,
               "was": null,
-              "flag": "est"
+              "flag": "live"
             },
             "w": {
               "now": 1.76,
@@ -3737,11 +3737,11 @@
           }
         }
       ],
-      "cost": 11.76,
-      "cost_per_serve": 5.88,
-      "saving": 0.0,
-      "saving_pct": 0.0,
-      "hero_on_special": false
+      "cost": 13.33,
+      "cost_per_serve": 6.67,
+      "saving": 2.4,
+      "saving_pct": 15.3,
+      "hero_on_special": true
     },
     {
       "id": "squid-chips-qukes",
@@ -3784,14 +3784,14 @@
           "unit": "kg",
           "role": "hero",
           "note": null,
-          "now": 6.0,
-          "was": null,
-          "flag": "est",
+          "now": 4.68,
+          "was": 6.3,
+          "flag": "live",
           "by_store": {
             "c": {
-              "now": 6.0,
-              "was": null,
-              "flag": "est"
+              "now": 4.68,
+              "was": 6.3,
+              "flag": "live"
             },
             "w": {
               "now": 6.0,
@@ -3801,11 +3801,11 @@
           }
         }
       ],
-      "cost": 6.0,
-      "cost_per_serve": 3.0,
-      "saving": 0.0,
-      "saving_pct": 0.0,
-      "hero_on_special": false
+      "cost": 4.68,
+      "cost_per_serve": 2.34,
+      "saving": 1.62,
+      "saving_pct": 25.7,
+      "hero_on_special": true
     },
     {
       "id": "tuna-cherry-tom-pasta",
@@ -3869,14 +3869,14 @@
           "unit": "kg",
           "role": "hero",
           "note": null,
-          "now": 3.7,
-          "was": null,
-          "flag": "est",
+          "now": 2.82,
+          "was": 5.65,
+          "flag": "live",
           "by_store": {
             "c": {
-              "now": 3.7,
-              "was": null,
-              "flag": "est"
+              "now": 2.82,
+              "was": 5.65,
+              "flag": "live"
             },
             "w": {
               "now": 3.7,
@@ -3892,14 +3892,14 @@
           "unit": "kg",
           "role": "shared",
           "note": "half bag",
-          "now": 1.0,
+          "now": 2.9,
           "was": null,
-          "flag": "est",
+          "flag": "live",
           "by_store": {
             "c": {
-              "now": 1.0,
+              "now": 2.9,
               "was": null,
-              "flag": "est"
+              "flag": "live"
             },
             "w": {
               "now": 1.0,
@@ -3955,11 +3955,11 @@
           }
         }
       ],
-      "cost": 24.7,
-      "cost_per_serve": 12.35,
-      "saving": 0.0,
-      "saving_pct": 0.0,
-      "hero_on_special": false
+      "cost": 25.72,
+      "cost_per_serve": 12.86,
+      "saving": 2.83,
+      "saving_pct": 9.9,
+      "hero_on_special": true
     },
     {
       "id": "fried-rice-bacon-egg",
@@ -4010,13 +4010,13 @@
           "role": "hero",
           "note": "250g tonight \u2014 rest breakfasts/freezer",
           "now": 13.0,
-          "was": null,
-          "flag": "est",
+          "was": 17.5,
+          "flag": "live",
           "by_store": {
             "c": {
               "now": 13.0,
-              "was": null,
-              "flag": "est"
+              "was": 17.5,
+              "flag": "live"
             },
             "w": {
               "now": 13.0,
@@ -4051,9 +4051,9 @@
       ],
       "cost": 17.2,
       "cost_per_serve": 8.6,
-      "saving": 0.0,
-      "saving_pct": 0.0,
-      "hero_on_special": false
+      "saving": 4.5,
+      "saving_pct": 20.7,
+      "hero_on_special": true
     },
     {
       "id": "drumstick-traybake",
@@ -4103,14 +4103,14 @@
           "unit": "kg",
           "role": "hero",
           "note": "freeze half",
-          "now": 7.0,
+          "now": 28.0,
           "was": null,
-          "flag": "est",
+          "flag": "live",
           "by_store": {
             "c": {
-              "now": 7.0,
+              "now": 28.0,
               "was": null,
-              "flag": "est"
+              "flag": "live"
             },
             "w": {
               "now": 7.0,
@@ -4143,8 +4143,8 @@
           }
         }
       ],
-      "cost": 9.0,
-      "cost_per_serve": 4.5,
+      "cost": 30.0,
+      "cost_per_serve": 15.0,
       "saving": 0.0,
       "saving_pct": 0.0,
       "hero_on_special": false
@@ -4204,14 +4204,14 @@
           "unit": "kg",
           "role": "hero",
           "note": null,
-          "now": 6.0,
-          "was": null,
-          "flag": "est",
+          "now": 6.38,
+          "was": 8.07,
+          "flag": "live",
           "by_store": {
             "c": {
-              "now": 6.0,
-              "was": null,
-              "flag": "est"
+              "now": 6.38,
+              "was": 8.07,
+              "flag": "live"
             },
             "w": {
               "now": 6.0,
@@ -4227,14 +4227,14 @@
           "unit": "kg",
           "role": "scales",
           "note": null,
-          "now": 3.6,
-          "was": null,
-          "flag": "est",
+          "now": 6.75,
+          "was": 8.55,
+          "flag": "live",
           "by_store": {
             "c": {
-              "now": 3.6,
-              "was": null,
-              "flag": "est"
+              "now": 6.75,
+              "was": 8.55,
+              "flag": "live"
             },
             "w": {
               "now": 3.6,
@@ -4267,11 +4267,11 @@
           }
         }
       ],
-      "cost": 16.08,
-      "cost_per_serve": 8.04,
-      "saving": 0.0,
-      "saving_pct": 0.0,
-      "hero_on_special": false
+      "cost": 19.61,
+      "cost_per_serve": 9.8,
+      "saving": 3.49,
+      "saving_pct": 15.1,
+      "hero_on_special": true
     },
     {
       "id": "beef-fajita-strips",
@@ -4328,13 +4328,13 @@
           "unit": "kg",
           "role": "hero",
           "note": null,
-          "now": 4.8,
-          "was": 7.2,
+          "now": 10.67,
+          "was": 12.0,
           "flag": "live",
           "by_store": {
             "c": {
-              "now": 4.8,
-              "was": 7.2,
+              "now": 10.67,
+              "was": 12.0,
               "flag": "live"
             },
             "w": {
@@ -4391,10 +4391,10 @@
           }
         }
       ],
-      "cost": 8.7,
-      "cost_per_serve": 4.35,
-      "saving": 2.4,
-      "saving_pct": 21.6,
+      "cost": 14.57,
+      "cost_per_serve": 7.29,
+      "saving": 1.33,
+      "saving_pct": 8.4,
       "hero_on_special": true
     },
     {
@@ -4459,14 +4459,14 @@
           "unit": "kg",
           "role": "hero",
           "note": null,
-          "now": 8.1,
-          "was": null,
-          "flag": "est",
+          "now": 4.95,
+          "was": 5.85,
+          "flag": "live",
           "by_store": {
             "c": {
-              "now": 8.1,
-              "was": null,
-              "flag": "est"
+              "now": 4.95,
+              "was": 5.85,
+              "flag": "live"
             },
             "w": {
               "now": 8.1,
@@ -4545,11 +4545,11 @@
           }
         }
       ],
-      "cost": 10.8,
-      "cost_per_serve": 5.4,
-      "saving": 0.0,
-      "saving_pct": 0.0,
-      "hero_on_special": false
+      "cost": 7.65,
+      "cost_per_serve": 3.83,
+      "saving": 0.9,
+      "saving_pct": 10.5,
+      "hero_on_special": true
     },
     {
       "id": "tofu-peanut-noodles",
@@ -4636,14 +4636,14 @@
           "unit": "kg",
           "role": "shared",
           "note": "half pack",
-          "now": 2.8,
-          "was": null,
-          "flag": "est",
+          "now": 0.68,
+          "was": 1.35,
+          "flag": "live",
           "by_store": {
             "c": {
-              "now": 2.8,
-              "was": null,
-              "flag": "est"
+              "now": 0.68,
+              "was": 1.35,
+              "flag": "live"
             },
             "w": {
               "now": 2.8,
@@ -4699,10 +4699,10 @@
           }
         }
       ],
-      "cost": 9.4,
-      "cost_per_serve": 4.7,
-      "saving": 0.0,
-      "saving_pct": 0.0,
+      "cost": 7.28,
+      "cost_per_serve": 3.64,
+      "saving": 0.67,
+      "saving_pct": 8.4,
       "hero_on_special": false
     },
     {
@@ -4767,14 +4767,14 @@
           "unit": "kg",
           "role": "hero",
           "note": null,
-          "now": 4.8,
+          "now": 2.7,
           "was": null,
-          "flag": "est",
+          "flag": "live",
           "by_store": {
             "c": {
-              "now": 4.8,
+              "now": 2.7,
               "was": null,
-              "flag": "est"
+              "flag": "live"
             },
             "w": {
               "now": 4.8,
@@ -4813,14 +4813,14 @@
           "unit": "L",
           "role": "shared",
           "note": "half can",
-          "now": 1.1,
-          "was": null,
-          "flag": "est",
+          "now": 1.98,
+          "was": 3.3,
+          "flag": "live",
           "by_store": {
             "c": {
-              "now": 1.1,
-              "was": null,
-              "flag": "est"
+              "now": 1.98,
+              "was": 3.3,
+              "flag": "live"
             },
             "w": {
               "now": 1.1,
@@ -4853,10 +4853,10 @@
           }
         }
       ],
-      "cost": 10.7,
-      "cost_per_serve": 5.35,
-      "saving": 0.0,
-      "saving_pct": 0.0,
+      "cost": 9.48,
+      "cost_per_serve": 4.74,
+      "saving": 1.32,
+      "saving_pct": 12.2,
       "hero_on_special": false
     },
     {
@@ -4922,13 +4922,13 @@
           "unit": "kg",
           "role": "hero",
           "note": null,
-          "now": 4.8,
-          "was": 7.2,
+          "now": 10.67,
+          "was": 12.0,
           "flag": "live",
           "by_store": {
             "c": {
-              "now": 4.8,
-              "was": 7.2,
+              "now": 10.67,
+              "was": 12.0,
               "flag": "live"
             },
             "w": {
@@ -4968,14 +4968,14 @@
           "unit": "pack",
           "role": "pantry",
           "note": null,
-          "now": 0.0,
-          "was": null,
-          "flag": "est",
+          "now": 13.0,
+          "was": 26.0,
+          "flag": "live",
           "by_store": {
             "c": {
-              "now": 0.0,
-              "was": null,
-              "flag": "est"
+              "now": 13.0,
+              "was": 26.0,
+              "flag": "live"
             },
             "w": {
               "now": 0.0,
@@ -5008,10 +5008,10 @@
           }
         }
       ],
-      "cost": 8.5,
-      "cost_per_serve": 4.25,
-      "saving": 2.4,
-      "saving_pct": 22.0,
+      "cost": 27.37,
+      "cost_per_serve": 13.69,
+      "saving": 14.33,
+      "saving_pct": 34.4,
       "hero_on_special": true
     },
     {
@@ -5069,14 +5069,14 @@
           "unit": "kg",
           "role": "hero",
           "note": null,
-          "now": 8.4,
+          "now": 6.3,
           "was": null,
-          "flag": "est",
+          "flag": "live",
           "by_store": {
             "c": {
-              "now": 8.4,
+              "now": 6.3,
               "was": null,
-              "flag": "est"
+              "flag": "live"
             },
             "w": {
               "now": 8.4,
@@ -5132,8 +5132,8 @@
           }
         }
       ],
-      "cost": 10.4,
-      "cost_per_serve": 5.2,
+      "cost": 8.3,
+      "cost_per_serve": 4.15,
       "saving": 0.0,
       "saving_pct": 0.0,
       "hero_on_special": false
@@ -5186,14 +5186,14 @@
           "unit": "kg",
           "role": "hero",
           "note": null,
-          "now": 14.4,
-          "was": null,
-          "flag": "est",
+          "now": 25.6,
+          "was": 33.6,
+          "flag": "live",
           "by_store": {
             "c": {
-              "now": 14.4,
-              "was": null,
-              "flag": "est"
+              "now": 25.6,
+              "was": 33.6,
+              "flag": "live"
             },
             "w": {
               "now": 14.4,
@@ -5226,11 +5226,11 @@
           }
         }
       ],
-      "cost": 17.4,
-      "cost_per_serve": 8.7,
-      "saving": 0.0,
-      "saving_pct": 0.0,
-      "hero_on_special": false
+      "cost": 28.6,
+      "cost_per_serve": 14.3,
+      "saving": 8.0,
+      "saving_pct": 21.9,
+      "hero_on_special": true
     },
     {
       "id": "thai-basil-squid",
@@ -5418,14 +5418,14 @@
           "unit": "kg",
           "role": "hero",
           "note": null,
-          "now": 4.8,
+          "now": 2.7,
           "was": null,
-          "flag": "est",
+          "flag": "live",
           "by_store": {
             "c": {
-              "now": 4.8,
+              "now": 2.7,
               "was": null,
-              "flag": "est"
+              "flag": "live"
             },
             "w": {
               "now": 4.8,
@@ -5464,14 +5464,14 @@
           "unit": "L",
           "role": "scales",
           "note": "whole can",
-          "now": 2.2,
-          "was": null,
-          "flag": "est",
+          "now": 3.96,
+          "was": 6.6,
+          "flag": "live",
           "by_store": {
             "c": {
-              "now": 2.2,
-              "was": null,
-              "flag": "est"
+              "now": 3.96,
+              "was": 6.6,
+              "flag": "live"
             },
             "w": {
               "now": 2.2,
@@ -5504,10 +5504,10 @@
           }
         }
       ],
-      "cost": 17.0,
-      "cost_per_serve": 8.5,
-      "saving": 0.0,
-      "saving_pct": 0.0,
+      "cost": 16.66,
+      "cost_per_serve": 8.33,
+      "saving": 2.64,
+      "saving_pct": 13.7,
       "hero_on_special": false
     },
     {
@@ -5572,13 +5572,13 @@
           "unit": "kg",
           "role": "hero",
           "note": null,
-          "now": 7.2,
-          "was": 10.8,
+          "now": 16.0,
+          "was": 18.0,
           "flag": "live",
           "by_store": {
             "c": {
-              "now": 7.2,
-              "was": 10.8,
+              "now": 16.0,
+              "was": 18.0,
               "flag": "live"
             },
             "w": {
@@ -5595,14 +5595,14 @@
           "unit": "L",
           "role": "scales",
           "note": null,
-          "now": 4.0,
-          "was": null,
-          "flag": "est",
+          "now": 1.2,
+          "was": 1.5,
+          "flag": "live",
           "by_store": {
             "c": {
-              "now": 4.0,
-              "was": null,
-              "flag": "est"
+              "now": 1.2,
+              "was": 1.5,
+              "flag": "live"
             },
             "w": {
               "now": 4.0,
@@ -5618,12 +5618,12 @@
           "unit": "L",
           "role": "pantry",
           "note": null,
-          "now": 1.2,
+          "now": 1.6,
           "was": 1.8,
           "flag": "live",
           "by_store": {
             "c": {
-              "now": 1.2,
+              "now": 1.6,
               "was": 1.8,
               "flag": "live"
             },
@@ -5658,10 +5658,10 @@
           }
         }
       ],
-      "cost": 15.4,
-      "cost_per_serve": 7.7,
-      "saving": 4.2,
-      "saving_pct": 21.4,
+      "cost": 21.8,
+      "cost_per_serve": 10.9,
+      "saving": 2.5,
+      "saving_pct": 10.3,
       "hero_on_special": true
     },
     {
@@ -5726,14 +5726,14 @@
           "unit": "kg",
           "role": "hero",
           "note": null,
-          "now": 9.6,
-          "was": null,
-          "flag": "est",
+          "now": 11.0,
+          "was": 22.0,
+          "flag": "live",
           "by_store": {
             "c": {
-              "now": 9.6,
-              "was": null,
-              "flag": "est"
+              "now": 11.0,
+              "was": 22.0,
+              "flag": "live"
             },
             "w": {
               "now": 9.6,
@@ -5749,14 +5749,14 @@
           "unit": "pack",
           "role": "scales",
           "note": "whole used",
-          "now": 3.5,
+          "now": 2.9,
           "was": null,
-          "flag": "est",
+          "flag": "live",
           "by_store": {
             "c": {
-              "now": 3.5,
+              "now": 2.9,
               "was": null,
-              "flag": "est"
+              "flag": "live"
             },
             "w": {
               "now": 3.5,
@@ -5812,11 +5812,11 @@
           }
         }
       ],
-      "cost": 13.9,
-      "cost_per_serve": 6.95,
-      "saving": 0.0,
-      "saving_pct": 0.0,
-      "hero_on_special": false
+      "cost": 14.7,
+      "cost_per_serve": 7.35,
+      "saving": 11.0,
+      "saving_pct": 42.8,
+      "hero_on_special": true
     },
     {
       "id": "chicken-rice-bowl-fried-egg",
@@ -5866,14 +5866,14 @@
           "unit": "pack",
           "role": "hero",
           "note": "carcass \u2192 next week stock",
-          "now": 8.0,
+          "now": 14.0,
           "was": null,
-          "flag": "est",
+          "flag": "live",
           "by_store": {
             "c": {
-              "now": 8.0,
+              "now": 14.0,
               "was": null,
-              "flag": "est"
+              "flag": "live"
             },
             "w": {
               "now": 8.0,
@@ -5906,8 +5906,8 @@
           }
         }
       ],
-      "cost": 9.4,
-      "cost_per_serve": 4.7,
+      "cost": 15.4,
+      "cost_per_serve": 7.7,
       "saving": 0.0,
       "saving_pct": 0.0,
       "hero_on_special": false
@@ -5967,14 +5967,14 @@
           "unit": "kg",
           "role": "hero",
           "note": null,
-          "now": 11.5,
+          "now": 13.0,
           "was": null,
-          "flag": "est",
+          "flag": "live",
           "by_store": {
             "c": {
-              "now": 11.5,
+              "now": 13.0,
               "was": null,
-              "flag": "est"
+              "flag": "live"
             },
             "w": {
               "now": 11.5,
@@ -5990,12 +5990,12 @@
           "unit": "L",
           "role": "pantry",
           "note": null,
-          "now": 2.4,
+          "now": 3.2,
           "was": 3.6,
           "flag": "live",
           "by_store": {
             "c": {
-              "now": 2.4,
+              "now": 3.2,
               "was": 3.6,
               "flag": "live"
             },
@@ -6030,10 +6030,10 @@
           }
         }
       ],
-      "cost": 15.1,
-      "cost_per_serve": 7.55,
-      "saving": 1.2,
-      "saving_pct": 7.4,
+      "cost": 17.4,
+      "cost_per_serve": 8.7,
+      "saving": 0.4,
+      "saving_pct": 2.2,
       "hero_on_special": false
     },
     {
@@ -6099,14 +6099,14 @@
           "unit": "kg",
           "role": "shared",
           "note": "half pack",
-          "now": 2.8,
-          "was": null,
-          "flag": "est",
+          "now": 0.68,
+          "was": 1.35,
+          "flag": "live",
           "by_store": {
             "c": {
-              "now": 2.8,
-              "was": null,
-              "flag": "est"
+              "now": 0.68,
+              "was": 1.35,
+              "flag": "live"
             },
             "w": {
               "now": 2.8,
@@ -6122,14 +6122,14 @@
           "unit": "pack",
           "role": "pantry",
           "note": null,
-          "now": 0.0,
-          "was": null,
-          "flag": "est",
+          "now": 4.0,
+          "was": 5.5,
+          "flag": "live",
           "by_store": {
             "c": {
-              "now": 0.0,
-              "was": null,
-              "flag": "est"
+              "now": 4.0,
+              "was": 5.5,
+              "flag": "live"
             },
             "w": {
               "now": 0.0,
@@ -6185,10 +6185,10 @@
           }
         }
       ],
-      "cost": 7.2,
-      "cost_per_serve": 3.6,
-      "saving": 0.0,
-      "saving_pct": 0.0,
+      "cost": 9.08,
+      "cost_per_serve": 4.54,
+      "saving": 2.17,
+      "saving_pct": 19.3,
       "hero_on_special": false
     },
     {
@@ -6254,14 +6254,14 @@
           "unit": "kg",
           "role": "hero",
           "note": null,
-          "now": 7.2,
+          "now": 4.05,
           "was": null,
-          "flag": "est",
+          "flag": "live",
           "by_store": {
             "c": {
-              "now": 7.2,
+              "now": 4.05,
               "was": null,
-              "flag": "est"
+              "flag": "live"
             },
             "w": {
               "now": 7.2,
@@ -6323,14 +6323,14 @@
           "unit": "L",
           "role": "scales",
           "note": "rest \u2192 breakfasts",
-          "now": 3.2,
-          "was": null,
-          "flag": "est",
+          "now": 1.2,
+          "was": 2.4,
+          "flag": "live",
           "by_store": {
             "c": {
-              "now": 3.2,
-              "was": null,
-              "flag": "est"
+              "now": 1.2,
+              "was": 2.4,
+              "flag": "live"
             },
             "w": {
               "now": 3.2,
@@ -6340,10 +6340,10 @@
           }
         }
       ],
-      "cost": 13.9,
-      "cost_per_serve": 6.95,
-      "saving": 0.0,
-      "saving_pct": 0.0,
+      "cost": 8.75,
+      "cost_per_serve": 4.38,
+      "saving": 1.2,
+      "saving_pct": 12.1,
       "hero_on_special": false
     },
     {
@@ -6401,13 +6401,13 @@
           "unit": "kg",
           "role": "hero",
           "note": null,
-          "now": 4.8,
-          "was": 7.2,
+          "now": 10.67,
+          "was": 12.0,
           "flag": "live",
           "by_store": {
             "c": {
-              "now": 4.8,
-              "was": 7.2,
+              "now": 10.67,
+              "was": 12.0,
               "flag": "live"
             },
             "w": {
@@ -6447,14 +6447,14 @@
           "unit": "pack",
           "role": "pantry",
           "note": null,
-          "now": 0.0,
-          "was": null,
-          "flag": "est",
+          "now": 13.0,
+          "was": 26.0,
+          "flag": "live",
           "by_store": {
             "c": {
-              "now": 0.0,
-              "was": null,
-              "flag": "est"
+              "now": 13.0,
+              "was": 26.0,
+              "flag": "live"
             },
             "w": {
               "now": 0.0,
@@ -6464,10 +6464,10 @@
           }
         }
       ],
-      "cost": 8.3,
-      "cost_per_serve": 4.15,
-      "saving": 2.4,
-      "saving_pct": 22.4,
+      "cost": 27.17,
+      "cost_per_serve": 13.59,
+      "saving": 14.33,
+      "saving_pct": 34.5,
       "hero_on_special": true
     },
     {
@@ -6532,14 +6532,14 @@
           "unit": "kg",
           "role": "hero",
           "note": null,
-          "now": 0.0,
-          "was": null,
-          "flag": "est",
+          "now": 0.6,
+          "was": 0.75,
+          "flag": "live",
           "by_store": {
             "c": {
-              "now": 0.0,
-              "was": null,
-              "flag": "est"
+              "now": 0.6,
+              "was": 0.75,
+              "flag": "live"
             },
             "w": {
               "now": 0.0,
@@ -6555,14 +6555,14 @@
           "unit": "L",
           "role": "scales",
           "note": "whole can",
-          "now": 2.2,
-          "was": null,
-          "flag": "est",
+          "now": 3.96,
+          "was": 6.6,
+          "flag": "live",
           "by_store": {
             "c": {
-              "now": 2.2,
-              "was": null,
-              "flag": "est"
+              "now": 3.96,
+              "was": 6.6,
+              "flag": "live"
             },
             "w": {
               "now": 2.2,
@@ -6618,11 +6618,11 @@
           }
         }
       ],
-      "cost": 3.0,
-      "cost_per_serve": 1.5,
-      "saving": 0.0,
-      "saving_pct": 0.0,
-      "hero_on_special": false
+      "cost": 5.36,
+      "cost_per_serve": 2.68,
+      "saving": 2.79,
+      "saving_pct": 34.2,
+      "hero_on_special": true
     },
     {
       "id": "honey-soy-chicken-potatoes",
@@ -6672,14 +6672,14 @@
           "unit": "kg",
           "role": "hero",
           "note": null,
-          "now": 8.4,
+          "now": 6.3,
           "was": null,
-          "flag": "est",
+          "flag": "live",
           "by_store": {
             "c": {
-              "now": 8.4,
+              "now": 6.3,
               "was": null,
-              "flag": "est"
+              "flag": "live"
             },
             "w": {
               "now": 8.4,
@@ -6712,8 +6712,8 @@
           }
         }
       ],
-      "cost": 8.4,
-      "cost_per_serve": 4.2,
+      "cost": 6.3,
+      "cost_per_serve": 3.15,
       "saving": 0.0,
       "saving_pct": 0.0,
       "hero_on_special": false
@@ -6775,12 +6775,12 @@
           "note": null,
           "now": 5.7,
           "was": null,
-          "flag": "est",
+          "flag": "live",
           "by_store": {
             "c": {
               "now": 5.7,
               "was": null,
-              "flag": "est"
+              "flag": "live"
             },
             "w": {
               "now": 5.7,
@@ -6819,14 +6819,14 @@
           "unit": "kg",
           "role": "scales",
           "note": "FODMAP-safe",
-          "now": 2.0,
-          "was": null,
-          "flag": "est",
+          "now": 2.04,
+          "was": 4.08,
+          "flag": "live",
           "by_store": {
             "c": {
-              "now": 2.0,
-              "was": null,
-              "flag": "est"
+              "now": 2.04,
+              "was": 4.08,
+              "flag": "live"
             },
             "w": {
               "now": 2.0,
@@ -6836,10 +6836,10 @@
           }
         }
       ],
-      "cost": 9.1,
-      "cost_per_serve": 4.55,
-      "saving": 0.0,
-      "saving_pct": 0.0,
+      "cost": 9.14,
+      "cost_per_serve": 4.57,
+      "saving": 2.04,
+      "saving_pct": 18.2,
       "hero_on_special": false
     },
     {
@@ -7073,14 +7073,14 @@
           "unit": "L",
           "role": "scales",
           "note": null,
-          "now": 1.1,
-          "was": null,
-          "flag": "est",
+          "now": 1.98,
+          "was": 3.3,
+          "flag": "live",
           "by_store": {
             "c": {
-              "now": 1.1,
-              "was": null,
-              "flag": "est"
+              "now": 1.98,
+              "was": 3.3,
+              "flag": "live"
             },
             "w": {
               "now": 1.1,
@@ -7096,14 +7096,14 @@
           "unit": "kg",
           "role": "scales",
           "note": "fully used",
-          "now": 3.0,
-          "was": null,
-          "flag": "est",
+          "now": 0.75,
+          "was": 0.99,
+          "flag": "live",
           "by_store": {
             "c": {
-              "now": 3.0,
-              "was": null,
-              "flag": "est"
+              "now": 0.75,
+              "was": 0.99,
+              "flag": "live"
             },
             "w": {
               "now": 3.0,
@@ -7113,10 +7113,10 @@
           }
         }
       ],
-      "cost": 10.9,
-      "cost_per_serve": 5.45,
-      "saving": 0.0,
-      "saving_pct": 0.0,
+      "cost": 9.53,
+      "cost_per_serve": 4.76,
+      "saving": 1.56,
+      "saving_pct": 14.1,
       "hero_on_special": false
     },
     {
@@ -7181,14 +7181,14 @@
           "unit": "kg",
           "role": "hero",
           "note": null,
-          "now": 9.5,
-          "was": null,
-          "flag": "est",
+          "now": 5.5,
+          "was": 6.5,
+          "flag": "live",
           "by_store": {
             "c": {
-              "now": 9.5,
-              "was": null,
-              "flag": "est"
+              "now": 5.5,
+              "was": 6.5,
+              "flag": "live"
             },
             "w": {
               "now": 9.5,
@@ -7267,11 +7267,11 @@
           }
         }
       ],
-      "cost": 17.0,
-      "cost_per_serve": 8.5,
-      "saving": 0.0,
-      "saving_pct": 0.0,
-      "hero_on_special": false
+      "cost": 13.0,
+      "cost_per_serve": 6.5,
+      "saving": 1.0,
+      "saving_pct": 7.1,
+      "hero_on_special": true
     },
     {
       "id": "mussels-white-wine-rice",
@@ -7351,14 +7351,14 @@
           "unit": "L",
           "role": "scales",
           "note": null,
-          "now": 4.0,
-          "was": null,
-          "flag": "est",
+          "now": 1.0,
+          "was": 1.38,
+          "flag": "live",
           "by_store": {
             "c": {
-              "now": 4.0,
-              "was": null,
-              "flag": "est"
+              "now": 1.0,
+              "was": 1.38,
+              "flag": "live"
             },
             "w": {
               "now": 4.0,
@@ -7391,10 +7391,10 @@
           }
         }
       ],
-      "cost": 22.0,
-      "cost_per_serve": 11.0,
-      "saving": 0.0,
-      "saving_pct": 0.0,
+      "cost": 19.0,
+      "cost_per_serve": 9.5,
+      "saving": 0.38,
+      "saving_pct": 2.0,
       "hero_on_special": false
     },
     {
@@ -7459,13 +7459,13 @@
           "unit": "kg",
           "role": "hero",
           "note": null,
-          "now": 4.8,
-          "was": 7.2,
+          "now": 10.67,
+          "was": 12.0,
           "flag": "live",
           "by_store": {
             "c": {
-              "now": 4.8,
-              "was": 7.2,
+              "now": 10.67,
+              "was": 12.0,
               "flag": "live"
             },
             "w": {
@@ -7482,14 +7482,14 @@
           "unit": "pack",
           "role": "scales",
           "note": "whole used",
-          "now": 3.5,
+          "now": 2.9,
           "was": null,
-          "flag": "est",
+          "flag": "live",
           "by_store": {
             "c": {
-              "now": 3.5,
+              "now": 2.9,
               "was": null,
-              "flag": "est"
+              "flag": "live"
             },
             "w": {
               "now": 3.5,
@@ -7505,14 +7505,14 @@
           "unit": "kg",
           "role": "scales",
           "note": "whole can used",
-          "now": 2.2,
-          "was": null,
-          "flag": "est",
+          "now": 1.7,
+          "was": 3.4,
+          "flag": "live",
           "by_store": {
             "c": {
-              "now": 2.2,
-              "was": null,
-              "flag": "est"
+              "now": 1.7,
+              "was": 3.4,
+              "flag": "live"
             },
             "w": {
               "now": 2.2,
@@ -7545,10 +7545,10 @@
           }
         }
       ],
-      "cost": 11.7,
-      "cost_per_serve": 5.85,
-      "saving": 2.4,
-      "saving_pct": 17.0,
+      "cost": 16.47,
+      "cost_per_serve": 8.23,
+      "saving": 3.03,
+      "saving_pct": 15.5,
       "hero_on_special": true
     },
     {
@@ -7744,14 +7744,14 @@
           "unit": "kg",
           "role": "hero",
           "note": null,
-          "now": 6.4,
+          "now": 3.6,
           "was": null,
-          "flag": "est",
+          "flag": "live",
           "by_store": {
             "c": {
-              "now": 6.4,
+              "now": 3.6,
               "was": null,
-              "flag": "est"
+              "flag": "live"
             },
             "w": {
               "now": 6.4,
@@ -7767,14 +7767,14 @@
           "unit": "pack",
           "role": "scales",
           "note": null,
-          "now": 0.0,
-          "was": null,
-          "flag": "est",
+          "now": 4.5,
+          "was": 5.8,
+          "flag": "live",
           "by_store": {
             "c": {
-              "now": 0.0,
-              "was": null,
-              "flag": "est"
+              "now": 4.5,
+              "was": 5.8,
+              "flag": "live"
             },
             "w": {
               "now": 0.0,
@@ -7790,14 +7790,14 @@
           "unit": "L",
           "role": "scales",
           "note": null,
-          "now": 1.1,
-          "was": null,
-          "flag": "est",
+          "now": 1.98,
+          "was": 3.3,
+          "flag": "live",
           "by_store": {
             "c": {
-              "now": 1.1,
-              "was": null,
-              "flag": "est"
+              "now": 1.98,
+              "was": 3.3,
+              "flag": "live"
             },
             "w": {
               "now": 1.1,
@@ -7813,14 +7813,14 @@
           "unit": "kg",
           "role": "shared",
           "note": "half pack",
-          "now": 2.8,
-          "was": null,
-          "flag": "est",
+          "now": 0.68,
+          "was": 1.35,
+          "flag": "live",
           "by_store": {
             "c": {
-              "now": 2.8,
-              "was": null,
-              "flag": "est"
+              "now": 0.68,
+              "was": 1.35,
+              "flag": "live"
             },
             "w": {
               "now": 2.8,
@@ -7853,10 +7853,10 @@
           }
         }
       ],
-      "cost": 11.8,
-      "cost_per_serve": 5.9,
-      "saving": 0.0,
-      "saving_pct": 0.0,
+      "cost": 12.26,
+      "cost_per_serve": 6.13,
+      "saving": 3.29,
+      "saving_pct": 21.2,
       "hero_on_special": false
     }
   ]
