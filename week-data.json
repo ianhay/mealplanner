@@ -1,20 +1,20 @@
 {
   "schema": 2,
   "metadata": {
-    "generated": "2026-09-16T00:02:35.407211",
-    "week_start": "2026-09-16",
-    "week_end": "2026-09-22",
+    "generated": "2026-09-23T00:04:34.772757",
+    "week_start": "2026-09-23",
+    "week_end": "2026-09-29",
     "coles_saleid": "66019",
     "coles_url": "https://www.coles.com.au/catalogues/view#view=list&saleId=66019&areaName=c-wa-met",
     "woolies_saleid": "66046",
     "woolies_url": "https://www.woolworths.com.au/shop/catalogue/view#view=list&saleId=66046&areaName=WA",
-    "note": "Priced 4 of 96 ingredients from this week's catalogue (4 by search, 0 by catalogue pool, 92 on bank baseline).",
-    "catalogue_start": "2026-09-16",
-    "catalogue_end": "2026-09-22",
-    "ingredients_matched": 4,
+    "note": "Priced 5 of 96 ingredients from this week's catalogue (5 by search, 0 by catalogue pool, 91 on bank baseline).",
+    "catalogue_start": "2026-09-23",
+    "catalogue_end": "2026-09-29",
+    "ingredients_matched": 5,
     "ingredients_total": 96,
-    "recipes_on_special": 1,
-    "total_possible_saving": 10.25
+    "recipes_on_special": 2,
+    "total_possible_saving": 20.8
   },
   "ingredients": {
     "whole_chicken": {
@@ -4459,14 +4459,14 @@
           "unit": "kg",
           "role": "hero",
           "note": null,
-          "now": 8.1,
-          "was": null,
-          "flag": "est",
+          "now": 13.5,
+          "was": 22.5,
+          "flag": "live",
           "by_store": {
             "c": {
-              "now": 8.1,
-              "was": null,
-              "flag": "est"
+              "now": 13.5,
+              "was": 22.5,
+              "flag": "live"
             },
             "w": {
               "now": 8.1,
@@ -4545,11 +4545,11 @@
           }
         }
       ],
-      "cost": 10.8,
-      "cost_per_serve": 5.4,
-      "saving": 0.0,
-      "saving_pct": 0.0,
-      "hero_on_special": false
+      "cost": 16.2,
+      "cost_per_serve": 8.1,
+      "saving": 9.0,
+      "saving_pct": 35.7,
+      "hero_on_special": true
     },
     {
       "id": "tofu-peanut-noodles",
@@ -5595,14 +5595,14 @@
           "unit": "L",
           "role": "scales",
           "note": null,
-          "now": 4.0,
-          "was": null,
-          "flag": "est",
+          "now": 14.4,
+          "was": 15.6,
+          "flag": "live",
           "by_store": {
             "c": {
-              "now": 4.0,
-              "was": null,
-              "flag": "est"
+              "now": 14.4,
+              "was": 15.6,
+              "flag": "live"
             },
             "w": {
               "now": 4.0,
@@ -5658,10 +5658,10 @@
           }
         }
       ],
-      "cost": 19.3,
-      "cost_per_serve": 9.65,
-      "saving": 0.0,
-      "saving_pct": 0.0,
+      "cost": 29.7,
+      "cost_per_serve": 14.85,
+      "saving": 1.2,
+      "saving_pct": 3.9,
       "hero_on_special": false
     },
     {
@@ -6122,13 +6122,13 @@
           "unit": "pack",
           "role": "pantry",
           "note": null,
-          "now": 52.0,
-          "was": 59.0,
+          "now": 47.0,
+          "was": 55.0,
           "flag": "live",
           "by_store": {
             "c": {
-              "now": 52.0,
-              "was": 59.0,
+              "now": 47.0,
+              "was": 55.0,
               "flag": "live"
             },
             "w": {
@@ -6185,10 +6185,10 @@
           }
         }
       ],
-      "cost": 59.2,
-      "cost_per_serve": 29.6,
-      "saving": 7.0,
-      "saving_pct": 10.6,
+      "cost": 54.2,
+      "cost_per_serve": 27.1,
+      "saving": 8.0,
+      "saving_pct": 12.9,
       "hero_on_special": false
     },
     {
@@ -6532,13 +6532,13 @@
           "unit": "kg",
           "role": "hero",
           "note": null,
-          "now": 10.8,
-          "was": 11.1,
+          "now": 7.2,
+          "was": 7.8,
           "flag": "live",
           "by_store": {
             "c": {
-              "now": 10.8,
-              "was": 11.1,
+              "now": 7.2,
+              "was": 7.8,
               "flag": "live"
             },
             "w": {
@@ -6618,10 +6618,10 @@
           }
         }
       ],
-      "cost": 13.8,
-      "cost_per_serve": 6.9,
-      "saving": 0.3,
-      "saving_pct": 2.1,
+      "cost": 10.2,
+      "cost_per_serve": 5.1,
+      "saving": 0.6,
+      "saving_pct": 5.6,
       "hero_on_special": true
     },
     {
@@ -7204,14 +7204,14 @@
           "unit": "L",
           "role": "scales",
           "note": null,
-          "now": 4.4,
-          "was": 5.6,
-          "flag": "live",
+          "now": 3.5,
+          "was": null,
+          "flag": "est",
           "by_store": {
             "c": {
-              "now": 4.4,
-              "was": 5.6,
-              "flag": "live"
+              "now": 3.5,
+              "was": null,
+              "flag": "est"
             },
             "w": {
               "now": 3.5,
@@ -7267,10 +7267,10 @@
           }
         }
       ],
-      "cost": 17.9,
-      "cost_per_serve": 8.95,
-      "saving": 1.2,
-      "saving_pct": 6.3,
+      "cost": 17.0,
+      "cost_per_serve": 8.5,
+      "saving": 0.0,
+      "saving_pct": 0.0,
       "hero_on_special": false
     },
     {
@@ -7351,13 +7351,13 @@
           "unit": "L",
           "role": "scales",
           "note": null,
-          "now": 13.0,
-          "was": 14.75,
+          "now": 11.75,
+          "was": 13.75,
           "flag": "live",
           "by_store": {
             "c": {
-              "now": 13.0,
-              "was": 14.75,
+              "now": 11.75,
+              "was": 13.75,
               "flag": "live"
             },
             "w": {
@@ -7391,10 +7391,10 @@
           }
         }
       ],
-      "cost": 31.0,
-      "cost_per_serve": 15.5,
-      "saving": 1.75,
-      "saving_pct": 5.3,
+      "cost": 29.75,
+      "cost_per_serve": 14.88,
+      "saving": 2.0,
+      "saving_pct": 6.3,
       "hero_on_special": false
     },
     {
