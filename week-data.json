@@ -1,20 +1,20 @@
 {
   "schema": 2,
   "metadata": {
-    "generated": "2026-09-30T01:06:23.254530",
-    "week_start": "2026-09-30",
-    "week_end": "2026-10-06",
+    "generated": "2026-10-07T01:18:20.446043",
+    "week_start": "2026-10-07",
+    "week_end": "2026-10-13",
     "coles_saleid": "66019",
     "coles_url": "https://www.coles.com.au/catalogues/view#view=list&saleId=66019&areaName=c-wa-met",
     "woolies_saleid": "66046",
     "woolies_url": "https://www.woolworths.com.au/shop/catalogue/view#view=list&saleId=66046&areaName=WA",
-    "note": "Priced 2 of 96 ingredients from this week's catalogue (2 by search, 0 by catalogue pool, 94 on bank baseline).",
-    "catalogue_start": "2026-09-30",
-    "catalogue_end": "2026-10-06",
-    "ingredients_matched": 2,
+    "note": "Priced 0 of 96 ingredients from this week's catalogue (0 by search, 0 by catalogue pool, 96 on bank baseline).",
+    "catalogue_start": "2026-10-07",
+    "catalogue_end": "2026-10-13",
+    "ingredients_matched": 0,
     "ingredients_total": 96,
     "recipes_on_special": 0,
-    "total_possible_saving": 10.0
+    "total_possible_saving": 0.0
   },
   "ingredients": {
     "whole_chicken": {
@@ -6122,14 +6122,14 @@
           "unit": "pack",
           "role": "pantry",
           "note": null,
-          "now": 47.0,
-          "was": 55.0,
-          "flag": "live",
+          "now": 0.0,
+          "was": null,
+          "flag": "est",
           "by_store": {
             "c": {
-              "now": 47.0,
-              "was": 55.0,
-              "flag": "live"
+              "now": 0.0,
+              "was": null,
+              "flag": "est"
             },
             "w": {
               "now": 0.0,
@@ -6185,10 +6185,10 @@
           }
         }
       ],
-      "cost": 54.2,
-      "cost_per_serve": 27.1,
-      "saving": 8.0,
-      "saving_pct": 12.9,
+      "cost": 7.2,
+      "cost_per_serve": 3.6,
+      "saving": 0.0,
+      "saving_pct": 0.0,
       "hero_on_special": false
     },
     {
@@ -7351,14 +7351,14 @@
           "unit": "L",
           "role": "scales",
           "note": null,
-          "now": 11.75,
-          "was": 13.75,
-          "flag": "live",
+          "now": 4.0,
+          "was": null,
+          "flag": "est",
           "by_store": {
             "c": {
-              "now": 11.75,
-              "was": 13.75,
-              "flag": "live"
+              "now": 4.0,
+              "was": null,
+              "flag": "est"
             },
             "w": {
               "now": 4.0,
@@ -7391,10 +7391,10 @@
           }
         }
       ],
-      "cost": 29.75,
-      "cost_per_serve": 14.88,
-      "saving": 2.0,
-      "saving_pct": 6.3,
+      "cost": 22.0,
+      "cost_per_serve": 11.0,
+      "saving": 0.0,
+      "saving_pct": 0.0,
       "hero_on_special": false
     },
     {
