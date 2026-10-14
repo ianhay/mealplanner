@@ -1,20 +1,20 @@
 {
   "schema": 2,
   "metadata": {
-    "generated": "2026-10-07T01:18:20.446043",
-    "week_start": "2026-10-07",
-    "week_end": "2026-10-13",
+    "generated": "2026-10-14T00:58:04.810046",
+    "week_start": "2026-10-14",
+    "week_end": "2026-10-20",
     "coles_saleid": "66019",
     "coles_url": "https://www.coles.com.au/catalogues/view#view=list&saleId=66019&areaName=c-wa-met",
     "woolies_saleid": "66046",
     "woolies_url": "https://www.woolworths.com.au/shop/catalogue/view#view=list&saleId=66046&areaName=WA",
-    "note": "Priced 0 of 96 ingredients from this week's catalogue (0 by search, 0 by catalogue pool, 96 on bank baseline).",
-    "catalogue_start": "2026-10-07",
-    "catalogue_end": "2026-10-13",
-    "ingredients_matched": 0,
+    "note": "Priced 1 of 96 ingredients from this week's catalogue (1 by search, 0 by catalogue pool, 95 on bank baseline).",
+    "catalogue_start": "2026-10-14",
+    "catalogue_end": "2026-10-20",
+    "ingredients_matched": 1,
     "ingredients_total": 96,
     "recipes_on_special": 0,
-    "total_possible_saving": 0.0
+    "total_possible_saving": 0.8
   },
   "ingredients": {
     "whole_chicken": {
@@ -7204,14 +7204,14 @@
           "unit": "L",
           "role": "scales",
           "note": null,
-          "now": 3.5,
-          "was": null,
-          "flag": "est",
+          "now": 3.8,
+          "was": 4.6,
+          "flag": "live",
           "by_store": {
             "c": {
-              "now": 3.5,
-              "was": null,
-              "flag": "est"
+              "now": 3.8,
+              "was": 4.6,
+              "flag": "live"
             },
             "w": {
               "now": 3.5,
@@ -7267,10 +7267,10 @@
           }
         }
       ],
-      "cost": 17.0,
-      "cost_per_serve": 8.5,
-      "saving": 0.0,
-      "saving_pct": 0.0,
+      "cost": 17.3,
+      "cost_per_serve": 8.65,
+      "saving": 0.8,
+      "saving_pct": 4.4,
       "hero_on_special": false
     },
     {
