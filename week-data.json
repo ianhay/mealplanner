@@ -1,20 +1,20 @@
 {
   "schema": 2,
   "metadata": {
-    "generated": "2026-11-11T01:49:43.633425",
-    "week_start": "2026-11-11",
-    "week_end": "2026-11-17",
+    "generated": "2026-11-18T03:24:45.705418",
+    "week_start": "2026-11-18",
+    "week_end": "2026-11-24",
     "coles_saleid": "66019",
     "coles_url": "https://www.coles.com.au/catalogues/view#view=list&saleId=66019&areaName=c-wa-met",
     "woolies_saleid": "66046",
     "woolies_url": "https://www.woolworths.com.au/shop/catalogue/view#view=list&saleId=66046&areaName=WA",
-    "note": "Priced 1 of 96 ingredients from this week's catalogue (1 by search, 0 by catalogue pool, 95 on bank baseline).",
-    "catalogue_start": "2026-11-11",
-    "catalogue_end": "2026-11-17",
-    "ingredients_matched": 1,
+    "note": "Priced 3 of 96 ingredients from this week's catalogue (3 by search, 0 by catalogue pool, 93 on bank baseline).",
+    "catalogue_start": "2026-11-18",
+    "catalogue_end": "2026-11-24",
+    "ingredients_matched": 3,
     "ingredients_total": 96,
-    "recipes_on_special": 0,
-    "total_possible_saving": 24.0
+    "recipes_on_special": 1,
+    "total_possible_saving": 6.53
   },
   "ingredients": {
     "whole_chicken": {
@@ -2141,14 +2141,14 @@
           "unit": "pack",
           "role": "pantry",
           "note": "lasts weeks",
-          "now": 4.5,
-          "was": null,
-          "flag": "est",
+          "now": 7.5,
+          "was": 12.0,
+          "flag": "live",
           "by_store": {
             "c": {
-              "now": 4.5,
-              "was": null,
-              "flag": "est"
+              "now": 7.5,
+              "was": 12.0,
+              "flag": "live"
             },
             "w": {
               "now": 4.5,
@@ -2227,10 +2227,10 @@
           }
         }
       ],
-      "cost": 18.9,
-      "cost_per_serve": 9.45,
-      "saving": 0.0,
-      "saving_pct": 0.0,
+      "cost": 21.9,
+      "cost_per_serve": 10.95,
+      "saving": 4.5,
+      "saving_pct": 17.0,
       "hero_on_special": false
     },
     {
@@ -2810,14 +2810,14 @@
           "unit": "pack",
           "role": "scales",
           "note": null,
-          "now": 52.0,
-          "was": 60.0,
-          "flag": "live",
+          "now": 0.0,
+          "was": null,
+          "flag": "est",
           "by_store": {
             "c": {
-              "now": 52.0,
-              "was": 60.0,
-              "flag": "live"
+              "now": 0.0,
+              "was": null,
+              "flag": "est"
             },
             "w": {
               "now": 0.0,
@@ -2873,10 +2873,10 @@
           }
         }
       ],
-      "cost": 62.3,
-      "cost_per_serve": 31.15,
-      "saving": 8.0,
-      "saving_pct": 11.4,
+      "cost": 10.3,
+      "cost_per_serve": 5.15,
+      "saving": 0.0,
+      "saving_pct": 0.0,
       "hero_on_special": false
     },
     {
@@ -3472,14 +3472,14 @@
           "unit": "pack",
           "role": "scales",
           "note": "pantry check",
-          "now": 52.0,
-          "was": 60.0,
-          "flag": "live",
+          "now": 0.0,
+          "was": null,
+          "flag": "est",
           "by_store": {
             "c": {
-              "now": 52.0,
-              "was": 60.0,
-              "flag": "live"
+              "now": 0.0,
+              "was": null,
+              "flag": "est"
             },
             "w": {
               "now": 0.0,
@@ -3489,10 +3489,10 @@
           }
         }
       ],
-      "cost": 68.2,
-      "cost_per_serve": 34.1,
-      "saving": 8.0,
-      "saving_pct": 10.5,
+      "cost": 16.2,
+      "cost_per_serve": 8.1,
+      "saving": 0.0,
+      "saving_pct": 0.0,
       "hero_on_special": false
     },
     {
@@ -5595,14 +5595,14 @@
           "unit": "L",
           "role": "scales",
           "note": null,
-          "now": 4.0,
-          "was": null,
-          "flag": "est",
+          "now": 2.25,
+          "was": 3.6,
+          "flag": "live",
           "by_store": {
             "c": {
-              "now": 4.0,
-              "was": null,
-              "flag": "est"
+              "now": 2.25,
+              "was": 3.6,
+              "flag": "live"
             },
             "w": {
               "now": 4.0,
@@ -5658,10 +5658,10 @@
           }
         }
       ],
-      "cost": 19.3,
-      "cost_per_serve": 9.65,
-      "saving": 0.0,
-      "saving_pct": 0.0,
+      "cost": 17.55,
+      "cost_per_serve": 8.78,
+      "saving": 1.35,
+      "saving_pct": 7.1,
       "hero_on_special": false
     },
     {
@@ -6532,14 +6532,14 @@
           "unit": "kg",
           "role": "hero",
           "note": null,
-          "now": 0.0,
-          "was": null,
-          "flag": "est",
+          "now": 1.12,
+          "was": 1.8,
+          "flag": "live",
           "by_store": {
             "c": {
-              "now": 0.0,
-              "was": null,
-              "flag": "est"
+              "now": 1.12,
+              "was": 1.8,
+              "flag": "live"
             },
             "w": {
               "now": 0.0,
@@ -6618,11 +6618,11 @@
           }
         }
       ],
-      "cost": 3.0,
-      "cost_per_serve": 1.5,
-      "saving": 0.0,
-      "saving_pct": 0.0,
-      "hero_on_special": false
+      "cost": 4.12,
+      "cost_per_serve": 2.06,
+      "saving": 0.68,
+      "saving_pct": 14.2,
+      "hero_on_special": true
     },
     {
       "id": "honey-soy-chicken-potatoes",
@@ -7767,14 +7767,14 @@
           "unit": "pack",
           "role": "scales",
           "note": null,
-          "now": 52.0,
-          "was": 60.0,
-          "flag": "live",
+          "now": 0.0,
+          "was": null,
+          "flag": "est",
           "by_store": {
             "c": {
-              "now": 52.0,
-              "was": 60.0,
-              "flag": "live"
+              "now": 0.0,
+              "was": null,
+              "flag": "est"
             },
             "w": {
               "now": 0.0,
@@ -7853,10 +7853,10 @@
           }
         }
       ],
-      "cost": 63.8,
-      "cost_per_serve": 31.9,
-      "saving": 8.0,
-      "saving_pct": 11.1,
+      "cost": 11.8,
+      "cost_per_serve": 5.9,
+      "saving": 0.0,
+      "saving_pct": 0.0,
       "hero_on_special": false
     }
   ]
